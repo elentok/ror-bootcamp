@@ -1,0 +1,19 @@
+body {
+  font-family: "PT Serif";
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.page {
+  max-width: 960px;
+  background-color: #EDEFF4;
+  margin: auto;
+  padding: 20px;
+}
+
+
