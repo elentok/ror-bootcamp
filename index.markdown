@@ -1,10 +1,10 @@
 Ruby on Rails Bootcamp
 ======================
 
-This set of posts is targeted at programmers that don't know a thing about Ruby on Rails 
+This document is targeted at programmers that don't know a thing about Ruby on Rails 
 and want to learn.
 
-The purpose of these posts is to guide people who want to learn RoR through the process.
+The purpose of this document is to guide people who want to learn RoR through the process.
 
 **Table of Contents**
 
