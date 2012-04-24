@@ -21,12 +21,7 @@ and want to learn.</p>
 <ul id="markdown-toc">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#part-1---the-ruby-language">Part 1 - The Ruby Language</a>    <ul>
-      <li><a href="#exercise-11---strings-numbers-classes-and-objects">Exercise #1.1 - Strings, Numbers, Classes and Objects</a></li>
-      <li><a href="#exercise-12a---attributes-and-class-variables">Exercise #1.2a - Attributes and Class Variables</a></li>
-      <li><a href="#exercise-12b---class-hierarchies">Exercise #1.2b - Class Hierarchies</a></li>
-      <li><a href="#exercise-13---strings-and-ranges">Exercise #1.3 - Strings and Ranges</a></li>
-      <li><a href="#exercise-14a---arrays">Exercise #1.4a - Arrays</a></li>
-      <li><a href="#exercise-14b---hashes">Exercise #1.4b - Hashes</a></li>
+      <li><a href="#exercise-11">Exercise #1.1</a></li>
       <li><a href="#todo">TODO</a></li>
     </ul>
   </li>
@@ -81,97 +76,97 @@ You can use whatever you want:
 <h2 id="part-1---the-ruby-language">Part 1 - The Ruby Language</h2>
 
 <ul>
-  <li>Download <a href="from http://www.sapphiresteel.com/ruby-programming/The-Book-Of-Ruby">the Book of Ruby</a></li>
-  <li>Read the introduction (pages 5-9)</li>
+  <li>Read the <a href="http://www.ruby-lang.org/en/documentation/quickstart">Ruby Language QuickStart</a></li>
 </ul>
 
-<h3 id="exercise-11---strings-numbers-classes-and-objects">Exercise #1.1 - Strings, Numbers, Classes and Objects</h3>
+<h3 id="exercise-11">Exercise #1.1</h3>
 
 <ul>
-  <li>Read chapter 1, 5 and 7 (without &ldquo;Digging Deeper&rdquo;)</li>
-  <li>Create a command-line application:
-    <ul>
-      <li>Create a class named <strong>PhoneBook</strong> with a method named <strong>menu</strong>, when the method is called it will show this menu:
-        <ol>
-          <li>List all contacts</li>
-          <li>Add contact</li>
-          <li>Delete contact</li>
-          <li>Exit</li>
-        </ol>
-      </li>
-      <li>For now pressing 1-3 will just tell the user what was selected and will display the menu again.</li>
-      <li>Pressing 0 will exit the application.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="exercise-12a---attributes-and-class-variables">Exercise #1.2a - Attributes and Class Variables</h3>
-
-<ul>
-  <li>Read chapter 2 (without &ldquo;Digging Deeper&rdquo;)</li>
   <li>
-    <p>Modify the previous application:</p>
+    <p>Create the <code>PizzaBurger</code> application that will show this menu:</p>
 
-    <ul>
-      <li>Create a class called <strong>Contact</strong> with two attributes: name and phone number</li>
-      <li>Implement the &ldquo;Add contact&rdquo; action:
-Ask the user for the name and phone number and create a new contact object</li>
-    </ul>
+    <pre><code>  Welcome to PizzaBurger,
+  What would you like to do?
+
+  1. Order a pizza
+  2. Order a burger
+  3. List all orders
+  4. Cancel and order
+  0. Exit
+</code></pre>
+  </li>
+  <li>
+    <p>Pressing <strong>1</strong> will ask the user:</p>
+
+    <pre><code>  Ordering a pizza!
+
+  Your name: Bob
+  Your phone number: 054-1234567
+  Which toppings: onions and pepperoni
+  How many pizzas: 3
+</code></pre>
+  </li>
+  <li>
+    <p>Pressing <strong>2</strong> will ask the user:</p>
+
+    <pre><code>  Ordering a burger!
+
+  Your name: Joe
+  Your phone number: 054-7654321
+  How would you like your burger: medium-rare
+  Would you like fries: yes
+</code></pre>
+  </li>
+  <li>
+    <p>Pressing <strong>3</strong> will show:</p>
+
+    <pre><code>  The current orders are:
+    
+    1) 3 pizzas with onions and pepperoni
+       Bob, 054-1234567
+
+    2) Burger with fries (medium-rare)
+       Joe, 054-7654321
+</code></pre>
+  </li>
+  <li>
+    <p>Pressing <strong>4</strong> will ask the user:</p>
+
+    <pre><code>  Which order would you like to cancel? 1
+
+  Order details:
+
+    1) 3 pizzas with onions and pepperoni
+       Bob, 054-1234567
+
+  Are you sure? yes
+
+  The order has been cancelled.
+</code></pre>
+  </li>
+  <li>
+    <p>Pressing <strong>0</strong> will display &ldquo;Thank you for using PizzaBurger&rdquo; and exit.</p>
   </li>
 </ul>
 
-<h3 id="exercise-12b---class-hierarchies">Exercise #1.2b - Class Hierarchies</h3>
+<p><strong>Notes:</strong></p>
 
 <ul>
-  <li>Modify the previous application:
+  <li>Create the following classes:
     <ul>
-      <li>Create two classes that inherit from <strong>Contact</strong>: 
+      <li><code>PizzaBurger</code>
         <ul>
-          <li><strong>Person</strong> - will have a birthday attribute</li>
-          <li><strong>Organization</strong> - will have a fax attribute</li>
+          <li>has a method named <code>menu</code> which shows the menu.</li>
+          <li>has an instance (member) variable named <code>orders</code> which will contain all of the orders.</li>
         </ul>
       </li>
-      <li>Instead of the <strong>&ldquo;2. Add contact&rdquo;</strong> add two menu items (delete contact should become 4):
-        <ul>
-          <li>2 Add person - will also read the birthday from the user</li>
-          <li>3 Add organization - will also read the fax from the user</li>
-        </ul>
-      </li>
+      <li><code>PizzaOrder</code> - contains the parameters for a pizza order.</li>
+      <li><code>BurgerOrder</code> - contains the parameters for a pizza order.</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="exercise-13---strings-and-ranges">Exercise #1.3 - Strings and Ranges</h3>
-
-<ul>
-  <li>Read chapter 3 (pages 47-55).</li>
-  <li>Modify the previous application:
-    <ul>
-      <li>Everywhere you used &lsquo;+&rsquo; to combine strings, use the &ldquo;#{variable}&rdquo; technique.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>TODO: NEED A BETTER EXERCISE</p>
-
-<h3 id="exercise-14a---arrays">Exercise #1.4a - Arrays</h3>
-
-<ul>
-  <li>Read pages 61-72 of chapter 4</li>
-  <li>Implement all of the menu items (list, add and delete) so that the 
-contacts are stored in an array (member variable of the <strong>PhoneBook</strong> class).</li>
-</ul>
-
-<h3 id="exercise-14b---hashes">Exercise #1.4b - Hashes</h3>
-
-<ul>
-  <li>Read pages 73-77 of chapter 4</li>
-  <li>Modify the application:
-    <ul>
-      <li>Instead of an array the contacts are stored in hash where the key is the contact&rsquo;s name.</li>
-      <li>When listing the contacts, sort them by the name</li>
-    </ul>
-  </li>
+  <li>Do not concatenate strings (<code>"123" + x</code>), use <code>"123#{x}"</code>.</li>
+  <li>Override the <code>to_s</code> method for <code>PizzaOrder</code> and <code>BurderOrder</code> to display the details</li>
+  <li>Validate all of the user input, if invalid show error messages and ask to enter again.</li>
 </ul>
 
 <h3 id="todo">TODO</h3>

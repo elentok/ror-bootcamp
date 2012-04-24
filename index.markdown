@@ -46,62 +46,76 @@ Introduction
 Part 1 - The Ruby Language
 ------------------------------
 
-* Download [the Book of Ruby](from http://www.sapphiresteel.com/ruby-programming/The-Book-Of-Ruby)
-* Read the introduction (pages 5-9)
+* Read the [Ruby Language QuickStart](http://www.ruby-lang.org/en/documentation/quickstart)
 
-### Exercise #1.1 - Strings, Numbers, Classes and Objects
+### Exercise #1.1
 
-* Read chapter 1, 5 and 7 (without "Digging Deeper")
-* Create a command-line application:
-  * Create a class named **PhoneBook** with a method named **menu**, when the method is called it will show this menu:
-    1. List all contacts
-    2. Add contact
-    3. Delete contact
-    0. Exit
+* Create the `PizzaBurger` application that will show this menu:
 
-  * For now pressing 1-3 will just tell the user what was selected and will display the menu again.
-  * Pressing 0 will exit the application.
+        Welcome to PizzaBurger,
+        What would you like to do?
 
+        1. Order a pizza
+        2. Order a burger
+        3. List all orders
+        4. Cancel and order
+        0. Exit
 
-### Exercise #1.2a - Attributes and Class Variables
+* Pressing **1** will ask the user:
 
-* Read chapter 2 (without "Digging Deeper")
-* Modify the previous application:
+        Ordering a pizza!
 
-  * Create a class called **Contact** with two attributes: name and phone number
-  * Implement the "Add contact" action:
-    Ask the user for the name and phone number and create a new contact object
+        Your name: Bob
+        Your phone number: 054-1234567
+        Which toppings: onions and pepperoni
+        How many pizzas: 3
 
-### Exercise #1.2b - Class Hierarchies
+* Pressing **2** will ask the user:
 
-* Modify the previous application:
-  * Create two classes that inherit from **Contact**: 
-    * **Person** - will have a birthday attribute
-    * **Organization** - will have a fax attribute
-  * Instead of the **"2. Add contact"** add two menu items (delete contact should become 4):
-    * 2 Add person - will also read the birthday from the user
-    * 3 Add organization - will also read the fax from the user
+        Ordering a burger!
 
-### Exercise #1.3 - Strings and Ranges
+        Your name: Joe
+        Your phone number: 054-7654321
+        How would you like your burger: medium-rare
+        Would you like fries: yes
+      
+* Pressing **3** will show:
+        
+        The current orders are:
+        
+          1) 3 pizzas with onions and pepperoni
+             Bob, 054-1234567
 
-* Read chapter 3 (pages 47-55).
-* Modify the previous application:
-  * Everywhere you used '+' to combine strings, use the "#{variable}" technique.
+          2) Burger with fries (medium-rare)
+             Joe, 054-7654321
 
-TODO: NEED A BETTER EXERCISE
+* Pressing **4** will ask the user:
+        
+        Which order would you like to cancel? 1
 
-### Exercise #1.4a - Arrays
+        Order details:
 
-* Read pages 61-72 of chapter 4
-* Implement all of the menu items (list, add and delete) so that the 
-  contacts are stored in an array (member variable of the **PhoneBook** class).
+          1) 3 pizzas with onions and pepperoni
+             Bob, 054-1234567
 
-### Exercise #1.4b - Hashes
+        Are you sure? yes
 
-* Read pages 73-77 of chapter 4
-* Modify the application:
-  * Instead of an array the contacts are stored in hash where the key is the contact's name.
-  * When listing the contacts, sort them by the name
+        The order has been cancelled.
+      
+* Pressing **0** will display "Thank you for using PizzaBurger" and exit.
+
+**Notes:**
+
+* Create the following classes:
+  * `PizzaBurger`
+      * has a method named `menu` which shows the menu.
+      * has an instance (member) variable named `orders` which will contain all of the orders.
+  * `PizzaOrder` - contains the parameters for a pizza order.
+  * `BurgerOrder` - contains the parameters for a pizza order.
+
+* Do not concatenate strings (`"123" + x`), use `"123#{x}"`.
+* Override the `to_s` method for `PizzaOrder` and `BurderOrder` to display the details
+* Validate all of the user input, if invalid show error messages and ask to enter again.
 
 
 ### TODO
