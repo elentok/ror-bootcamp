@@ -7,11 +7,17 @@ body {
   background-image: url(bg.png);
 }
 
-h1 {
+h1.title {
   margin-top: 0;
+  text-align: center;
 }
 
-.page {
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+  color: black;
+}
+
+.document {
   max-width: 960px;
   background-color: white;
   /*background-color: #EDEFF4;*/
