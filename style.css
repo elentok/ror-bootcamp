@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 20px;
+
+  background-image: url(bg.png);
 }
 
 h1 {
@@ -11,7 +13,9 @@ h1 {
 
 .page {
   max-width: 960px;
-  background-color: #EDEFF4;
+  background-color: white;
+  /*background-color: #EDEFF4;*/
+  box-shadow: 0px 0px 10px black;
   margin: auto;
   padding: 20px;
 }
@@ -19,3 +23,13 @@ h1 {
 pre {
   color: #555;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+  table td, table th {
+    border: 1px solid #ccc;
+    padding: 2px;
+  }

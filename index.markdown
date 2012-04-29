@@ -117,24 +117,13 @@ Part 1 - The Ruby Language
 * Override the `to_s` method for `PizzaOrder` and `BurderOrder` to display the details
 * Validate all of the user input, if invalid show error messages and ask to enter again.
 
+Schedule
+------------
 
-### TODO
+| Week/Day | Sunday | Monday | Tuesday | Wednesday | Thursday |
+| ----------------------------------------------------------- |
+| Week #1  | Intro Lecture <br> bla    |        |         |           |          |
 
-
-Chapter6 (conditionals)
-Chapter7 (methods???)
-Chapter8 (arguments and returning values)
-Chapter9 (exceptions)
-Chapter10 (blocks, procs and lambdas)
-Chapter11 (symbols)
-Chapter12 (modules and mixins)
-Chapter13 (files and I/O)
-Chapter14 (yaml)
-Chapter16 (regular expressions)
-Chapter18
-  pages 327-336 (IRB and debugging)
-  pages 342-344 (line breaks, graphic debuggers)
-Chapter20 (dynamic programming)
 
 
 Bla Bla
