@@ -9,6 +9,19 @@ The purpose of this document is to guide people who want to learn RoR through th
 
 .. contents::
 
+Schedule
+=========
+
++----------+-----------------+----------------+-----------------+-------------------+------------------+
+| Week/Day |      Sunday     |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
++----------+-----------------+----------------+-----------------+-------------------+------------------+
+| Week #1  | * Intro Lecture                                                        | * Retro          |
+| (Ruby)   | * Exercise 1                                                           |                  |
++----------+-----------------+----------------+-----------------+-------------------+------------------+
+| Week #2  | * Intro Lecture                                                        | * Retro          |
+| (?????)  | * Exercise 1                                                           |                  |
++----------+-----------------+----------------+-----------------+-------------------+------------------+
+
 Introduction
 ============
 
@@ -33,7 +46,7 @@ Introduction
 
 * Installing Ruby On Rails
 
-  * Windows - [RailsInstaller](http://railsinstaller.org/)
+  * Windows - `RailsInstaller <http://railsinstaller.org/>`_
   * Linux/Mac - Rvm
     Ruby Version Manager - allows running multiple versions of Ruby on the same machine
     (so people can run legacy Ruby 1.8 web apps and new 1.9 web apps side-by-side).
@@ -45,15 +58,13 @@ Introduction
   * RubyMine
   * NotePad++
 
-
-
 Part 1 - The Ruby Language
-------------------------------
+==========================
 
-* Read the [Ruby Language QuickStart](http://www.ruby-lang.org/en/documentation/quickstart)
+* Read the `Ruby Language QuickStart <http://www.ruby-lang.org/en/documentation/quickstart>`_
 
 Exercise #1.1
-~~~~~~~~~~~~~
+-------------
 
 * Create the `PizzaBurger` application that will show this menu::
 
@@ -125,39 +136,60 @@ Exercise #1.1
 * Override the ``to_s`` method for ``PizzaOrder`` and ``BurderOrder`` to display the details
 * Validate all of the user input, if invalid show error messages and ask to enter again.
 
-Schedule
-------------
+Part 2 - Ruby Gems
+===================
 
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week/Day |      Sunday     |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week #1  | Intro Lecture   |                |                 |                   |                  |
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
+* A gem is a ruby plugin
+* To install a single gem::
 
+    gem install gem-name-here
 
+* A single project uses multiple gems and in order to manage gem dependencies
+  and simplify deployment of a rails app we use a tool called *Bundler*.
 
-Bla Bla
+* Bundler uses a file called *Gemfile*:
+
+  .. code-block:: ruby
+
+      # this line tells bundler to use "http://rubygems.org" as the gem repository
+      # (if you wish to use an offline repository, replace this url with your own)
+      source 'http://rubygems.org'
+
+      # the rails gem is required
+      gem 'rails'
+
+      # gems that will only be required for development 
+      # (when deploying a production environment these won't be loaded)
+      group :development do
+        gem 'debugger'
+        gem 'guard-livereload'
+      end
+
+* Watch the `bundler screencast <http://railscasts.com/episodes/201-bundler-revised>`_.
+
+Mess
+==============
+
+Todo
 -------
 
 * Debugging
 * Deployment
+* Stuff in Ruby that confuses new programmers:
 
-Stuff in Ruby that confuses new programmers:
-  blocks
-  => vs :
+  * blocks
+  * => vs :
 
 
-List of external sources
-
-STOP READING THE BOOK!!!!! I FOUND A BETTER WAY TO LEARN RoR:
+Online tutorials
+-------------------
 1. first go over the exercises in TryRuby: http://tryruby.org/
 2. sign up (for free) in http://railsforzombies.org/ (it's a hands-on online course)
 
-3. watch these:
-
-  - http://railscasts.com/episodes/201-bundler-revised
-  - http://railscasts.com/episodes/279-understanding-the-asset-pipeline
-  - http://railscasts.com/episodes/318-upgrading-to-rails-3-2
-  - http://railscasts.com/episodes/285-spork
-  - http://railscasts.com/episodes/324-passing-data-to-javascript
-  - http://railscasts.com/episodes/334-compass-css-sprites
+Screencasts
+-----------
+* http://railscasts.com/episodes/279-understanding-the-asset-pipeline
+* http://railscasts.com/episodes/318-upgrading-to-rails-3-2
+* http://railscasts.com/episodes/285-spork
+* http://railscasts.com/episodes/324-passing-data-to-javascript
+* http://railscasts.com/episodes/334-compass-css-sprites

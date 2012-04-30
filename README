@@ -1,1 +1,11 @@
 Ruby on Rails Bootcamp
+
+
+NOTES
+
+* To generate the pygmentize css:
+  pygmentize -S default -f html -a .highlight > style.css
+
+* The rst2html-pygments script came from here:
+  http://docutils.sourceforge.net/sandbox/code-block-directive/data/rst2html-pygments
+
