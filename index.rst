@@ -58,6 +58,36 @@ Introduction
   * RubyMine
   * NotePad++
 
+Part 0 - Linux/Unix
+====================================
+* Important differences between Unix and Windows:
+
+  * file names are case sensitive, so a directory can contain two files named "Bob" and "bob".
+  * there is notion of drive C:, D:, etc. The directory tree has a single root, and it looks like this:
+
+    * **/bin** - basic shell commands (ls, mv, cp, mkdir, ...)
+    * **/sbin** - hardcore system binaries (file system stuff, low-level hardware management, ...)
+    * **/lib** - low-level libraries (kernel modules, ...)
+    * **/dev** - ??? (how to explain...)
+    * **/proc** - ??? (how to explain...)
+    * **/var** - cache, logs, etc...
+    * **/tmp** - temporary files
+    * **/home** - contains the home directories of each user:
+      
+      * when logged in as the user "bob", the environment variable $HOME will usually be "/home/bob"
+      * the home directory can be referenced using the tilda (~) symbol, so running::
+       
+            cd ~/projects/myproject
+
+        will change the current directory to */home/bob/projects/myproject*
+
+
+
+* Important commands:
+
+  * ``ls`` - shows a list of the files in the current directory
+  * ``cd /path/to/other/directory`` - 
+
 Part 1 - The Ruby Language
 ==========================
 

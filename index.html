@@ -21,33 +21,34 @@ and want to learn.</p>
 <ul class="simple">
 <li><a class="reference internal" href="#schedule" id="id1">Schedule</a></li>
 <li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
-<li><a class="reference internal" href="#part-1-the-ruby-language" id="id3">Part 1 - The Ruby Language</a><ul>
-<li><a class="reference internal" href="#exercise-1-1" id="id4">Exercise #1.1</a></li>
-<li><a class="reference internal" href="#exercise-1-2" id="id5">Exercise #1.2</a></li>
-<li><a class="reference internal" href="#exercise-1-3" id="id6">Exercise #1.3</a></li>
+<li><a class="reference internal" href="#part-0-linux-unix" id="id3">Part 0 - Linux/Unix</a></li>
+<li><a class="reference internal" href="#part-1-the-ruby-language" id="id4">Part 1 - The Ruby Language</a><ul>
+<li><a class="reference internal" href="#exercise-1-1" id="id5">Exercise #1.1</a></li>
+<li><a class="reference internal" href="#exercise-1-2" id="id6">Exercise #1.2</a></li>
+<li><a class="reference internal" href="#exercise-1-3" id="id7">Exercise #1.3</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-2-ruby-gems" id="id7">Part 2 - Ruby Gems</a><ul>
-<li><a class="reference internal" href="#exercise-2" id="id8">Exercise 2</a></li>
+<li><a class="reference internal" href="#part-2-ruby-gems" id="id8">Part 2 - Ruby Gems</a><ul>
+<li><a class="reference internal" href="#exercise-2" id="id9">Exercise 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-3-debugging" id="id9">Part 3 - Debugging</a></li>
-<li><a class="reference internal" href="#part-4-active-record" id="id10">Part 4 - Active Record</a><ul>
-<li><a class="reference internal" href="#exercise-4" id="id11">Exercise 4</a></li>
+<li><a class="reference internal" href="#part-3-debugging" id="id10">Part 3 - Debugging</a></li>
+<li><a class="reference internal" href="#part-4-active-record" id="id11">Part 4 - Active Record</a><ul>
+<li><a class="reference internal" href="#exercise-4" id="id12">Exercise 4</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-5-rspec-tdd" id="id12">Part 5 - RSpec (TDD)</a><ul>
-<li><a class="reference internal" href="#exercise-5" id="id13">Exercise 5</a></li>
+<li><a class="reference internal" href="#part-5-rspec-tdd" id="id13">Part 5 - RSpec (TDD)</a><ul>
+<li><a class="reference internal" href="#exercise-5" id="id14">Exercise 5</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-6-rails" id="id14">Part 6 - Rails</a><ul>
-<li><a class="reference internal" href="#exercise-6" id="id15">Exercise 6</a></li>
+<li><a class="reference internal" href="#part-6-rails" id="id15">Part 6 - Rails</a><ul>
+<li><a class="reference internal" href="#exercise-6" id="id16">Exercise 6</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mess" id="id16">Mess</a><ul>
-<li><a class="reference internal" href="#todo" id="id17">Todo</a></li>
-<li><a class="reference internal" href="#online-tutorials" id="id18">Online tutorials</a></li>
-<li><a class="reference internal" href="#screencasts" id="id19">Screencasts</a></li>
+<li><a class="reference internal" href="#mess" id="id17">Mess</a><ul>
+<li><a class="reference internal" href="#todo" id="id18">Todo</a></li>
+<li><a class="reference internal" href="#online-tutorials" id="id19">Online tutorials</a></li>
+<li><a class="reference internal" href="#screencasts" id="id20">Screencasts</a></li>
 </ul>
 </li>
 </ul>
@@ -128,8 +129,55 @@ Ruby Version Manager - allows running multiple versions of Ruby on the same mach
 </li>
 </ul>
 </div>
+<div class="section" id="part-0-linux-unix">
+<h1><a class="toc-backref" href="#id3">Part 0 - Linux/Unix</a></h1>
+<ul>
+<li><p class="first">Important differences between Unix and Windows:</p>
+<ul>
+<li><p class="first">file names are case sensitive, so a directory can contain two files named &quot;Bob&quot; and &quot;bob&quot;.</p>
+</li>
+<li><p class="first">there is notion of drive C:, D:, etc. The directory tree has a single root, and it looks like this:</p>
+<ul>
+<li><p class="first"><strong>/bin</strong> - basic shell commands (ls, mv, cp, mkdir, ...)</p>
+</li>
+<li><p class="first"><strong>/sbin</strong> - hardcore system binaries (file system stuff, low-level hardware management, ...)</p>
+</li>
+<li><p class="first"><strong>/lib</strong> - low-level libraries (kernel modules, ...)</p>
+</li>
+<li><p class="first"><strong>/dev</strong> - ??? (how to explain...)</p>
+</li>
+<li><p class="first"><strong>/proc</strong> - ??? (how to explain...)</p>
+</li>
+<li><p class="first"><strong>/var</strong> - cache, logs, etc...</p>
+</li>
+<li><p class="first"><strong>/tmp</strong> - temporary files</p>
+</li>
+<li><p class="first"><strong>/home</strong> - contains the home directories of each user:</p>
+<ul>
+<li><p class="first">when logged in as the user &quot;bob&quot;, the environment variable $HOME will usually be &quot;/home/bob&quot;</p>
+</li>
+<li><p class="first">the home directory can be referenced using the tilda (~) symbol, so running:</p>
+<pre class="literal-block">
+cd ~/projects/myproject
+</pre>
+<p>will change the current directory to <em>/home/bob/projects/myproject</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Important commands:</p>
+<ul class="simple">
+<li><tt class="docutils literal">ls</tt> - shows a list of the files in the current directory</li>
+<li><tt class="docutils literal">cd /path/to/other/directory</tt> -</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="part-1-the-ruby-language">
-<h1><a class="toc-backref" href="#id3">Part 1 - The Ruby Language</a></h1>
+<h1><a class="toc-backref" href="#id4">Part 1 - The Ruby Language</a></h1>
 <ul class="simple">
 <li>Read the Ruby Language QuickStart:
 <a class="reference external" href="http://www.ruby-lang.org/en/documentation/quickstart">Part 1</a>,
@@ -138,7 +186,7 @@ Ruby Version Manager - allows running multiple versions of Ruby on the same mach
 <a class="reference external" href="http://www.ruby-lang.org/en/documentation/quickstart/4">Part 4</a>.</li>
 </ul>
 <div class="section" id="exercise-1-1">
-<h2><a class="toc-backref" href="#id4">Exercise #1.1</a></h2>
+<h2><a class="toc-backref" href="#id5">Exercise #1.1</a></h2>
 <ul>
 <li><p class="first">Create the <cite>PizzaBurger</cite> application that will show this menu:</p>
 <pre class="literal-block">
@@ -218,7 +266,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-2">
-<h2><a class="toc-backref" href="#id5">Exercise #1.2</a></h2>
+<h2><a class="toc-backref" href="#id6">Exercise #1.2</a></h2>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/">Jamming with Ruby YAML</a> and
 <a class="reference external" href="http://rhnh.net/2006/06/25/yaml-tutorial">YAML Tutorial</a>.</li>
@@ -226,7 +274,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-3">
-<h2><a class="toc-backref" href="#id6">Exercise #1.3</a></h2>
+<h2><a class="toc-backref" href="#id7">Exercise #1.3</a></h2>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://ruby.about.com/od/rubyfeatures/a/hashes.htm">How to create and use Hashes in Ruby</a>.</li>
 <li>Modify exercise #1.2:<ul>
@@ -238,7 +286,7 @@ The order has been cancelled.
 </div>
 </div>
 <div class="section" id="part-2-ruby-gems">
-<h1><a class="toc-backref" href="#id7">Part 2 - Ruby Gems</a></h1>
+<h1><a class="toc-backref" href="#id8">Part 2 - Ruby Gems</a></h1>
 <ul>
 <li><p class="first">A gem is a ruby plugin</p>
 </li>
@@ -272,7 +320,7 @@ and simplify deployment of a rails app we use a tool called <em>Bundler</em>.</p
 </li>
 </ul>
 <div class="section" id="exercise-2">
-<h2><a class="toc-backref" href="#id8">Exercise 2</a></h2>
+<h2><a class="toc-backref" href="#id9">Exercise 2</a></h2>
 <ul class="simple">
 <li>Create a new folder</li>
 <li>Create a file called &quot;Gemfile&quot; and the following gems to it:<ul>
@@ -292,45 +340,45 @@ at the beginning of the file.</li>
 </div>
 </div>
 <div class="section" id="part-3-debugging">
-<h1><a class="toc-backref" href="#id9">Part 3 - Debugging</a></h1>
+<h1><a class="toc-backref" href="#id10">Part 3 - Debugging</a></h1>
 <ul class="simple">
 <li>Watch the <a class="reference external" href="http://railscasts.com/episodes/54-debugging-ruby-revised">Debugging ruby screencast</a>.</li>
 </ul>
 </div>
 <div class="section" id="part-4-active-record">
-<h1><a class="toc-backref" href="#id10">Part 4 - Active Record</a></h1>
+<h1><a class="toc-backref" href="#id11">Part 4 - Active Record</a></h1>
 <div class="section" id="exercise-4">
-<h2><a class="toc-backref" href="#id11">Exercise 4</a></h2>
+<h2><a class="toc-backref" href="#id12">Exercise 4</a></h2>
 <ul class="simple">
 <li>Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.</li>
 </ul>
 </div>
 </div>
 <div class="section" id="part-5-rspec-tdd">
-<h1><a class="toc-backref" href="#id12">Part 5 - RSpec (TDD)</a></h1>
+<h1><a class="toc-backref" href="#id13">Part 5 - RSpec (TDD)</a></h1>
 <div class="section" id="exercise-5">
-<h2><a class="toc-backref" href="#id13">Exercise 5</a></h2>
+<h2><a class="toc-backref" href="#id14">Exercise 5</a></h2>
 <ul class="simple">
 <li>Write tests for PizzaBurger</li>
 </ul>
 </div>
 </div>
 <div class="section" id="part-6-rails">
-<h1><a class="toc-backref" href="#id14">Part 6 - Rails</a></h1>
+<h1><a class="toc-backref" href="#id15">Part 6 - Rails</a></h1>
 <ul class="simple">
 <li>Read the &quot;Agile Web Developement with Rails&quot; book.</li>
 </ul>
 <div class="section" id="exercise-6">
-<h2><a class="toc-backref" href="#id15">Exercise 6</a></h2>
+<h2><a class="toc-backref" href="#id16">Exercise 6</a></h2>
 <ul class="simple">
 <li>Rewrite PizzaBurger as a web application</li>
 </ul>
 </div>
 </div>
 <div class="section" id="mess">
-<h1><a class="toc-backref" href="#id16">Mess</a></h1>
+<h1><a class="toc-backref" href="#id17">Mess</a></h1>
 <div class="section" id="todo">
-<h2><a class="toc-backref" href="#id17">Todo</a></h2>
+<h2><a class="toc-backref" href="#id18">Todo</a></h2>
 <ul class="simple">
 <li>Debugging</li>
 <li>Deployment</li>
@@ -342,14 +390,14 @@ at the beginning of the file.</li>
 </ul>
 </div>
 <div class="section" id="online-tutorials">
-<h2><a class="toc-backref" href="#id18">Online tutorials</a></h2>
+<h2><a class="toc-backref" href="#id19">Online tutorials</a></h2>
 <ol class="arabic simple">
 <li>first go over the exercises in TryRuby: <a class="reference external" href="http://tryruby.org/">http://tryruby.org/</a></li>
 <li>sign up (for free) in <a class="reference external" href="http://railsforzombies.org/">http://railsforzombies.org/</a> (it's a hands-on online course)</li>
 </ol>
 </div>
 <div class="section" id="screencasts">
-<h2><a class="toc-backref" href="#id19">Screencasts</a></h2>
+<h2><a class="toc-backref" href="#id20">Screencasts</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://railscasts.com/episodes/279-understanding-the-asset-pipeline">http://railscasts.com/episodes/279-understanding-the-asset-pipeline</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/318-upgrading-to-rails-3-2">http://railscasts.com/episodes/318-upgrading-to-rails-3-2</a></li>
