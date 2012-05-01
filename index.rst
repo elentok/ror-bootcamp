@@ -14,12 +14,12 @@ Schedule
 
 +----------+-----------------+----------------+-----------------+-------------------+------------------+
 | Week/Day |      Sunday     |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
++==========+=================+================+=================+===================+==================+
+| Week #1  | * Intro Lecture                                                                           |
+|          | * Part 1 (Ruby)                                                                           |
 +----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week #1  | * Intro Lecture                                                        | * Retro          |
-| (Ruby)   | * Exercise 1                                                           |                  |
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week #2  | * Intro Lecture                                                        | * Retro          |
-| (?????)  | * Exercise 1                                                           |                  |
+| Week #2  | * Part 2 (Gems) |                                                                         |
+|          |                 |                                                                         |
 +----------+-----------------+----------------+-----------------+-------------------+------------------+
 
 Introduction
@@ -61,7 +61,11 @@ Introduction
 Part 1 - The Ruby Language
 ==========================
 
-* Read the `Ruby Language QuickStart <http://www.ruby-lang.org/en/documentation/quickstart>`_
+* Read the Ruby Language QuickStart: 
+  `Part 1 <http://www.ruby-lang.org/en/documentation/quickstart>`_, 
+  `Part 2 <http://www.ruby-lang.org/en/documentation/quickstart/2>`_, 
+  `Part 3 <http://www.ruby-lang.org/en/documentation/quickstart/3>`_ and
+  `Part 4 <http://www.ruby-lang.org/en/documentation/quickstart/4>`_.
 
 Exercise #1.1
 -------------
@@ -136,6 +140,25 @@ Exercise #1.1
 * Override the ``to_s`` method for ``PizzaOrder`` and ``BurderOrder`` to display the details
 * Validate all of the user input, if invalid show error messages and ask to enter again.
 
+Exercise #1.2
+-------------
+
+* Read `Jamming with Ruby YAML <http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/>`_ and
+  `YAML Tutorial <http://rhnh.net/2006/06/25/yaml-tutorial>`_.
+
+* Enhance exercise #1.1 to store (and load) the orders to a yaml file.
+
+Exercise #1.3
+-------------
+
+* Read `How to create and use Hashes in Ruby <http://ruby.about.com/od/rubyfeatures/a/hashes.htm>`_.
+
+* Modify exercise #1.2:
+ 
+  * store the orders using a hash instead of an array (the key should be the phone number of person that ordered).
+  * add an option to search for orders by the phone number of the person who ordered.
+
+
 Part 2 - Ruby Gems
 ===================
 
@@ -155,17 +178,71 @@ Part 2 - Ruby Gems
       # (if you wish to use an offline repository, replace this url with your own)
       source 'http://rubygems.org'
 
-      # the rails gem is required
+      # this tells bundler to load the "rails" gem and all of its dependencies
       gem 'rails'
 
-      # gems that will only be required for development 
+      # these gems will only be required for development 
       # (when deploying a production environment these won't be loaded)
       group :development do
         gem 'debugger'
         gem 'guard-livereload'
       end
 
+* After creating the Gemfile, run the command ``bundle install`` to install the gems.
+
 * Watch the `bundler screencast <http://railscasts.com/episodes/201-bundler-revised>`_.
+
+Exercise 2
+----------
+
+* Create a new folder
+* Create a file called "Gemfile" and the following gems to it:
+
+  * rails
+  * rspec-rails
+  * debugger
+
+* Run ``bundle install``, you should see "Your bundle is complete! ..."
+
+**Notes:**
+
+* If it complains that there is no source, then add the source line (``source 'url-for-gem-server'``)
+  at the beginning of the file.
+
+* You can run a local gem server by running ``gem server`` in a terminal (the url for this server will be *http://localhost:8808*).
+
+Part 3 - Debugging
+==================
+
+* Watch the `Debugging ruby screencast <http://railscasts.com/episodes/54-debugging-ruby-revised>`_.
+
+
+Part 4 - Active Record
+======================
+
+Exercise 4
+----------
+
+* Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.
+
+Part 5 - RSpec (TDD)
+====================
+
+Exercise 5
+----------
+
+* Write tests for PizzaBurger
+
+
+Part 6 - Rails
+==============
+
+* Read the "Agile Web Developement with Rails" book.
+
+Exercise 6
+----------
+
+* Rewrite PizzaBurger as a web application
 
 Mess
 ==============
