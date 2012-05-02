@@ -54,3 +54,7 @@ table {
     margin: 0;
     padding-left: 20px;
   }
+
+tt.literal {
+  background-color: #eee;
+}

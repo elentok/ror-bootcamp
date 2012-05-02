@@ -62,8 +62,8 @@ Part 0 - Linux/Unix
 ====================================
 * Important differences between Unix and Windows:
 
-  * file names are case sensitive, so a directory can contain two files named "Bob" and "bob".
-  * there is notion of drive C:, D:, etc. The directory tree has a single root, and it looks like this:
+  1. file names are case sensitive, so a directory can contain two files named "Bob" and "bob".
+  2. there is notion of drive C:, D:, etc. The directory tree has a single root, and it looks like this:
 
     * **/bin** - basic shell commands (ls, mv, cp, mkdir, ...)
     * **/sbin** - hardcore system binaries (file system stuff, low-level hardware management, ...)
@@ -81,12 +81,51 @@ Part 0 - Linux/Unix
 
         will change the current directory to */home/bob/projects/myproject*
 
+  3. file system permissions:
+    
+    * each file is owned by a user
+    * each file belongs to a group
+    * there are 3 types of permissions:
+      
+      * read (r)
+      * write (w)
+      * execute (x)
+
+        * when a file is set as executable you can run it by typing ``./filename`` in the terminal
+        * when a directory is set as executable you can open it and see its contents
+
+    * these three permissions are defined for these three entities:
+
+      * owner - the user that owns this file
+      * group - the group this file belongs to
+      * other - all other users
+
+    * you can see the permissions of a file by running ``ls -l``
+    * if I run ``ls -l`` on this document's directory I will get the following::
+
+        drwxrwxr-x 2 david david  4096 Apr 29 16:07 exercises
+        -rw-rw-r-- 1 david david   720 Apr 30 09:24 Guardfile
+        -rw-rw-r-- 1 david david 18493 May  2 09:48 index.html
+        -rw-rw-r-- 1 david david 10212 May  2 09:48 index.rst
+        -rw-rw-r-- 1 david david   259 Apr 30 09:19 README
+        -rwxrwxr-x 1 david david  2089 Apr 30 09:16 rst2html-pygments.py
+        drwxrwxr-x 2 david david  4096 May  1 16:53 style
+
+      these are the permissions on the "index.rst" file are "-rw-rw-r--":
+
+      * the owner (david) can read and write it
+      * the group (david) can read and write it (yes, the group is also called "david", 
+        when installing Ubuntu it automatically creates a user and a group by the same name).
+      * other users can only read it
+
 
 
 * Important commands:
 
   * ``ls`` - shows a list of the files in the current directory
-  * ``cd /path/to/other/directory`` - 
+  * ``cd /path/to/other/directory`` - changes the current directory
+  * ``pwd`` - shows the current directory
+
 
 Part 1 - The Ruby Language
 ==========================
