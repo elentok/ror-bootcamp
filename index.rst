@@ -12,15 +12,30 @@ The purpose of this document is to guide people who want to learn RoR through th
 Schedule
 =========
 
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week/Day |      Sunday     |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
-+==========+=================+================+=================+===================+==================+
-| Week #1  | * Intro Lecture                                                                           |
-|          | * Part 1 (Ruby)                                                                           |
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
-| Week #2  | * Part 2 (Gems) |                                                                         |
-|          |                 |                                                                         |
-+----------+-----------------+----------------+-----------------+-------------------+------------------+
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week/Day |      Sunday          |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
++==========+======================+================+=================+===================+==================+
+| Week #1  | * Intro Lecture                                                                                |
+|          | * Part 1 (Ruby)                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #2  | * Part 2 (Gems)      | Part 4 (Active Record)                                                  |
+|          | * Part 3 (Debugging) |                                                                         |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #3  | Part 5 (RSpec)                                                                                 |
+|          |                                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #4  | Part 6 (Rails) - Read the "Agile Web Development with Rails" book and do the exercises.        |
+|          |                                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #6  | Exercise 6.1                                                                                   |
+|          |                                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #7  | Exercise 6.2                                                                                   |
+|          |                                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
+| Week #8  | Exercise 6.3                                                                                   |
+|          |                                                                                                |
++----------+----------------------+----------------+-----------------+-------------------+------------------+
 
 Introduction
 ============
@@ -65,14 +80,22 @@ Part 0 - Linux/Unix
   1. file names are case sensitive, so a directory can contain two files named "Bob" and "bob".
   2. there is notion of drive C:, D:, etc. The directory tree has a single root, and it looks like this:
 
-    * **/bin** - basic shell commands (ls, mv, cp, mkdir, ...)
-    * **/sbin** - hardcore system binaries (file system stuff, low-level hardware management, ...)
-    * **/lib** - low-level libraries (kernel modules, ...)
-    * **/dev** - ??? (how to explain...)
-    * **/proc** - ??? (how to explain...)
-    * **/var** - cache, logs, etc...
-    * **/tmp** - temporary files
-    * **/home** - contains the home directories of each user:
+    * ``/bin`` - basic shell commands (ls, mv, cp, mkdir, ...)
+    * ``/sbin`` - hardcore system binaries (file system stuff, low-level hardware management, ...)
+    * ``/lib`` - low-level libraries (kernel modules, ...)
+    * ``/dev`` - ??? (how to explain...)
+    * ``/proc`` - ??? (how to explain...)
+    * ``/var`` - cache, logs, etc...
+    * ``/tmp`` - temporary files
+    * ``/usr`` - application-level
+      
+      * ``/usr/bin`` - application binaries
+      * ``/usr/lib`` - application libraries
+      * ``/usr/share`` - application resources
+
+        * ``/usr/share/doc`` - application documentation
+      
+    * ``/home`` - contains the home directories of each user:
       
       * when logged in as the user "bob", the environment variable $HOME will usually be "/home/bob"
       * the home directory can be referenced using the tilda (~) symbol, so running::
@@ -118,13 +141,43 @@ Part 0 - Linux/Unix
         when installing Ubuntu it automatically creates a user and a group by the same name).
       * other users can only read it
 
+    * sometimes you might see permissions written using 3 digits, like 754:
+
+      * each digit is actually the sum of the following:
+
+        * executable = 1
+        * writeable = 2
+        * readable = 4
+
+      * the 1st digit is the user permissions
+      * the 2st digit is the group permissions
+      * the 3st digit is the permissions for all other users
+
+      * so 754 means:
+        
+        * read/write/execute-able by the user (7=1+2+4)
+        * read/execute-able by the group (5=1+4)
+        * readable by other users (4)
+
 
 
 * Important commands:
 
+  * To see help for a command just run "``name-of-command --help``"
   * ``ls`` - shows a list of the files in the current directory
   * ``cd /path/to/other/directory`` - changes the current directory
   * ``pwd`` - shows the current directory
+  * ``chmod`` - changes the permissions on a file, examples:
+
+    * ``chmod u=rwx myfile`` - make myfile read/write/execute-able by the owning user
+    * ``chmod g=rx myfile`` - make myfile read/execute-able by the group
+    * ``chmod o=r myfile`` - make myfile readable by all other users
+    * ``chmod -R u=rwx mydir`` - make mydir and all of its contents (files and directories) 
+      read/write/execute-able by the owning user.
+
+  * ``rm file`` - delete a file
+
+    * ``rm -R dir`` - delete a directory and all of its contents
 
 
 Part 1 - The Ruby Language
@@ -306,7 +359,8 @@ Exercise 5
 Part 6 - Rails
 ==============
 
-* Read the "Agile Web Developement with Rails" book.
+* Read the "Agile Web Developement with Rails" book and do the exercises.
+* Watch the `Understanding the Asset Pipeline screencast <http://railscasts.com/episodes/279-understanding-the-asset-pipeline>`_.
 
 Exercise 6
 ----------
@@ -316,25 +370,13 @@ Exercise 6
 Mess
 ==============
 
-Todo
--------
-
-* Debugging
-* Deployment
-* Stuff in Ruby that confuses new programmers:
-
-  * blocks
-  * => vs :
-
-
 Online tutorials
 -------------------
-1. first go over the exercises in TryRuby: http://tryruby.org/
-2. sign up (for free) in http://railsforzombies.org/ (it's a hands-on online course)
+1. TryRuby: http://tryruby.org/
+2. http://railsforzombies.org/ (it's a hands-on online course)
 
 Screencasts
 -----------
-* http://railscasts.com/episodes/279-understanding-the-asset-pipeline
 * http://railscasts.com/episodes/318-upgrading-to-rails-3-2
 * http://railscasts.com/episodes/285-spork
 * http://railscasts.com/episodes/324-passing-data-to-javascript

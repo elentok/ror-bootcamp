@@ -46,9 +46,8 @@ and want to learn.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#mess" id="id17">Mess</a><ul>
-<li><a class="reference internal" href="#todo" id="id18">Todo</a></li>
-<li><a class="reference internal" href="#online-tutorials" id="id19">Online tutorials</a></li>
-<li><a class="reference internal" href="#screencasts" id="id20">Screencasts</a></li>
+<li><a class="reference internal" href="#online-tutorials" id="id18">Online tutorials</a></li>
+<li><a class="reference internal" href="#screencasts" id="id19">Screencasts</a></li>
 </ul>
 </li>
 </ul>
@@ -58,11 +57,11 @@ and want to learn.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
-<col width="18%" />
+<col width="22%" />
 <col width="16%" />
-<col width="18%" />
-<col width="20%" />
+<col width="17%" />
 <col width="19%" />
+<col width="18%" />
 </colgroup>
 <thead valign="bottom">
 <tr><th class="head">Week/Day</th>
@@ -84,9 +83,25 @@ and want to learn.</p>
 <tr><td>Week #2</td>
 <td><ul class="first last simple">
 <li>Part 2 (Gems)</li>
+<li>Part 3 (Debugging)</li>
 </ul>
 </td>
-<td colspan="4">&nbsp;</td>
+<td colspan="4">Part 4 (Active Record)</td>
+</tr>
+<tr><td>Week #3</td>
+<td colspan="5">Part 5 (RSpec)</td>
+</tr>
+<tr><td>Week #4</td>
+<td colspan="5">Part 6 (Rails) - Read the &quot;Agile Web Development with Rails&quot; book and do the exercises.</td>
+</tr>
+<tr><td>Week #6</td>
+<td colspan="5">Exercise 6.1</td>
+</tr>
+<tr><td>Week #7</td>
+<td colspan="5">Exercise 6.2</td>
+</tr>
+<tr><td>Week #8</td>
+<td colspan="5">Exercise 6.3</td>
 </tr>
 </tbody>
 </table>
@@ -139,21 +154,31 @@ Ruby Version Manager - allows running multiple versions of Ruby on the same mach
 </ol>
 <blockquote>
 <ul>
-<li><p class="first"><strong>/bin</strong> - basic shell commands (ls, mv, cp, mkdir, ...)</p>
+<li><p class="first"><tt class="docutils literal">/bin</tt> - basic shell commands (ls, mv, cp, mkdir, ...)</p>
 </li>
-<li><p class="first"><strong>/sbin</strong> - hardcore system binaries (file system stuff, low-level hardware management, ...)</p>
+<li><p class="first"><tt class="docutils literal">/sbin</tt> - hardcore system binaries (file system stuff, low-level hardware management, ...)</p>
 </li>
-<li><p class="first"><strong>/lib</strong> - low-level libraries (kernel modules, ...)</p>
+<li><p class="first"><tt class="docutils literal">/lib</tt> - low-level libraries (kernel modules, ...)</p>
 </li>
-<li><p class="first"><strong>/dev</strong> - ??? (how to explain...)</p>
+<li><p class="first"><tt class="docutils literal">/dev</tt> - ??? (how to explain...)</p>
 </li>
-<li><p class="first"><strong>/proc</strong> - ??? (how to explain...)</p>
+<li><p class="first"><tt class="docutils literal">/proc</tt> - ??? (how to explain...)</p>
 </li>
-<li><p class="first"><strong>/var</strong> - cache, logs, etc...</p>
+<li><p class="first"><tt class="docutils literal">/var</tt> - cache, logs, etc...</p>
 </li>
-<li><p class="first"><strong>/tmp</strong> - temporary files</p>
+<li><p class="first"><tt class="docutils literal">/tmp</tt> - temporary files</p>
 </li>
-<li><p class="first"><strong>/home</strong> - contains the home directories of each user:</p>
+<li><p class="first"><tt class="docutils literal">/usr</tt> - application-level</p>
+<ul class="simple">
+<li><tt class="docutils literal">/usr/bin</tt> - application binaries</li>
+<li><tt class="docutils literal">/usr/lib</tt> - application libraries</li>
+<li><tt class="docutils literal">/usr/share</tt> - application resources<ul>
+<li><tt class="docutils literal">/usr/share/doc</tt> - application documentation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><tt class="docutils literal">/home</tt> - contains the home directories of each user:</p>
 <ul>
 <li><p class="first">when logged in as the user &quot;bob&quot;, the environment variable $HOME will usually be &quot;/home/bob&quot;</p>
 </li>
@@ -214,14 +239,46 @@ when installing Ubuntu it automatically creates a user and a group by the same n
 <li>other users can only read it</li>
 </ul>
 </li>
+<li><p class="first">sometimes you might see permissions written using 3 digits, like 754:</p>
+<ul class="simple">
+<li>each digit is actually the sum of the following:<ul>
+<li>executable = 1</li>
+<li>writeable = 2</li>
+<li>readable = 4</li>
+</ul>
+</li>
+<li>the 1st digit is the user permissions</li>
+<li>the 2st digit is the group permissions</li>
+<li>the 3st digit is the permissions for all other users</li>
+<li>so 754 means:<ul>
+<li>read/write/execute-able by the user (7=1+2+4)</li>
+<li>read/execute-able by the group (5=1+4)</li>
+<li>readable by other users (4)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 </li>
 <li><p class="first">Important commands:</p>
 <ul class="simple">
+<li>To see help for a command just run &quot;<tt class="docutils literal"><span class="pre">name-of-command</span> <span class="pre">--help</span></tt>&quot;</li>
 <li><tt class="docutils literal">ls</tt> - shows a list of the files in the current directory</li>
 <li><tt class="docutils literal">cd /path/to/other/directory</tt> - changes the current directory</li>
 <li><tt class="docutils literal">pwd</tt> - shows the current directory</li>
+<li><tt class="docutils literal">chmod</tt> - changes the permissions on a file, examples:<ul>
+<li><tt class="docutils literal">chmod u=rwx myfile</tt> - make myfile read/write/execute-able by the owning user</li>
+<li><tt class="docutils literal">chmod g=rx myfile</tt> - make myfile read/execute-able by the group</li>
+<li><tt class="docutils literal">chmod o=r myfile</tt> - make myfile readable by all other users</li>
+<li><tt class="docutils literal">chmod <span class="pre">-R</span> u=rwx mydir</tt> - make mydir and all of its contents (files and directories)
+read/write/execute-able by the owning user.</li>
+</ul>
+</li>
+<li><tt class="docutils literal">rm file</tt> - delete a file<ul>
+<li><tt class="docutils literal">rm <span class="pre">-R</span> dir</tt> - delete a directory and all of its contents</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -416,7 +473,8 @@ at the beginning of the file.</li>
 <div class="section" id="part-6-rails">
 <h1><a class="toc-backref" href="#id15">Part 6 - Rails</a></h1>
 <ul class="simple">
-<li>Read the &quot;Agile Web Developement with Rails&quot; book.</li>
+<li>Read the &quot;Agile Web Developement with Rails&quot; book and do the exercises.</li>
+<li>Watch the <a class="reference external" href="http://railscasts.com/episodes/279-understanding-the-asset-pipeline">Understanding the Asset Pipeline screencast</a>.</li>
 </ul>
 <div class="section" id="exercise-6">
 <h2><a class="toc-backref" href="#id16">Exercise 6</a></h2>
@@ -427,29 +485,16 @@ at the beginning of the file.</li>
 </div>
 <div class="section" id="mess">
 <h1><a class="toc-backref" href="#id17">Mess</a></h1>
-<div class="section" id="todo">
-<h2><a class="toc-backref" href="#id18">Todo</a></h2>
-<ul class="simple">
-<li>Debugging</li>
-<li>Deployment</li>
-<li>Stuff in Ruby that confuses new programmers:<ul>
-<li>blocks</li>
-<li>=&gt; vs :</li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="section" id="online-tutorials">
-<h2><a class="toc-backref" href="#id19">Online tutorials</a></h2>
+<h2><a class="toc-backref" href="#id18">Online tutorials</a></h2>
 <ol class="arabic simple">
-<li>first go over the exercises in TryRuby: <a class="reference external" href="http://tryruby.org/">http://tryruby.org/</a></li>
-<li>sign up (for free) in <a class="reference external" href="http://railsforzombies.org/">http://railsforzombies.org/</a> (it's a hands-on online course)</li>
+<li>TryRuby: <a class="reference external" href="http://tryruby.org/">http://tryruby.org/</a></li>
+<li><a class="reference external" href="http://railsforzombies.org/">http://railsforzombies.org/</a> (it's a hands-on online course)</li>
 </ol>
 </div>
 <div class="section" id="screencasts">
-<h2><a class="toc-backref" href="#id20">Screencasts</a></h2>
+<h2><a class="toc-backref" href="#id19">Screencasts</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://railscasts.com/episodes/279-understanding-the-asset-pipeline">http://railscasts.com/episodes/279-understanding-the-asset-pipeline</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/318-upgrading-to-rails-3-2">http://railscasts.com/episodes/318-upgrading-to-rails-3-2</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/285-spork">http://railscasts.com/episodes/285-spork</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/324-passing-data-to-javascript">http://railscasts.com/episodes/324-passing-data-to-javascript</a></li>
