@@ -23,6 +23,7 @@ section.active {
 
 h1, h2, h3 {
   text-align: center;
+  font-weight: normal;
 }
 
 h1 {
@@ -47,4 +48,8 @@ h3 {
   -webkit-opacity: 0.7;
   color: #ccc;
   font-size: 60%;
+}
+
+pre {
+  font-size: 120%;
 }

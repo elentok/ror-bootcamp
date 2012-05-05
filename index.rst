@@ -43,6 +43,8 @@ Schedule
 Introduction
 ============
 
+* Watch the `introduction lecture <intro.html>`_.
+
 * What is Ruby? 
 
   * Ruby is a dynamic, interpreted, open source language.

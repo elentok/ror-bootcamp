@@ -17,16 +17,44 @@
       var _this = this;
       this.pages = $('section');
       this.pager = $('#pager');
-      this.select(this.pages.first());
+      this.autoSelectByHash();
       $(window).keydown(function(e) {
         var _ref, _ref1;
+        if (e.altKey) {
+          return;
+        }
         if ((_ref = e.keyCode) === Keys.up || _ref === Keys.left) {
           return _this.prev();
         } else if ((_ref1 = e.keyCode) === Keys.down || _ref1 === Keys.right) {
           return _this.next();
         }
       });
+      $(window).click(function(e) {
+        return console.log(e);
+      });
+      $(window).bind('touchstart', function(e) {
+        var width, x;
+        x = e.originalEvent.touches[0].pageX;
+        width = $(document).width();
+        if (x <= 0.2 * width) {
+          return _this.prev();
+        } else if (x >= 0.8 * width) {
+          return _this.next();
+        }
+      });
     }
+
+    Presentation.prototype.autoSelectByHash = function() {
+      var url_index;
+      url_index = document.location.hash.substring(1);
+      console.log("URL INDEX = " + url_index);
+      if (url_index.length > 0) {
+        url_index = parseInt(url_index, 10);
+        return this.select(this.pages.eq(url_index - 1));
+      } else {
+        return this.select(this.pages.first());
+      }
+    };
 
     Presentation.prototype.next = function() {
       var next;
@@ -45,7 +73,6 @@
       if (prev.length === 0) {
         prev = this.pages.last();
       }
-      console.log(prev);
       if (prev.length > 0) {
         return this.select(prev);
       }
@@ -58,7 +85,10 @@
       }
       this.active = page.addClass('active');
       index = this.pages.index(this.active);
-      return this.pager.html("" + (index + 1) + " of " + this.pages.length);
+      this.pager.html("" + (index + 1) + " of " + this.pages.length);
+      return window.history.replaceState({
+        index: index + 1
+      }, "Page " + (index + 1), "#" + (index + 1));
     };
 
     return Presentation;
