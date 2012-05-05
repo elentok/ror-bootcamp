@@ -84,7 +84,36 @@ Course
 The Ruby Language
 -----------------
 
+Notes for the demonstration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+* Interpreter (IRB and Pry)
+* How to create and run a ruby script
+* String helper methods
+* `Symbols <http://www.troubleshooters.com/codecorn/ruby/symbols.htm>`_ - performance,
+  comparing symbols is faster than comparing strings.
+* Classes
+
+  * Instance Variables
+  * Instance Methods
+  * Class Methods
+  * attr_accessor
+  * attr_reader/writer
+  * extend integer
+
+    .. code-block:: ruby
+
+        class Integer
+          def square
+            self * self
+          end
+        end
+
+* Arrays
+* Loops (each/for/loop/range)
+
+Reading Material
+~~~~~~~~~~~~~~~~
 * Read the Ruby Language QuickStart: 
   `Part 1 <http://www.ruby-lang.org/en/documentation/quickstart>`_, 
   `Part 2 <http://www.ruby-lang.org/en/documentation/quickstart/2>`_, 
