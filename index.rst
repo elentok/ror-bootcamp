@@ -131,7 +131,7 @@ Exercise #1.1
     1. Order a pizza
     2. Order a burger
     3. List all orders
-    4. Cancel and order
+    4. Cancel an order
     0. Exit
 
 * Pressing **1** will ask the user::
