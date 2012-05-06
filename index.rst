@@ -84,8 +84,8 @@ Course
 The Ruby Language
 -----------------
 
-Notes for the demonstration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Demonstration #1
+~~~~~~~~~~~~~~~~
 
 * Interpreter (IRB and Pry)
 * How to create and run a ruby script
@@ -224,8 +224,69 @@ Exercise #1.3
 * store only the phone number in the orders
 * store the clients in a hash inside the PizzaBurger class
 
+Demonstration #2
+~~~~~~~~~~~~~~~~
+
+* method argument starting with "*"
+* Arrays/Hashes: min/max/group_by
+* Singleton Pattern
+* Modules and Classes
+* Include and Extend
+* missing_method
+* Show `How and why to avoid nil <https://www.destroyallsoftware.com/screencasts/catalog/how-and-why-to-avoid-nil>`_
+
+Exercise #1.4
+~~~~~~~~~~~~~
+
+* Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_
+* Convert PizzaBurger to a singleton using the Module technique
+
+Exercise #1.5
+~~~~~~~~~~~~~
+
+* Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_
+* Convert PizzaBurger to a singleton using the Ruby Singleton module technique
+
+Exercise #1.6
+~~~~~~~~~~~~~
+
+* Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_
+* Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_
+* Move the save/load to yaml code to a class named ``PizzaBurgerData``
+  with two methods: 
+
+  * ``initialize`` - loads from yaml (if it exists)
+  * ``save`` - saves to yaml
+
+* Use ``missing_method`` to allow accessing values in the hash directly
+
+  .. code-block:: ruby
+    
+      data = PizzaBurgerData.new
+      data.orders # will return @hash[:orders]
+
+
+Exercise #1.7
+~~~~~~~~~~~~~~~~~~~
+
+* Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_
+* Implement your own version attr_accessor
+* Implement your own version class_attr_accessor
+  (same as attr_accessor but creates a static property)
+
 Ruby Gems
 ------------------
+
+Demonstration
+~~~~~~~~~~~~~
+
+* install a gem
+* create a Gemfile
+* run bundle install
+* use Gemfile groups
+
+Read
+~~~~
 
 * A gem is a ruby plugin
 * To install a single gem::
