@@ -205,12 +205,24 @@ Exercise #1.3
 ~~~~~~~~~~~~~
 
 * Read `How to create and use Hashes in Ruby <http://ruby.about.com/od/rubyfeatures/a/hashes.htm>`_.
-
-* Modify exercise #1.2:
  
-  * store the orders using a hash instead of an array (the key should be the phone number of person that ordered).
-  * add an option to search for orders by the phone number of the person who ordered.
+* add the following option to the menu::
 
+      5. List all clients
+
+* add a new class: ``Client`` with three attributes:
+  
+  * name
+  * phone
+  * address
+
+* when ordering a pizza or a burger, ask for the phone number first
+
+  * if it doesn't exist, ask for the client's phone and address
+  * if it does exist, say "Welcome back {client's name}"
+
+* store only the phone number in the orders
+* store the clients in a hash inside the PizzaBurger class
 
 Ruby Gems
 ------------------

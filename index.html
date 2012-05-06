@@ -303,12 +303,30 @@ The order has been cancelled.
 </div>
 <div class="section" id="exercise-1-3">
 <h3><a class="toc-backref" href="#id9">3.1.5.&nbsp;&nbsp;&nbsp;Exercise #1.3</a></h3>
+<ul>
+<li><p class="first">Read <a class="reference external" href="http://ruby.about.com/od/rubyfeatures/a/hashes.htm">How to create and use Hashes in Ruby</a>.</p>
+</li>
+<li><p class="first">add the following option to the menu:</p>
+<pre class="literal-block">
+5. List all clients
+</pre>
+</li>
+<li><p class="first">add a new class: <tt class="docutils literal">Client</tt> with three attributes:</p>
 <ul class="simple">
-<li>Read <a class="reference external" href="http://ruby.about.com/od/rubyfeatures/a/hashes.htm">How to create and use Hashes in Ruby</a>.</li>
-<li>Modify exercise #1.2:<ul>
-<li>store the orders using a hash instead of an array (the key should be the phone number of person that ordered).</li>
-<li>add an option to search for orders by the phone number of the person who ordered.</li>
+<li>name</li>
+<li>phone</li>
+<li>address</li>
 </ul>
+</li>
+<li><p class="first">when ordering a pizza or a burger, ask for the phone number first</p>
+<ul class="simple">
+<li>if it doesn't exist, ask for the client's phone and address</li>
+<li>if it does exist, say &quot;Welcome back {client's name}&quot;</li>
+</ul>
+</li>
+<li><p class="first">store only the phone number in the orders</p>
+</li>
+<li><p class="first">store the clients in a hash inside the PizzaBurger class</p>
 </li>
 </ul>
 </div>
