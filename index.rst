@@ -16,30 +16,33 @@ The purpose of this document is to guide people who want to learn RoR through th
 Schedule
 =========
 
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week/Day |      Sunday          |     Monday     |     Tuesday     |     Wednesday     |     Thursday     |
-+==========+======================+================+=================+===================+==================+
-| Week #1  | * Intro Lecture                                                                                |
-|          | * Part 1 (Ruby)                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #2  | * Part 2 (Gems)      | Part 4 (Active Record)                                                  |
-|          | * Part 3 (Debugging) |                                                                         |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #3  | Part 5 (RSpec)                                                                                 |
-|          |                                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #4  | Part 6 (Rails) - Read the "Agile Web Development with Rails" book and do the exercises.        |
-|          |                                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #6  | Exercise 6.1                                                                                   |
-|          |                                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #7  | Exercise 6.2                                                                                   |
-|          |                                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
-| Week #8  | Exercise 6.3                                                                                   |
-|          |                                                                                                |
-+----------+----------------------+----------------+-----------------+-------------------+------------------+
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week/Day |      Sunday          |     Monday     |     Tuesday          |     Wednesday     |     Thursday     |
++==========+======================+================+======================+===================+==================+
+| Week #1  | * Intro Lecture                       | * Part 2 (Gems)      | Part 4 (Active Record)               |
+|          | * Part 1 (Ruby)                       | * Part 3 (Debugging) |                                      |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #2  | More ActiveRecord                                                                                   |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #3  | Part 5 (Rspec)                                                                                      |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #4  | Part 6 (Rails)                                                                                      |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #5  | Exercise 6.2                                                                                        |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #6  | Exercise 6.3                                                                                        |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #7  | Exercise 6.4                                                                                        |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
+| Week #8  | Exercise 6.5                                                                                        |
+|          |                                                                                                     |
++----------+----------------------+----------------+----------------------+-------------------+------------------+
 
 Introduction
 ============
@@ -121,7 +124,7 @@ Reading Material
   `Part 3 <http://www.ruby-lang.org/en/documentation/quickstart/3>`_ and
   `Part 4 <http://www.ruby-lang.org/en/documentation/quickstart/4>`_.
 
-Exercise #1.1
+Exercise 1.1
 ~~~~~~~~~~~~~
 
 * Create the `PizzaBurger` application that will show this menu::
@@ -194,7 +197,7 @@ Exercise #1.1
 * Override the ``to_s`` method for ``PizzaOrder`` and ``BurderOrder`` to display the details
 * Validate all of the user input, if invalid show error messages and ask to enter again.
 
-Exercise #1.2
+Exercise 1.2
 ~~~~~~~~~~~~~
 
 * Read `Jamming with Ruby YAML <http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/>`_ and
@@ -202,7 +205,7 @@ Exercise #1.2
 
 * Enhance exercise #1.1 to store (and load) the orders to a yaml file.
 
-Exercise #1.3
+Exercise 1.3
 ~~~~~~~~~~~~~
 
 * Read `How to create and use Hashes in Ruby <http://ruby.about.com/od/rubyfeatures/a/hashes.htm>`_.
@@ -236,25 +239,25 @@ Demonstration #2
 * missing_method
 * Show `How and why to avoid nil <https://www.destroyallsoftware.com/screencasts/catalog/how-and-why-to-avoid-nil>`_
 
-Exercise #1.4
+Exercise 1.4
 ~~~~~~~~~~~~~
 
 * Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_ (by Dalibor Nasevic)
 * Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_ (by John Nunemaker)
 * Convert PizzaBurger to a singleton using the Ruby Singleton module technique
 
-Exercise #1.5
+Exercise 1.5
 ~~~~~~~~~~~~~
 
 * Convert PizzaBurger to a singleton using the Module technique (as seen in the "Ruby Singleton Pattern" article)
 
-Exercise #1.6
+Exercise 1.6
 ~~~~~~~~~~~~~
 
 * Change PizzaOrder and BurgerOrder from standard inheritance to module-based composition
   (convert Order to a module)
 
-Exercise #1.7
+Exercise 1.7
 ~~~~~~~~~~~~~
 
 * Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_ (by Myles Eftos)
@@ -272,7 +275,7 @@ Exercise #1.7
       data.orders # will return @hash[:orders]
 
 
-Exercise #1.8
+Exercise 1.8
 ~~~~~~~~~~~~~~~~~~~
 
 * Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_ (by Mark Menard)
@@ -410,19 +413,54 @@ Demonstration
   * add item
   * remove item
   * validations
-  * inheritance
 
-* The source code for the demo can be viewed `here <exercises/active_record>`_.
+* The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
 
 Exercise 4.1
 ~~~~~~~~~~~~
+
+* Read chapters 1-2 of `Association Basics <http://guides.rubyonrails.org/association_basics.html>`_
 
 * Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.
 
 Exercise 4.2
 ~~~~~~~~~~~~
 
+* Read chapters 1-4 of `Validations <http://guides.rubyonrails.org/active_record_validations_callbacks.html>`_
+
 * Add validations to the PizzaBurger models
+
+Extra Reading
+~~~~~~~~~~~~~
+
+* Read the rest of `Validations <http://guides.rubyonrails.org/active_record_validations_callbacks.html>`_
+
+Demonstration 2
+~~~~~~~~~~~~~~~
+
+* Single Table Inheritance
+* Multi-Table Inheritance (sort-of)
+
+  * Using composition
+  * Using polymorphic
+
+Exercise 4.3
+~~~~~~~~~~~~
+
+* Read the rest of `Association Basics <http://guides.rubyonrails.org/association_basics.html>`_
+
+* Implement ``PizzaOrder`` and ``BurgerOrder`` inheritance classes
+  (the base class should be ``Order``) using Single Table Inheritance
+
+Exercise 4.4
+~~~~~~~~~~~~
+
+* Now use composition-based sort-of multi-table inheritance.
+
+Exercise 4.5
+~~~~~~~~~~~~
+
+* Now use polymorphic sort-of multi-table inheritance.
 
 Part 5 - RSpec (TDD)
 --------------------
