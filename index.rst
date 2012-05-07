@@ -395,10 +395,34 @@ Exercise 3
 Active Record
 ----------------------
 
-Exercise 4
-~~~~~~~~~~
+Demonstration
+~~~~~~~~~~~~~
+
+* Database generation script
+  
+  * Connect to database
+  * Create a migration
+  * Run migrations
+
+* Connect to database
+
+  * create a model
+  * add item
+  * remove item
+  * validations
+  * inheritance
+
+* The source code for the demo can be viewed `here <exercises/active_record>`_.
+
+Exercise 4.1
+~~~~~~~~~~~~
 
 * Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.
+
+Exercise 4.2
+~~~~~~~~~~~~
+
+* Add validations to the PizzaBurger models
 
 Part 5 - RSpec (TDD)
 --------------------
