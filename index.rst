@@ -250,6 +250,12 @@ Exercise #1.5
 Exercise #1.6
 ~~~~~~~~~~~~~
 
+* Change PizzaOrder and BurgerOrder from standard inheritance to module-based composition
+  (convert Order to a module)
+
+Exercise #1.7
+~~~~~~~~~~~~~
+
 * Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_
 * Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_
 * Move the save/load to yaml code to a class named ``PizzaBurgerData``
@@ -266,7 +272,7 @@ Exercise #1.6
       data.orders # will return @hash[:orders]
 
 
-Exercise #1.7
+Exercise #1.8
 ~~~~~~~~~~~~~~~~~~~
 
 * Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_
