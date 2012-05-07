@@ -218,7 +218,7 @@ Exercise #1.3
 
 * when ordering a pizza or a burger, ask for the phone number first
 
-  * if it doesn't exist, ask for the client's phone and address
+  * if it doesn't exist, ask for the client's name and address
   * if it does exist, say "Welcome back {client's name}"
 
 * store only the phone number in the orders
@@ -238,8 +238,8 @@ Demonstration #2
 Exercise #1.4
 ~~~~~~~~~~~~~
 
-* Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_
-* Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_
+* Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_ (by Dalibor Nasevic)
+* Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_ (by John Nunemaker)
 * Convert PizzaBurger to a singleton using the Ruby Singleton module technique
 
 Exercise #1.5
@@ -256,7 +256,7 @@ Exercise #1.6
 Exercise #1.7
 ~~~~~~~~~~~~~
 
-* Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_
+* Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_ (by Myles Eftos)
 * Move the save/load to yaml code to a class named ``PizzaBurgerData``
   with two methods: 
 
@@ -274,8 +274,8 @@ Exercise #1.7
 Exercise #1.8
 ~~~~~~~~~~~~~~~~~~~
 
-* Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_
-* Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_
+* Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_ (by Mark Menard)
+* Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_ (by Greg Houston)
 * Implement your own version attr_accessor
 * Implement your own version class_attr_accessor
   (same as attr_accessor but creates a static property)
@@ -285,7 +285,8 @@ Extra Reading
 
 * `Github Ruby Styleguide <https://github.com/styleguide/ruby>`_
 * `Advanced Ruby Arrays <http://www.techotopia.com/index.php/Advanced_Ruby_Arrays>`_
-* `Understanding map and reduce <http://railspikes.com/2008/8/11/understanding-map-and-reduce>`_
+* `Understanding map and reduce <http://railspikes.com/2008/8/11/understanding-map-and-reduce>`_ (by Jon Dahl)
+* `A Wealth of Ruby loops and Iterators <http://www.skorks.com/2009/09/a-wealth-of-ruby-loops-and-iterators/>`_ (by Alan Skorkin).
 
 
 Ruby Gems
@@ -389,6 +390,14 @@ Exercise 4
 
 Part 5 - RSpec (TDD)
 --------------------
+
+Demonstration
+~~~~~~~~~~~~~
+
+Reading
+~~~~~~~
+
+* `A Unit-testing framework in 44 lines <http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/>`_
 
 Exercise 5
 ~~~~~~~~~~
