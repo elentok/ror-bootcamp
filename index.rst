@@ -4,6 +4,7 @@ Ruby on Rails Bootcamp
 
 .. sectnum::
    :suffix: .
+   :depth: 2
 
 This document is targeted at programmers that don't know a thing about Ruby on Rails 
 and want to learn.
@@ -287,13 +288,19 @@ Extra Reading
 * `Advanced Ruby Arrays <http://www.techotopia.com/index.php/Advanced_Ruby_Arrays>`_
 * `Understanding map and reduce <http://railspikes.com/2008/8/11/understanding-map-and-reduce>`_ (by Jon Dahl)
 * `A Wealth of Ruby loops and Iterators <http://www.skorks.com/2009/09/a-wealth-of-ruby-loops-and-iterators/>`_ (by Alan Skorkin).
-
+* `Ruby Procs and Lambdas <http://www.skorks.com/2010/05/ruby-procs-and-lambdas-and-the-difference-between-them/>`_ (by Alan Skorkin).
 
 Ruby Gems
 ------------------
 
 Demonstration
 ~~~~~~~~~~~~~
+
+* difference between ``require``, ``require_relative`` and ``load``:
+
+  * ``require './...'`` - relative to the curent working path
+  * ``require_relative '...'`` - relative to the path of the current file
+  * ``load '...'`` - loads a file (even if it's already loaded)
 
 * install a gem
 * create a Gemfile
@@ -369,15 +376,20 @@ Demonstration
 * use irb within the debugger
 * use pry within the debugger
 * Watch the `Debugging ruby screencast <http://railscasts.com/episodes/54-debugging-ruby-revised>`_.
-* References:
-  
-  * `Pry Wiki <https://github.com/pry/pry/wiki/>`_.
 
 Exercise 3
 ~~~~~~~~~~
 
 * Read `Ruby debug in 30 seconds <http://pivotallabs.com/users/chad/blog/articles/366-ruby-debug-in-30-seconds-we-don-t-need-no-stinkin-gui->`_
   (skip "Install the latest gem" and "Install the cheatsheet"
+* References:
+
+  * `Pry Wiki <https://github.com/pry/pry/wiki/>`_.
+
+* Debug the PizzaBurger application.
+
+  * run it in debug mode 
+  * run it normal mode (with breakpoints)
 
 
 Active Record

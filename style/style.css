@@ -13,6 +13,10 @@ h1.title {
 }
 
 h1 {
+  border-bottom: 4px solid #ccc;
+}
+
+h2 {
   border-bottom: 1px solid #ccc;
 }
 
