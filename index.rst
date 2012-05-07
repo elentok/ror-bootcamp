@@ -197,7 +197,7 @@ Exercise #1.2
 ~~~~~~~~~~~~~
 
 * Read `Jamming with Ruby YAML <http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/>`_ and
-  `YAML Tutorial <http://rhnh.net/2006/06/25/yaml-tutorial>`_.
+  `YAML Tutorial <http://rhnh.net/2011/01/31/yaml-tutorial>`_
 
 * Enhance exercise #1.1 to store (and load) the orders to a yaml file.
 
@@ -239,13 +239,13 @@ Exercise #1.4
 ~~~~~~~~~~~~~
 
 * Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_
-* Convert PizzaBurger to a singleton using the Module technique
+* Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_
+* Convert PizzaBurger to a singleton using the Ruby Singleton module technique
 
 Exercise #1.5
 ~~~~~~~~~~~~~
 
-* Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_
-* Convert PizzaBurger to a singleton using the Ruby Singleton module technique
+* Convert PizzaBurger to a singleton using the Module technique (as seen in the "Ruby Singleton Pattern" article)
 
 Exercise #1.6
 ~~~~~~~~~~~~~
@@ -256,7 +256,6 @@ Exercise #1.6
 Exercise #1.7
 ~~~~~~~~~~~~~
 
-* Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_
 * Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_
 * Move the save/load to yaml code to a class named ``PizzaBurgerData``
   with two methods: 
@@ -275,10 +274,19 @@ Exercise #1.7
 Exercise #1.8
 ~~~~~~~~~~~~~~~~~~~
 
+* Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_
 * Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_
 * Implement your own version attr_accessor
 * Implement your own version class_attr_accessor
   (same as attr_accessor but creates a static property)
+
+Extra Reading
+~~~~~~~~~~~~~
+
+* `Github Ruby Styleguide <https://github.com/styleguide/ruby>`_
+* `Advanced Ruby Arrays <http://www.techotopia.com/index.php/Advanced_Ruby_Arrays>`_
+* `Understanding map and reduce <http://railspikes.com/2008/8/11/understanding-map-and-reduce>`_
+
 
 Ruby Gems
 ------------------
@@ -290,6 +298,7 @@ Demonstration
 * create a Gemfile
 * run bundle install
 * use Gemfile groups
+* watch the `bundler screencast <http://railscasts.com/episodes/201-bundler-revised>`_.
 
 Read
 ~~~~
@@ -322,8 +331,6 @@ Read
 
 * After creating the Gemfile, run the command ``bundle install`` to install the gems.
 
-* Watch the `bundler screencast <http://railscasts.com/episodes/201-bundler-revised>`_.
-
 Exercise 2
 ~~~~~~~~~~
 
@@ -346,7 +353,30 @@ Exercise 2
 Debugging
 ------------------
 
+Demonstration
+~~~~~~~~~~~~~
+
+* debug a simple script
+  
+  * run via rdebug
+  * add breakpoint ('debugger')
+  * run via simple script (require 'debugger')
+  * help
+  * autolist
+  * autoeval
+
+* use irb within the debugger
+* use pry within the debugger
 * Watch the `Debugging ruby screencast <http://railscasts.com/episodes/54-debugging-ruby-revised>`_.
+* References:
+  
+  * `Pry Wiki <https://github.com/pry/pry/wiki/>`_.
+
+Exercise 3
+~~~~~~~~~~
+
+* Read `Ruby debug in 30 seconds <http://pivotallabs.com/users/chad/blog/articles/366-ruby-debug-in-30-seconds-we-don-t-need-no-stinkin-gui->`_
+  (skip "Install the latest gem" and "Install the cheatsheet"
 
 
 Active Record
