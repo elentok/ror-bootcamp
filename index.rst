@@ -412,7 +412,42 @@ Demonstration
   * create a model
   * add item
   * remove item
-  * validations
+
+* Basic validations
+* Associations:
+
+  * has_one / belongs_to
+  * has_many
+  * has_many, :dependent => :destroy
+
+* Important notes:
+
+  * If you want to modify/create a table and then modify/create objects
+    you must run ``{Model}.reset_column_information``
+    (from `stack overflow <http://stackoverflow.com/questions/8935350/rails-3-1-cant-write-to-column-in-same-migration-that-adds-it>`_).
+
+  * beware of *mass assignment*: (quote from comment by steve3210)
+
+      This isn't actually a hole in rails..  If you use mass assignment, you need to protect attributes you don't want assigned with attr_protected on your model.
+
+      If you don't want people to do this:
+
+      .. code-block:: ruby
+
+          @user.update_attributes({ :favorite_color => 'blue', 
+                                    :password => 'hacked'})
+
+      You need to do this:
+
+      .. code-block:: ruby
+
+          class User < ActiveRecord::Base
+            attr_protected :password
+          end
+
+  * Setting a variable during the before_validation callback: 
+    Use ``self`` when accessing the attribute.
+    (from `stack overflow <http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working>`_).
 
 * The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
 
@@ -439,7 +474,7 @@ Demonstration 2
 ~~~~~~~~~~~~~~~
 
 * Single Table Inheritance
-* Multi-Table Inheritance (sort-of)
+* Multi-Table (sort-of)Inheritance
 
   * Using composition
   * Using polymorphic
@@ -449,18 +484,17 @@ Exercise 4.3
 
 * Read the rest of `Association Basics <http://guides.rubyonrails.org/association_basics.html>`_
 
-* Implement ``PizzaOrder`` and ``BurgerOrder`` inheritance classes
-  (the base class should be ``Order``) using Single Table Inheritance
+* Use single table inheritance to implement ``PizzaOrder`` and ``BurgerOrder``.
 
 Exercise 4.4
 ~~~~~~~~~~~~
 
-* Now use composition-based sort-of multi-table inheritance.
+* Now use composition-based multi-table (sort-of)inheritance.
 
 Exercise 4.5
 ~~~~~~~~~~~~
 
-* Now use polymorphic sort-of multi-table inheritance.
+* Now use polymorphic multi-table (sort-of)inheritance.
 
 Part 5 - RSpec (TDD)
 --------------------
