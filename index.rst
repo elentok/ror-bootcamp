@@ -301,6 +301,7 @@ Demonstration
 
 * difference between ``require``, ``require_relative`` and ``load``:
 
+  * ``require 'name'`` - relative to $LOAD_PATH
   * ``require './...'`` - relative to the curent working path
   * ``require_relative '...'`` - relative to the path of the current file
   * ``load '...'`` - loads a file (even if it's already loaded)
@@ -378,7 +379,6 @@ Demonstration
 
 * use irb within the debugger
 * use pry within the debugger
-* Watch the `Debugging ruby screencast <http://railscasts.com/episodes/54-debugging-ruby-revised>`_.
 
 Exercise 3
 ~~~~~~~~~~
@@ -447,7 +447,7 @@ Demonstration
 
   * Setting a variable during the before_validation callback: 
     Use ``self`` when accessing the attribute.
-    (from `stack overflow <http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working>`_).
+    (see `trying to set a variable in before_validation but it isn't working <http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working>`_).
 
 * The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
 
@@ -657,4 +657,5 @@ Screencasts
 * http://railscasts.com/episodes/285-spork
 * http://railscasts.com/episodes/324-passing-data-to-javascript
 * http://railscasts.com/episodes/334-compass-css-sprites
+* `Debugging ruby screencast <http://railscasts.com/episodes/54-debugging-ruby-revised>`_.
 
