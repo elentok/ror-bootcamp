@@ -447,7 +447,7 @@ Demonstration
             attr_protected :password
           end
 
-* The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
+* `ActiveRecord demonstration code <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
 
 Exercise 4.1
 ~~~~~~~~~~~~
@@ -530,7 +530,7 @@ Demonstration
 
 * Client and Order, when creating an order, it sets the associated client.
 
-* The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/rspec>`_.
+* `rspec demonstration code <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/rspec>`_.
 
 Reading
 ~~~~~~~
