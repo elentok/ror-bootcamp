@@ -503,7 +503,7 @@ Exercise 4.3
 
 * Use single table inheritance to implement ``PizzaOrder`` and ``BurgerOrder``.
 
-Exercise 4.5
+Exercise 4.4
 ~~~~~~~~~~~~
 
 * Now use polymorphic associations
@@ -514,15 +514,34 @@ Part 5 - RSpec (TDD)
 Demonstration
 ~~~~~~~~~~~~~
 
+* How to run rspec
+
+* `String Calcluator kata <http://www.21apps.com/agile/tdd-kata-by-example-video/>`_:
+
+  * Add(string numbers)
+
+    * "" => 0
+    * "1" => 1
+    * "1,2" => 3
+    * "1,2,3....."
+    * "1\n,2,3"
+    * "1,\n" => raise ArgumentError
+    * "1,2,-4" => raise ArgumentError(negatives are not allowed)
+
+* Client and Order, when creating an order, it sets the associated client.
+
+* The source code for the demo can be viewed `here <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/rspec>`_.
+
 Reading
 ~~~~~~~
 
 * `A Unit-testing framework in 44 lines <http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/>`_
+* Reference - `RSpec documentation <https://www.relishapp.com/rspec>`_
 
 Exercise 5
 ~~~~~~~~~~
 
-* Write tests for PizzaBurger
+* Implement `Conway's Game of Life <http://en.wikipedia.org/wiki/Conway's_Game_of_Life>`_ using TDD and rspec.
 
 
 Part 6 - Rails
