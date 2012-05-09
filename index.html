@@ -51,37 +51,39 @@ and want to learn.</p>
 <li><a class="reference internal" href="#active-record" id="id31">3.4.&nbsp;&nbsp;&nbsp;Active Record</a><ul>
 <li><a class="reference internal" href="#id2" id="id32">Demonstration</a></li>
 <li><a class="reference internal" href="#exercise-4-1" id="id33">Exercise 4.1</a></li>
-<li><a class="reference internal" href="#exercise-4-2" id="id34">Exercise 4.2</a></li>
-<li><a class="reference internal" href="#id3" id="id35">Extra Reading</a></li>
-<li><a class="reference internal" href="#id5" id="id36">Demonstration 2</a></li>
-<li><a class="reference internal" href="#exercise-4-3" id="id37">Exercise 4.3</a></li>
-<li><a class="reference internal" href="#exercise-4-4" id="id38">Exercise 4.4</a></li>
-<li><a class="reference internal" href="#exercise-4-5" id="id39">Exercise 4.5</a></li>
+<li><a class="reference internal" href="#id3" id="id34">Demonstration 2</a></li>
+<li><a class="reference internal" href="#exercise-4-2" id="id35">Exercise 4.2</a></li>
+<li><a class="reference internal" href="#id4" id="id36">Extra Reading</a></li>
+<li><a class="reference internal" href="#demonstration-3" id="id37">Demonstration 3</a></li>
+<li><a class="reference internal" href="#exercise-4-3" id="id38">Exercise 4.3</a></li>
+<li><a class="reference internal" href="#exercise-4-4" id="id39">Exercise 4.4</a></li>
+<li><a class="reference internal" href="#exercise-4-5" id="id40">Exercise 4.5</a></li>
+<li><a class="reference internal" href="#exercise-4-6" id="id41">Exercise 4.6</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-5-rspec-tdd" id="id40">3.5.&nbsp;&nbsp;&nbsp;Part 5 - RSpec (TDD)</a><ul>
-<li><a class="reference internal" href="#id7" id="id41">Demonstration</a></li>
-<li><a class="reference internal" href="#reading" id="id42">Reading</a></li>
-<li><a class="reference internal" href="#exercise-5" id="id43">Exercise 5</a></li>
+<li><a class="reference internal" href="#part-5-rspec-tdd" id="id42">3.5.&nbsp;&nbsp;&nbsp;Part 5 - RSpec (TDD)</a><ul>
+<li><a class="reference internal" href="#id7" id="id43">Demonstration</a></li>
+<li><a class="reference internal" href="#reading" id="id44">Reading</a></li>
+<li><a class="reference internal" href="#exercise-5" id="id45">Exercise 5</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-6-rails" id="id44">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a><ul>
-<li><a class="reference internal" href="#exercise-6" id="id45">Exercise 6</a></li>
+<li><a class="reference internal" href="#part-6-rails" id="id46">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a><ul>
+<li><a class="reference internal" href="#exercise-6" id="id47">Exercise 6</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#appendixes" id="id46">4.&nbsp;&nbsp;&nbsp;Appendixes</a><ul class="auto-toc">
-<li><a class="reference internal" href="#important-differences-between-unix-and-windows" id="id47">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a><ul>
-<li><a class="reference internal" href="#drives-and-directory-tree" id="id48">Drives and Directory tree</a></li>
-<li><a class="reference internal" href="#file-system-permissions" id="id49">File system permissions</a></li>
-<li><a class="reference internal" href="#misc" id="id50">Misc</a></li>
+<li><a class="reference internal" href="#appendixes" id="id48">4.&nbsp;&nbsp;&nbsp;Appendixes</a><ul class="auto-toc">
+<li><a class="reference internal" href="#important-differences-between-unix-and-windows" id="id49">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a><ul>
+<li><a class="reference internal" href="#drives-and-directory-tree" id="id50">Drives and Directory tree</a></li>
+<li><a class="reference internal" href="#file-system-permissions" id="id51">File system permissions</a></li>
+<li><a class="reference internal" href="#misc" id="id52">Misc</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#important-linux-commands" id="id51">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></li>
-<li><a class="reference internal" href="#extra-references" id="id52">4.3.&nbsp;&nbsp;&nbsp;Extra References</a><ul>
-<li><a class="reference internal" href="#online-tutorials" id="id53">Online tutorials</a></li>
-<li><a class="reference internal" href="#screencasts" id="id54">Screencasts</a></li>
+<li><a class="reference internal" href="#important-linux-commands" id="id53">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></li>
+<li><a class="reference internal" href="#extra-references" id="id54">4.3.&nbsp;&nbsp;&nbsp;Extra References</a><ul>
+<li><a class="reference internal" href="#online-tutorials" id="id55">Online tutorials</a></li>
+<li><a class="reference internal" href="#screencasts" id="id56">Screencasts</a></li>
 </ul>
 </li>
 </ul>
@@ -570,6 +572,8 @@ at the beginning of the file.</li>
 you must run <tt class="docutils literal"><span class="pre">{Model}.reset_column_information</span></tt>
 (from <a class="reference external" href="http://stackoverflow.com/questions/8935350/rails-3-1-cant-write-to-column-in-same-migration-that-adds-it">stack overflow</a>).</p>
 </li>
+<li><p class="first">don't use attr_accessor for model attributes (it will override active record's default implementation).</p>
+</li>
 <li><p class="first">beware of <em>mass assignment</em>: (quote from comment by steve3210)</p>
 <blockquote>
 <p>This isn't actually a hole in rails..  If you use mass assignment, you need to protect attributes you don't want assigned with attr_protected on your model.</p>
@@ -584,10 +588,6 @@ you must run <tt class="docutils literal"><span class="pre">{Model}.reset_column
 </pre></div>
 </blockquote>
 </li>
-<li><p class="first">Setting a variable during the before_validation callback:
-Use <tt class="docutils literal">self</tt> when accessing the attribute.
-(see <a class="reference external" href="http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working">trying to set a variable in before_validation but it isn't working</a>).</p>
-</li>
 </ul>
 </li>
 <li><p class="first">The source code for the demo can be viewed <a class="reference external" href="https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record">here</a>.</p>
@@ -596,26 +596,45 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </div>
 <div class="section" id="exercise-4-1">
 <h3><a class="toc-backref" href="#id33">Exercise 4.1</a></h3>
+<ul>
+<li><p class="first">Create a file called ~/.pryrc and put these lines in the file:</p>
+<div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;logger&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;active_record&#39;</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="no">Logger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">STDOUT</span><span class="p">)</span>
+</pre></div>
+<p>This will show you the SQL code of every query.</p>
+</li>
+<li><p class="first">Read chapters 1-2 of <a class="reference external" href="http://guides.rubyonrails.org/association_basics.html">Association Basics</a></p>
+</li>
+<li><p class="first">Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id34">Demonstration 2</a></h3>
 <ul class="simple">
-<li>Read chapters 1-2 of <a class="reference external" href="http://guides.rubyonrails.org/association_basics.html">Association Basics</a></li>
-<li>Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.</li>
+<li>custom validations (using :validate)</li>
+<li>callbacks (before_save, before_validation)</li>
+<li>Setting a variable during the before_validation callback:
+Use <tt class="docutils literal">self</tt> when accessing the attribute.
+(see <a class="reference external" href="http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working">trying to set a variable in before_validation but it isn't working</a>).</li>
 </ul>
 </div>
 <div class="section" id="exercise-4-2">
-<h3><a class="toc-backref" href="#id34">Exercise 4.2</a></h3>
+<h3><a class="toc-backref" href="#id35">Exercise 4.2</a></h3>
 <ul class="simple">
 <li>Read chapters 1-4 of <a class="reference external" href="http://guides.rubyonrails.org/active_record_validations_callbacks.html">Validations</a></li>
 <li>Add validations to the PizzaBurger models</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id35">Extra Reading</a></h3>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id36">Extra Reading</a></h3>
 <ul class="simple">
 <li>Read the rest of <a class="reference external" href="http://guides.rubyonrails.org/active_record_validations_callbacks.html">Validations</a></li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h3><a class="toc-backref" href="#id36">Demonstration 2</a></h3>
+<div class="section" id="demonstration-3">
+<h3><a class="toc-backref" href="#id37">Demonstration 3</a></h3>
 <ul class="simple">
 <li>Single Table Inheritance</li>
 <li>Multi-Table (sort-of)Inheritance<ul>
@@ -626,51 +645,57 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </ul>
 </div>
 <div class="section" id="exercise-4-3">
-<h3><a class="toc-backref" href="#id37">Exercise 4.3</a></h3>
+<h3><a class="toc-backref" href="#id38">Exercise 4.3</a></h3>
 <ul class="simple">
 <li>Read the rest of <a class="reference external" href="http://guides.rubyonrails.org/association_basics.html">Association Basics</a></li>
 <li>Use single table inheritance to implement <tt class="docutils literal">PizzaOrder</tt> and <tt class="docutils literal">BurgerOrder</tt>.</li>
 </ul>
 </div>
 <div class="section" id="exercise-4-4">
-<h3><a class="toc-backref" href="#id38">Exercise 4.4</a></h3>
+<h3><a class="toc-backref" href="#id39">Exercise 4.4</a></h3>
 <ul class="simple">
 <li>Now use composition-based multi-table (sort-of)inheritance.</li>
 </ul>
 </div>
 <div class="section" id="exercise-4-5">
-<h3><a class="toc-backref" href="#id39">Exercise 4.5</a></h3>
+<h3><a class="toc-backref" href="#id40">Exercise 4.5</a></h3>
 <ul class="simple">
 <li>Now use polymorphic multi-table (sort-of)inheritance.</li>
 </ul>
 </div>
+<div class="section" id="exercise-4-6">
+<h3><a class="toc-backref" href="#id41">Exercise 4.6</a></h3>
+<ul class="simple">
+<li>Read <a class="reference external" href="http://guides.rubyonrails.org/active_record_validations_callbacks.html">Active Record Validations and Callbacks</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="part-5-rspec-tdd">
-<h2><a class="toc-backref" href="#id40">3.5.&nbsp;&nbsp;&nbsp;Part 5 - RSpec (TDD)</a></h2>
+<h2><a class="toc-backref" href="#id42">3.5.&nbsp;&nbsp;&nbsp;Part 5 - RSpec (TDD)</a></h2>
 <div class="section" id="id7">
-<h3><a class="toc-backref" href="#id41">Demonstration</a></h3>
+<h3><a class="toc-backref" href="#id43">Demonstration</a></h3>
 </div>
 <div class="section" id="reading">
-<h3><a class="toc-backref" href="#id42">Reading</a></h3>
+<h3><a class="toc-backref" href="#id44">Reading</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/">A Unit-testing framework in 44 lines</a></li>
 </ul>
 </div>
 <div class="section" id="exercise-5">
-<h3><a class="toc-backref" href="#id43">Exercise 5</a></h3>
+<h3><a class="toc-backref" href="#id45">Exercise 5</a></h3>
 <ul class="simple">
 <li>Write tests for PizzaBurger</li>
 </ul>
 </div>
 </div>
 <div class="section" id="part-6-rails">
-<h2><a class="toc-backref" href="#id44">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a></h2>
+<h2><a class="toc-backref" href="#id46">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a></h2>
 <ul class="simple">
 <li>Read the &quot;Agile Web Developement with Rails&quot; book and do the exercises.</li>
 <li>Watch the <a class="reference external" href="http://railscasts.com/episodes/279-understanding-the-asset-pipeline">Understanding the Asset Pipeline screencast</a>.</li>
 </ul>
 <div class="section" id="exercise-6">
-<h3><a class="toc-backref" href="#id45">Exercise 6</a></h3>
+<h3><a class="toc-backref" href="#id47">Exercise 6</a></h3>
 <ul class="simple">
 <li>Rewrite PizzaBurger as a web application</li>
 </ul>
@@ -678,11 +703,11 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </div>
 </div>
 <div class="section" id="appendixes">
-<h1><a class="toc-backref" href="#id46">4.&nbsp;&nbsp;&nbsp;Appendixes</a></h1>
+<h1><a class="toc-backref" href="#id48">4.&nbsp;&nbsp;&nbsp;Appendixes</a></h1>
 <div class="section" id="important-differences-between-unix-and-windows">
-<h2><a class="toc-backref" href="#id47">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a></h2>
+<h2><a class="toc-backref" href="#id49">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a></h2>
 <div class="section" id="drives-and-directory-tree">
-<h3><a class="toc-backref" href="#id48">Drives and Directory tree</a></h3>
+<h3><a class="toc-backref" href="#id50">Drives and Directory tree</a></h3>
 <p>There is notion of drive C:, D:, etc.
 The directory tree has a single root, and it looks like this:</p>
 <blockquote>
@@ -727,7 +752,7 @@ cd ~/projects/myproject
 </blockquote>
 </div>
 <div class="section" id="file-system-permissions">
-<h3><a class="toc-backref" href="#id49">File system permissions</a></h3>
+<h3><a class="toc-backref" href="#id51">File system permissions</a></h3>
 <blockquote>
 <ul>
 <li><p class="first">each file is owned by a user</p>
@@ -795,14 +820,14 @@ when installing Ubuntu it automatically creates a user and a group by the same n
 </blockquote>
 </div>
 <div class="section" id="misc">
-<h3><a class="toc-backref" href="#id50">Misc</a></h3>
+<h3><a class="toc-backref" href="#id52">Misc</a></h3>
 <ol class="arabic simple">
 <li>file names are case sensitive, so a directory can contain two files named &quot;Bob&quot; and &quot;bob&quot;.</li>
 </ol>
 </div>
 </div>
 <div class="section" id="important-linux-commands">
-<h2><a class="toc-backref" href="#id51">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></h2>
+<h2><a class="toc-backref" href="#id53">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></h2>
 <ul class="simple">
 <li>To see help for a command just run &quot;<tt class="docutils literal"><span class="pre">name-of-command</span> <span class="pre">--help</span></tt>&quot;</li>
 <li><tt class="docutils literal">ls</tt> - shows a list of the files in the current directory</li>
@@ -826,16 +851,16 @@ read/write/execute-able by the owning user.</li>
 </ul>
 </div>
 <div class="section" id="extra-references">
-<h2><a class="toc-backref" href="#id52">4.3.&nbsp;&nbsp;&nbsp;Extra References</a></h2>
+<h2><a class="toc-backref" href="#id54">4.3.&nbsp;&nbsp;&nbsp;Extra References</a></h2>
 <div class="section" id="online-tutorials">
-<h3><a class="toc-backref" href="#id53">Online tutorials</a></h3>
+<h3><a class="toc-backref" href="#id55">Online tutorials</a></h3>
 <ol class="arabic simple">
 <li>TryRuby: <a class="reference external" href="http://tryruby.org/">http://tryruby.org/</a></li>
 <li><a class="reference external" href="http://railsforzombies.org/">http://railsforzombies.org/</a> (it's a hands-on online course)</li>
 </ol>
 </div>
 <div class="section" id="screencasts">
-<h3><a class="toc-backref" href="#id54">Screencasts</a></h3>
+<h3><a class="toc-backref" href="#id56">Screencasts</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="http://railscasts.com/episodes/318-upgrading-to-rails-3-2">http://railscasts.com/episodes/318-upgrading-to-rails-3-2</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/285-spork">http://railscasts.com/episodes/285-spork</a></li>
