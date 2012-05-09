@@ -494,7 +494,7 @@ Demonstration 3
 * Multi-Table (sort-of)Inheritance
 
   * Using composition
-  * Using polymorphic
+  * Using polymorphic associations
 
 Exercise 4.3
 ~~~~~~~~~~~~
@@ -503,21 +503,10 @@ Exercise 4.3
 
 * Use single table inheritance to implement ``PizzaOrder`` and ``BurgerOrder``.
 
-Exercise 4.4
-~~~~~~~~~~~~
-
-* Now use composition-based multi-table (sort-of)inheritance.
-
 Exercise 4.5
 ~~~~~~~~~~~~
 
-* Now use polymorphic multi-table (sort-of)inheritance.
-
-
-Exercise 4.6
-~~~~~~~~~~~~
-
-* Read `Active Record Validations and Callbacks <http://guides.rubyonrails.org/active_record_validations_callbacks.html>`_
+* Now use polymorphic associations
 
 Part 5 - RSpec (TDD)
 --------------------
