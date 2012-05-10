@@ -508,6 +508,12 @@ Exercise 4.4
 
 * Now use polymorphic associations
 
+Screencasts
+~~~~~~~~~~~
+
+* Watch `What goes in Active Records <https://www.destroyallsoftware.com/screencasts/catalog/what-goes-in-active-records>`_
+* Watch `What goes in Active Records Part 2 <https://www.destroyallsoftware.com/screencasts/catalog/what-goes-in-active-records-part-2>`_
+
 Part 5 - RSpec (TDD)
 --------------------
 
@@ -524,8 +530,8 @@ Demonstration
     * "1" => 1
     * "1,2" => 3
     * "1,2,3....."
-    * "1\n,2,3"
-    * "1,\n" => raise ArgumentError
+    * "1\\n,2,3"
+    * "1,\\n" => raise ArgumentError
     * "1,2,-4" => raise ArgumentError(negatives are not allowed)
 
 * Client and Order, when creating an order, it sets the associated client.
@@ -543,6 +549,15 @@ Exercise 5
 
 * Implement `Conway's Game of Life <http://en.wikipedia.org/wiki/Conway's_Game_of_Life>`_ using TDD and rspec.
 
+Screencasts
+~~~~~~~~~~~
+
+* Watch `Building RSpec from scratch <https://www.destroyallsoftware.com/screencasts/catalog/building-rspec-from-scratch>`_
+* Watch `Growing a test suite <https://www.destroyallsoftware.com/screencasts/catalog/growing-a-test-suite>`_
+* Watch `Stubbing unloaded dependencies <https://www.destroyallsoftware.com/screencasts/catalog/stubbing-unloaded-dependencies>`_
+* Watch `Shorter class syntax <https://www.destroyallsoftware.com/screencasts/catalog/shorter-class-syntax>`_
+* Watch `Three Test Shapes <https://www.destroyallsoftware.com/screencasts/catalog/three-test-shapes>`_
+* Watch `When to generalize in TDD <https://www.destroyallsoftware.com/screencasts/catalog/three-test-shapes>`_
 
 Part 6 - Rails
 --------------
