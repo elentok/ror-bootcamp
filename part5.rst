@@ -46,12 +46,6 @@ Exercise 5.2
 
 In this exercise, you will implement a simple shop, with a shopping cart, products and orders.
 
-* Add these three ActiveRecord models to store the data:
-
-  * Order (fields: credit_card)
-  * Product (fields: name, price)
-  * LineItem (fields: order_id, product_id, quantity)
-
 * Implement the following menu::
 
     1. Add product
@@ -68,6 +62,28 @@ In this exercise, you will implement a simple shop, with a shopping cart, produc
     * creates an order from the shopping cart
     * moves the line items to the new order
     * empties the cart in the session
+
+* Notes:
+
+  * Add these three ActiveRecord models to store the data:
+
+    * Order (fields: credit_card)
+    * Product (fields: name, price)
+    * LineItem (fields: order_id, product_id, quantity)
+
+  * Use these classes:
+
+    * ShoppingCart
+
+      * add_product(product/product_id, quantity)
+      * empty!
+      * empty?
+      * checkout! (returns Order)
+
+    * Store
+
+      * menu
+
 
 Screencasts
 --------------------
