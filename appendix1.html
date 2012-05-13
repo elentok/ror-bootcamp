@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Ruby on Rails Bootcamp</title>
+<link rel="stylesheet" href="style/style.css" type="text/css" />
+<link rel="stylesheet" href="style/highlight.css" type="text/css" />
+<link rel="stylesheet" href="style/ptserif.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="ruby-on-rails-bootcamp">
+<h1 class="title">Ruby on Rails Bootcamp</h1>
+
+<p><a class="reference external" href="index.html">Back</a></p>
+<div class="section" id="appendix-1-linux">
+<h1><a class="toc-backref" href="#id1">Appendix 1 - Linux</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#appendix-1-linux" id="id1">Appendix 1 - Linux</a><ul>
+<li><a class="reference internal" href="#important-differences-between-unix-and-windows" id="id2">Important differences between Unix and Windows</a><ul>
+<li><a class="reference internal" href="#drives-and-directory-tree" id="id3">Drives and Directory tree</a></li>
+<li><a class="reference internal" href="#file-system-permissions" id="id4">File system permissions</a></li>
+<li><a class="reference internal" href="#misc" id="id5">Misc</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#important-linux-commands" id="id6">Important Linux commands</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="important-differences-between-unix-and-windows">
+<h2><a class="toc-backref" href="#id2">Important differences between Unix and Windows</a></h2>
+<div class="section" id="drives-and-directory-tree">
+<h3><a class="toc-backref" href="#id3">Drives and Directory tree</a></h3>
+<p>There is notion of drive C:, D:, etc.
+The directory tree has a single root, and it looks like this:</p>
+<blockquote>
+<ul>
+<li><p class="first"><tt class="docutils literal">/bin</tt> - basic shell commands (ls, mv, cp, mkdir, ...)</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/sbin</tt> - hardcore system binaries (file system stuff, low-level hardware management, ...)</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/lib</tt> - low-level libraries (kernel modules, ...)</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/dev</tt> - ??? (how to explain...)</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/proc</tt> - ??? (how to explain...)</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/var</tt> - cache, logs, etc...</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/tmp</tt> - temporary files</p>
+</li>
+<li><p class="first"><tt class="docutils literal">/usr</tt> - application-level</p>
+<ul class="simple">
+<li><tt class="docutils literal">/usr/bin</tt> - application binaries</li>
+<li><tt class="docutils literal">/usr/lib</tt> - application libraries</li>
+<li><tt class="docutils literal">/usr/share</tt> - application resources<ul>
+<li><tt class="docutils literal">/usr/share/doc</tt> - application documentation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><tt class="docutils literal">/home</tt> - contains the home directories of each user:</p>
+<ul>
+<li><p class="first">when logged in as the user &quot;bob&quot;, the environment variable $HOME will usually be &quot;/home/bob&quot;</p>
+</li>
+<li><p class="first">the home directory can be referenced using the tilda (~) symbol, so running:</p>
+<pre class="literal-block">
+cd ~/projects/myproject
+</pre>
+<p>will change the current directory to <em>/home/bob/projects/myproject</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="file-system-permissions">
+<h3><a class="toc-backref" href="#id4">File system permissions</a></h3>
+<blockquote>
+<ul>
+<li><p class="first">each file is owned by a user</p>
+</li>
+<li><p class="first">each file belongs to a group</p>
+</li>
+<li><p class="first">there are 3 types of permissions:</p>
+<ul class="simple">
+<li>read (r)</li>
+<li>write (w)</li>
+<li>execute (x)<ul>
+<li>when a file is set as executable you can run it by typing <tt class="docutils literal">./filename</tt> in the terminal</li>
+<li>when a directory is set as executable you can open it and see its contents</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">these three permissions are defined for these three entities:</p>
+<ul class="simple">
+<li>owner - the user that owns this file</li>
+<li>group - the group this file belongs to</li>
+<li>other - all other users</li>
+</ul>
+</li>
+<li><p class="first">you can see the permissions of a file by running <tt class="docutils literal">ls <span class="pre">-l</span></tt></p>
+</li>
+<li><p class="first">if I run <tt class="docutils literal">ls <span class="pre">-l</span></tt> on this document's directory I will get the following:</p>
+<pre class="literal-block">
+drwxrwxr-x 2 david david  4096 Apr 29 16:07 exercises
+-rw-rw-r-- 1 david david   720 Apr 30 09:24 Guardfile
+-rw-rw-r-- 1 david david 18493 May  2 09:48 index.html
+-rw-rw-r-- 1 david david 10212 May  2 09:48 index.rst
+-rw-rw-r-- 1 david david   259 Apr 30 09:19 README
+-rwxrwxr-x 1 david david  2089 Apr 30 09:16 rst2html-pygments.py
+drwxrwxr-x 2 david david  4096 May  1 16:53 style
+</pre>
+<p>these are the permissions on the &quot;index.rst&quot; file are &quot;-rw-rw-r--&quot;:</p>
+<ul class="simple">
+<li>the owner (david) can read and write it</li>
+<li>the group (david) can read and write it (yes, the group is also called &quot;david&quot;,
+when installing Ubuntu it automatically creates a user and a group by the same name).</li>
+<li>other users can only read it</li>
+</ul>
+</li>
+<li><p class="first">sometimes you might see permissions written using 3 digits, like 754:</p>
+<ul class="simple">
+<li>each digit is actually the sum of the following:<ul>
+<li>executable = 1</li>
+<li>writeable = 2</li>
+<li>readable = 4</li>
+</ul>
+</li>
+<li>the 1st digit is the user permissions</li>
+<li>the 2st digit is the group permissions</li>
+<li>the 3st digit is the permissions for all other users</li>
+<li>so 754 means:<ul>
+<li>read/write/execute-able by the user (7=1+2+4)</li>
+<li>read/execute-able by the group (5=1+4)</li>
+<li>readable by other users (4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="misc">
+<h3><a class="toc-backref" href="#id5">Misc</a></h3>
+<ol class="arabic simple">
+<li>file names are case sensitive, so a directory can contain two files named &quot;Bob&quot; and &quot;bob&quot;.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="important-linux-commands">
+<h2><a class="toc-backref" href="#id6">Important Linux commands</a></h2>
+<ul class="simple">
+<li>To see help for a command just run &quot;<tt class="docutils literal"><span class="pre">name-of-command</span> <span class="pre">--help</span></tt>&quot;</li>
+<li><tt class="docutils literal">ls</tt> - shows a list of the files in the current directory</li>
+<li><tt class="docutils literal">cd /path/to/other/directory</tt> - changes the current directory</li>
+<li><tt class="docutils literal">pwd</tt> - shows the current directory</li>
+<li><tt class="docutils literal">chmod</tt> - changes the permissions on a file, examples:<ul>
+<li><tt class="docutils literal">chmod u=rwx myfile</tt> - make myfile read/write/execute-able by the owning user</li>
+<li><tt class="docutils literal">chmod g=rx myfile</tt> - make myfile read/execute-able by the group</li>
+<li><tt class="docutils literal">chmod o=r myfile</tt> - make myfile readable by all other users</li>
+<li><tt class="docutils literal">chmod <span class="pre">-R</span> u=rwx mydir</tt> - make mydir and all of its contents (files and directories)
+read/write/execute-able by the owning user.</li>
+</ul>
+</li>
+<li><tt class="docutils literal">rm file</tt> - delete a file<ul>
+<li><tt class="docutils literal">rm <span class="pre">-R</span> dir</tt> - delete a directory and all of its contents</li>
+</ul>
+</li>
+<li><tt class="docutils literal">mv <span class="pre">source-file</span> <span class="pre">target-file</span></tt> - moves (or renames) a file</li>
+<li><tt class="docutils literal">mv <span class="pre">source-file</span> <span class="pre">target-directory/</span></tt> - moves the files into <em>target-directory</em></li>
+<li><tt class="docutils literal">cp <span class="pre">source-file</span> <span class="pre">target-file</span></tt> - copy a file</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
