@@ -704,28 +704,30 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </div>
 <div class="section" id="exercise-5-2">
 <h3><a class="toc-backref" href="#id47">Exercise 5.2</a></h3>
+<p>In this exercise, you will implement a simple shop, with a shopping cart, products and orders.</p>
 <ul>
-<li><p class="first">Implement a simple shop:</p>
-<ul>
-<li><p class="first">In the session (just stub a &quot;session&quot; hash) store the ShoppingCart class, for example</p>
-<div class="highlight"><pre><span class="n">session</span><span class="o">[</span><span class="ss">:shopping_cart</span><span class="o">]</span> <span class="o">=</span> <span class="no">ShoppingCart</span><span class="o">.</span><span class="n">new</span>
-</pre></div>
-</li>
 <li><p class="first">Add these three ActiveRecord models to store the data:</p>
 <ul class="simple">
-<li>Order</li>
-<li>Product</li>
-<li>LineItem (connection between Order and Product that includes quantity)</li>
+<li>Order (fields: credit_card)</li>
+<li>Product (fields: name, price)</li>
+<li>LineItem (fields: order_id, product_id, quantity)</li>
 </ul>
 </li>
-<li><p class="first">The shop will have the following features:</p>
+<li><p class="first">Implement the following menu:</p>
+<pre class="literal-block">
+1. Add product
+2. List all products
+3. Add to shopping cart
+4. Empty shopping cart
+5. Checkout
+0. Exit
+</pre>
 <ul class="simple">
-<li>Checkout:<ul>
+<li>The &quot;Checkout&quot; item will:<ul>
+<li>ask the user for a credit card number</li>
 <li>creates an order from the shopping cart</li>
 <li>moves the line items to the new order</li>
 <li>empties the cart in the session</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

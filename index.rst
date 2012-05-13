@@ -552,27 +552,30 @@ Exercise 5.1
 Exercise 5.2
 ~~~~~~~~~~~~
 
-* Implement a simple shop:
+In this exercise, you will implement a simple shop, with a shopping cart, products and orders.
 
-  * In the session (just stub a "session" hash) store the ShoppingCart class, for example
+* Add these three ActiveRecord models to store the data:
 
-    .. code-block:: ruby
+  * Order (fields: credit_card)
+  * Product (fields: name, price)
+  * LineItem (fields: order_id, product_id, quantity)
 
-        session[:shopping_cart] = ShoppingCart.new
+* Implement the following menu::
 
-  * Add these three ActiveRecord models to store the data:
+    1. Add product
+    2. List all products
+    3. Add to shopping cart
+    4. Empty shopping cart
+    5. Checkout
+    0. Exit
+  
 
-    * Order
-    * Product
-    * LineItem (connection between Order and Product that includes quantity)
-
-  * The shop will have the following features:
-
-    * Checkout:
-
-      * creates an order from the shopping cart
-      * moves the line items to the new order
-      * empties the cart in the session
+  * The "Checkout" item will:
+   
+    * ask the user for a credit card number
+    * creates an order from the shopping cart
+    * moves the line items to the new order
+    * empties the cart in the session
 
 
 Screencasts
