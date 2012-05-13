@@ -62,9 +62,9 @@ In this exercise, you will implement a simple shop, with a shopping cart, produc
     0. Exit
   
 
-  * The "Checkout" item will:
+  * The "Checkout" item:
    
-    * ask the user for a credit card number
+    * asks the user for a credit card number
     * creates an order from the shopping cart
     * moves the line items to the new order
     * empties the cart in the session
