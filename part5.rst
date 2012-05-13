@@ -75,7 +75,7 @@ In this exercise, you will implement a simple shop, with a shopping cart, produc
 
     * ShoppingCart
 
-      * add_product(product/product_id, quantity)
+      * add(product/product_id, quantity)
       * empty!
       * empty?
       * checkout! (returns Order)
