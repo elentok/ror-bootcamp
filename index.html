@@ -63,27 +63,28 @@ and want to learn.</p>
 <li><a class="reference internal" href="#part-5-rspec-tdd" id="id43">3.5.&nbsp;&nbsp;&nbsp;Part 5 - RSpec (TDD)</a><ul>
 <li><a class="reference internal" href="#id7" id="id44">Demonstration</a></li>
 <li><a class="reference internal" href="#reading" id="id45">Reading</a></li>
-<li><a class="reference internal" href="#exercise-5" id="id46">Exercise 5</a></li>
-<li><a class="reference internal" href="#id8" id="id47">Screencasts</a></li>
+<li><a class="reference internal" href="#exercise-5-1" id="id46">Exercise 5.1</a></li>
+<li><a class="reference internal" href="#exercise-5-2" id="id47">Exercise 5.2</a></li>
+<li><a class="reference internal" href="#id8" id="id48">Screencasts</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-6-rails" id="id48">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a><ul>
-<li><a class="reference internal" href="#exercise-6" id="id49">Exercise 6</a></li>
+<li><a class="reference internal" href="#part-6-rails" id="id49">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a><ul>
+<li><a class="reference internal" href="#exercise-6" id="id50">Exercise 6</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#appendixes" id="id50">4.&nbsp;&nbsp;&nbsp;Appendixes</a><ul class="auto-toc">
-<li><a class="reference internal" href="#important-differences-between-unix-and-windows" id="id51">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a><ul>
-<li><a class="reference internal" href="#drives-and-directory-tree" id="id52">Drives and Directory tree</a></li>
-<li><a class="reference internal" href="#file-system-permissions" id="id53">File system permissions</a></li>
-<li><a class="reference internal" href="#misc" id="id54">Misc</a></li>
+<li><a class="reference internal" href="#appendixes" id="id51">4.&nbsp;&nbsp;&nbsp;Appendixes</a><ul class="auto-toc">
+<li><a class="reference internal" href="#important-differences-between-unix-and-windows" id="id52">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a><ul>
+<li><a class="reference internal" href="#drives-and-directory-tree" id="id53">Drives and Directory tree</a></li>
+<li><a class="reference internal" href="#file-system-permissions" id="id54">File system permissions</a></li>
+<li><a class="reference internal" href="#misc" id="id55">Misc</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#important-linux-commands" id="id55">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></li>
-<li><a class="reference internal" href="#extra-references" id="id56">4.3.&nbsp;&nbsp;&nbsp;Extra References</a><ul>
-<li><a class="reference internal" href="#online-tutorials" id="id57">Online tutorials</a></li>
-<li><a class="reference internal" href="#id9" id="id58">Screencasts</a></li>
+<li><a class="reference internal" href="#important-linux-commands" id="id56">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></li>
+<li><a class="reference internal" href="#extra-references" id="id57">4.3.&nbsp;&nbsp;&nbsp;Extra References</a><ul>
+<li><a class="reference internal" href="#online-tutorials" id="id58">Online tutorials</a></li>
+<li><a class="reference internal" href="#id9" id="id59">Screencasts</a></li>
 </ul>
 </li>
 </ul>
@@ -695,14 +696,44 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 <li>Reference - <a class="reference external" href="https://www.relishapp.com/rspec">RSpec documentation</a></li>
 </ul>
 </div>
-<div class="section" id="exercise-5">
-<h3><a class="toc-backref" href="#id46">Exercise 5</a></h3>
+<div class="section" id="exercise-5-1">
+<h3><a class="toc-backref" href="#id46">Exercise 5.1</a></h3>
 <ul class="simple">
 <li>Implement <a class="reference external" href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> using TDD and rspec.</li>
 </ul>
 </div>
+<div class="section" id="exercise-5-2">
+<h3><a class="toc-backref" href="#id47">Exercise 5.2</a></h3>
+<ul>
+<li><p class="first">Implement a simple shop:</p>
+<ul>
+<li><p class="first">In the session (just stub a &quot;session&quot; hash) store the ShoppingCart class, for example</p>
+<div class="highlight"><pre><span class="n">session</span><span class="o">[</span><span class="ss">:shopping_cart</span><span class="o">]</span> <span class="o">=</span> <span class="no">ShoppingCart</span><span class="o">.</span><span class="n">new</span>
+</pre></div>
+</li>
+<li><p class="first">Add these three ActiveRecord models to store the data:</p>
+<ul class="simple">
+<li>Order</li>
+<li>Product</li>
+<li>LineItem (connection between Order and Product that includes quantity)</li>
+</ul>
+</li>
+<li><p class="first">The shop will have the following features:</p>
+<ul class="simple">
+<li>Checkout:<ul>
+<li>creates an order from the shopping cart</li>
+<li>moves the line items to the new order</li>
+<li>empties the cart in the session</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="id8">
-<h3><a class="toc-backref" href="#id47">Screencasts</a></h3>
+<h3><a class="toc-backref" href="#id48">Screencasts</a></h3>
 <ul class="simple">
 <li>Watch <a class="reference external" href="https://www.destroyallsoftware.com/screencasts/catalog/building-rspec-from-scratch">Building RSpec from scratch</a></li>
 <li>Watch <a class="reference external" href="https://www.destroyallsoftware.com/screencasts/catalog/growing-a-test-suite">Growing a test suite</a></li>
@@ -714,13 +745,13 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </div>
 </div>
 <div class="section" id="part-6-rails">
-<h2><a class="toc-backref" href="#id48">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a></h2>
+<h2><a class="toc-backref" href="#id49">3.6.&nbsp;&nbsp;&nbsp;Part 6 - Rails</a></h2>
 <ul class="simple">
 <li>Read the &quot;Agile Web Developement with Rails&quot; book and do the exercises.</li>
 <li>Watch the <a class="reference external" href="http://railscasts.com/episodes/279-understanding-the-asset-pipeline">Understanding the Asset Pipeline screencast</a>.</li>
 </ul>
 <div class="section" id="exercise-6">
-<h3><a class="toc-backref" href="#id49">Exercise 6</a></h3>
+<h3><a class="toc-backref" href="#id50">Exercise 6</a></h3>
 <ul class="simple">
 <li>Rewrite PizzaBurger as a web application</li>
 </ul>
@@ -728,11 +759,11 @@ Use <tt class="docutils literal">self</tt> when accessing the attribute.
 </div>
 </div>
 <div class="section" id="appendixes">
-<h1><a class="toc-backref" href="#id50">4.&nbsp;&nbsp;&nbsp;Appendixes</a></h1>
+<h1><a class="toc-backref" href="#id51">4.&nbsp;&nbsp;&nbsp;Appendixes</a></h1>
 <div class="section" id="important-differences-between-unix-and-windows">
-<h2><a class="toc-backref" href="#id51">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a></h2>
+<h2><a class="toc-backref" href="#id52">4.1.&nbsp;&nbsp;&nbsp;Important differences between Unix and Windows</a></h2>
 <div class="section" id="drives-and-directory-tree">
-<h3><a class="toc-backref" href="#id52">Drives and Directory tree</a></h3>
+<h3><a class="toc-backref" href="#id53">Drives and Directory tree</a></h3>
 <p>There is notion of drive C:, D:, etc.
 The directory tree has a single root, and it looks like this:</p>
 <blockquote>
@@ -777,7 +808,7 @@ cd ~/projects/myproject
 </blockquote>
 </div>
 <div class="section" id="file-system-permissions">
-<h3><a class="toc-backref" href="#id53">File system permissions</a></h3>
+<h3><a class="toc-backref" href="#id54">File system permissions</a></h3>
 <blockquote>
 <ul>
 <li><p class="first">each file is owned by a user</p>
@@ -845,14 +876,14 @@ when installing Ubuntu it automatically creates a user and a group by the same n
 </blockquote>
 </div>
 <div class="section" id="misc">
-<h3><a class="toc-backref" href="#id54">Misc</a></h3>
+<h3><a class="toc-backref" href="#id55">Misc</a></h3>
 <ol class="arabic simple">
 <li>file names are case sensitive, so a directory can contain two files named &quot;Bob&quot; and &quot;bob&quot;.</li>
 </ol>
 </div>
 </div>
 <div class="section" id="important-linux-commands">
-<h2><a class="toc-backref" href="#id55">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></h2>
+<h2><a class="toc-backref" href="#id56">4.2.&nbsp;&nbsp;&nbsp;Important Linux commands</a></h2>
 <ul class="simple">
 <li>To see help for a command just run &quot;<tt class="docutils literal"><span class="pre">name-of-command</span> <span class="pre">--help</span></tt>&quot;</li>
 <li><tt class="docutils literal">ls</tt> - shows a list of the files in the current directory</li>
@@ -876,16 +907,16 @@ read/write/execute-able by the owning user.</li>
 </ul>
 </div>
 <div class="section" id="extra-references">
-<h2><a class="toc-backref" href="#id56">4.3.&nbsp;&nbsp;&nbsp;Extra References</a></h2>
+<h2><a class="toc-backref" href="#id57">4.3.&nbsp;&nbsp;&nbsp;Extra References</a></h2>
 <div class="section" id="online-tutorials">
-<h3><a class="toc-backref" href="#id57">Online tutorials</a></h3>
+<h3><a class="toc-backref" href="#id58">Online tutorials</a></h3>
 <ol class="arabic simple">
 <li>TryRuby: <a class="reference external" href="http://tryruby.org/">http://tryruby.org/</a></li>
 <li><a class="reference external" href="http://railsforzombies.org/">http://railsforzombies.org/</a> (it's a hands-on online course)</li>
 </ol>
 </div>
 <div class="section" id="id9">
-<h3><a class="toc-backref" href="#id58">Screencasts</a></h3>
+<h3><a class="toc-backref" href="#id59">Screencasts</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="http://railscasts.com/episodes/318-upgrading-to-rails-3-2">http://railscasts.com/episodes/318-upgrading-to-rails-3-2</a></li>
 <li><a class="reference external" href="http://railscasts.com/episodes/285-spork">http://railscasts.com/episodes/285-spork</a></li>

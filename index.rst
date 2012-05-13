@@ -544,10 +544,36 @@ Reading
 * `A Unit-testing framework in 44 lines <http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/>`_
 * Reference - `RSpec documentation <https://www.relishapp.com/rspec>`_
 
-Exercise 5
-~~~~~~~~~~
+Exercise 5.1
+~~~~~~~~~~~~
 
 * Implement `Conway's Game of Life <http://en.wikipedia.org/wiki/Conway's_Game_of_Life>`_ using TDD and rspec.
+
+Exercise 5.2
+~~~~~~~~~~~~
+
+* Implement a simple shop:
+
+  * In the session (just stub a "session" hash) store the ShoppingCart class, for example
+
+    .. code-block:: ruby
+
+        session[:shopping_cart] = ShoppingCart.new
+
+  * Add these three ActiveRecord models to store the data:
+
+    * Order
+    * Product
+    * LineItem (connection between Order and Product that includes quantity)
+
+  * The shop will have the following features:
+
+    * Checkout:
+
+      * creates an order from the shopping cart
+      * moves the line items to the new order
+      * empties the cart in the session
+
 
 Screencasts
 ~~~~~~~~~~~
