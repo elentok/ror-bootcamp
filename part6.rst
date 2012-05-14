@@ -58,8 +58,8 @@ Demonstration #1
 Exercise 6.1
 -------------
 
-* Read chapters 1-9 of `Action Controller Overview <http://guides.rubyonrails.org/action_controller_overview.html>_`
-* Read `Layouts and Rendering <http://guides.rubyonrails.org/layouts_and_rendering.html>_`
+* Read chapters 1-9 of `Action Controller Overview <http://guides.rubyonrails.org/action_controller_overview.html>`_
+* Read `Layouts and Rendering <http://guides.rubyonrails.org/layouts_and_rendering.html>`_
 
 * Rewrite PizzaBurger as a web application
 
