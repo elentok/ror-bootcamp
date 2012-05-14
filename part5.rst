@@ -84,10 +84,29 @@ In this exercise, you will implement a simple shop, with a shopping cart, produc
 
       * menu
 
+Exercise 5.3
+--------------------
+
+* Extend the previous exercise:
+ 
+  * Modify the ``checkout!`` method:
+
+    * After the order is created it should bill the credit card for the sum of the order
+      by calling the ``Billing.bill(credit_card, sum)`` method
+
+    * don't implement Billing, use a stub of it:
+
+      .. code-block:: ruby
+
+        Billing.stub(:bill).should_receive([arg1, ...])
+
+
+  * Add a ``sum`` method to the Order model
+  
+
 
 Screencasts
 --------------------
-
 * Watch `Building RSpec from scratch <https://www.destroyallsoftware.com/screencasts/catalog/building-rspec-from-scratch>`_
 * Watch `Growing a test suite <https://www.destroyallsoftware.com/screencasts/catalog/growing-a-test-suite>`_
 * Watch `Stubbing unloaded dependencies <https://www.destroyallsoftware.com/screencasts/catalog/stubbing-unloaded-dependencies>`_
