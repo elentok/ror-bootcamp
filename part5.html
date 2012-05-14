@@ -124,7 +124,7 @@
 by calling the <tt class="docutils literal">Billing.bill(credit_card, sum)</tt> method</p>
 </li>
 <li><p class="first">don't implement Billing, use a stub of it:</p>
-<div class="highlight"><pre><span class="no">Billing</span><span class="o">.</span><span class="n">stub</span><span class="p">(</span><span class="ss">:bill</span><span class="p">)</span><span class="o">.</span><span class="n">should_receive</span><span class="p">(</span><span class="o">[</span><span class="n">arg1</span><span class="p">,</span> <span class="o">.</span><span class="n">.</span><span class="o">.]</span><span class="p">)</span>
+<div class="highlight"><pre><span class="no">Billing</span><span class="o">.</span><span class="n">should_receive</span><span class="p">(</span><span class="ss">:bill</span><span class="p">)</span><span class="o">.</span><span class="n">with</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">)</span>
 </pre></div>
 </li>
 </ul>

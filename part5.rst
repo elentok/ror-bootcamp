@@ -98,7 +98,7 @@ Exercise 5.3
 
       .. code-block:: ruby
 
-        Billing.stub(:bill).should_receive([arg1, ...])
+        Billing.should_receive(:bill).with(arg1, ...)
 
 
   * Add a ``sum`` method to the Order model
