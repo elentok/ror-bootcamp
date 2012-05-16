@@ -61,7 +61,31 @@ Exercise 6.1
 * Read chapters 1-9 of `Action Controller Overview <http://guides.rubyonrails.org/action_controller_overview.html>`_
 * Read `Layouts and Rendering <http://guides.rubyonrails.org/layouts_and_rendering.html>`_
 
-* Rewrite PizzaBurger as a web application
+* Start writing PizzaBurger for pizzas only (call the order class ``Order``):
 
+  * Create a home controller with an index action/view with this menu:
 
+    * Add a client
+    * Show all clients
+    * Order a pizza
+
+      * the client should be a combobox selector
+
+    * Show all orders
+      
+      * will show all of the orders with an option to edit and to cancel
+
+  * Use haml and sass like in the demonstration
+  * Use the ``rails generate scaffold`` command to create the ``Order`` and ``Client`` class
+
+Exercise 6.2
+-------------
+
+* Add burger orders:
+
+  * Add the ``BurgerOrder`` and ``PizzaOrder`` classes that inherit 
+    from ``Order`` (use single-table inheritance)
+  * Add "Order a burger" to the menu
+  * In the order controller's "new" action, decide which order to create by using a query parameter
+  * In the order form view, decide which fields to show by checking the type of the object
 
