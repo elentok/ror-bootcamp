@@ -82,9 +82,16 @@ Exercise 6.1
 Demonstration 2
 ----------------
 
-* Watch `Simple Form <http://railscasts.com/episodes/234-simple-form-revised>`_
+* Watch the `Simple Form screencast<http://railscasts.com/episodes/234-simple-form-revised>`_
+* Twitter Bootstrap
+* The demo code is here: https://github.com/elentok/pizzaburger
 
 Exercise 6.2
+-------------
+
+* Use SimpleForm and Bootstrap
+
+Exercise 6.3
 -------------
 
 * Add burger orders:
