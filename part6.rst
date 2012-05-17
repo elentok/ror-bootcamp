@@ -104,8 +104,8 @@ Demonstration 2
 Exercise 6.2
 -------------
 
-* Go to `Twitter Bootstrap homepage <http://twitter.github.com/bootstrap/>` for reference.
-* Go to `Simple Form homepage <https://github.com/plataformatec/simple_form>` for reference.
+* Go to `Twitter Bootstrap homepage <http://twitter.github.com/bootstrap/>`_ for reference.
+* Go to `Simple Form homepage <https://github.com/plataformatec/simple_form>`_ for reference.
 * Use SimpleForm and Bootstrap
 
 Exercise 6.3
