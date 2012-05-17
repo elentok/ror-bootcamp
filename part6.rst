@@ -83,12 +83,29 @@ Demonstration 2
 ----------------
 
 * Watch the `Simple Form screencast <http://railscasts.com/episodes/234-simple-form-revised>`_
+
+  * Add ``gem "simple_form"`` to the Gemfile
+  * Run ``bundle``
+  * Run ``rails g simple_form:install --bootstrap``
+
 * Twitter Bootstrap
+
+  * Add ``gem "bootstrap-sass"`` to the Gemfile
+  * Run ``bundle``
+  * Add the following to the beginning of the ``application.css.sass`` file::
+
+    @import "bootstrap"
+    @import "bootstrap-responsive"
+
+  * Delete everything from ``scaffolds.css.sass``
+
 * The demo code is here: https://github.com/elentok/pizzaburger
 
 Exercise 6.2
 -------------
 
+* Go to `Twitter Bootstrap homepage <http://twitter.github.com/bootstrap/>` for reference.
+* Go to `Simple Form homepage <https://github.com/plataformatec/simple_form>` for reference.
 * Use SimpleForm and Bootstrap
 
 Exercise 6.3
