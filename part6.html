@@ -20,19 +20,20 @@
 <p class="topic-title first">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#part-6-rails" id="id1">Part 6 - Rails</a><ul>
-<li><a class="reference internal" href="#demonstration-1" id="id2">Demonstration #1</a></li>
+<li><a class="reference internal" href="#demonstration-1" id="id2">Demonstration 1</a></li>
 <li><a class="reference internal" href="#exercise-6-1" id="id3">Exercise 6.1</a></li>
-<li><a class="reference internal" href="#exercise-6-2" id="id4">Exercise 6.2</a></li>
+<li><a class="reference internal" href="#demonstration-2" id="id4">Demonstration 2</a></li>
+<li><a class="reference internal" href="#exercise-6-2" id="id5">Exercise 6.2</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="demonstration-1">
-<h2><a class="toc-backref" href="#id2">Demonstration #1</a></h2>
+<h2><a class="toc-backref" href="#id2">Demonstration 1</a></h2>
 <ul>
 <li><p class="first">Create a rails applications:</p>
 <pre class="literal-block">
-rails new -T
+rails new application-name -T
 </pre>
 <p>(-T = skip Test::Unit testing framework, we're gonna use rspec instead)</p>
 </li>
@@ -79,6 +80,7 @@ rails generate scaffold ModelName field1:type1 field2:type2
 <ul class="simple">
 <li>Read chapters 1-9 of <a class="reference external" href="http://guides.rubyonrails.org/action_controller_overview.html">Action Controller Overview</a></li>
 <li>Read <a class="reference external" href="http://guides.rubyonrails.org/layouts_and_rendering.html">Layouts and Rendering</a></li>
+<li>Read <a class="reference external" href="http://guides.rubyonrails.org/form_helpers.html">Form Helpers</a></li>
 <li>Start writing PizzaBurger for pizzas only (call the order class <tt class="docutils literal">Order</tt>):<ul>
 <li>Create a home controller with an index action/view with this menu:<ul>
 <li>Add a client</li>
@@ -99,8 +101,14 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </li>
 </ul>
 </div>
+<div class="section" id="demonstration-2">
+<h2><a class="toc-backref" href="#id4">Demonstration 2</a></h2>
+<ul class="simple">
+<li>Watch <a class="reference external" href="http://railscasts.com/episodes/234-simple-form-revised">Simple Form</a></li>
+</ul>
+</div>
 <div class="section" id="exercise-6-2">
-<h2><a class="toc-backref" href="#id4">Exercise 6.2</a></h2>
+<h2><a class="toc-backref" href="#id5">Exercise 6.2</a></h2>
 <ul class="simple">
 <li>Add burger orders:<ul>
 <li>Add the <tt class="docutils literal">BurgerOrder</tt> and <tt class="docutils literal">PizzaOrder</tt> classes that inherit

@@ -10,12 +10,12 @@ Part 6 - Rails
 .. contents::
 
 
-Demonstration #1
+Demonstration 1
 -----------------
 
 * Create a rails applications::
 
-    rails new -T
+    rails new application-name -T
 
   (-T = skip Test::Unit testing framework, we're gonna use rspec instead)
 
@@ -60,6 +60,7 @@ Exercise 6.1
 
 * Read chapters 1-9 of `Action Controller Overview <http://guides.rubyonrails.org/action_controller_overview.html>`_
 * Read `Layouts and Rendering <http://guides.rubyonrails.org/layouts_and_rendering.html>`_
+* Read `Form Helpers <http://guides.rubyonrails.org/form_helpers.html>`_
 
 * Start writing PizzaBurger for pizzas only (call the order class ``Order``):
 
@@ -77,6 +78,11 @@ Exercise 6.1
 
   * Use haml and sass like in the demonstration
   * Use the ``rails generate scaffold`` command to create the ``Order`` and ``Client`` class
+
+Demonstration 2
+----------------
+
+* Watch `Simple Form <http://railscasts.com/episodes/234-simple-form-revised>`_
 
 Exercise 6.2
 -------------
