@@ -55,6 +55,18 @@ Demonstration 1
 
 * Watch the `Understanding the Asset Pipeline screencast <http://railscasts.com/episodes/279-understanding-the-asset-pipeline>`_.
 
+Why is the rspec-rails gem in both :test and :development?
+-----------------------------------------------------------
+
+It's pretty obvious why the :test group is required (in order to run tests),
+
+but why is the :development group required?
+
+Well, it's because of the rails generators, when you run ``rails generate scaffold ModelName ...``:
+
+  * if "rspec-rails" isn't in the :development group, rails will create Test::Unit tests.
+  * if "rspec-rails" is in the :development, rails will create RSpec tests.
+
 Exercise 6.1
 -------------
 

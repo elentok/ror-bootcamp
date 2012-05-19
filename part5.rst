@@ -14,6 +14,8 @@ Demonstration
 
 * How to run rspec
 
+  * Add ``gem "rspec-rails"`` to the :test and :development groups
+
 * `String Calcluator kata <http://www.21apps.com/agile/tdd-kata-by-example-video/>`_:
 
   * Add(string numbers)
