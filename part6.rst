@@ -113,15 +113,26 @@ Demonstration 2
 
 * The demo code is here: https://github.com/elentok/pizzaburger
 
-Exercise 6.2
--------------
+Exercise 6.2 (Twitter Bootstrap + Simple Form)
+-----------------------------------------------
 
 * Go to `Twitter Bootstrap homepage <http://twitter.github.com/bootstrap/>`_ for reference.
 * Go to `Simple Form homepage <https://github.com/plataformatec/simple_form>`_ for reference.
 * Use SimpleForm and Bootstrap
 
-Exercise 6.3
--------------
+Exercise 6.3 (Partial Templates)
+---------------------------------
+
+* Read `Using Partials <http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials>`_
+  (only chapter 3.4).
+
+* When showing a client, also show all of his orders
+
+  * Extract a partial template called "_list" from the order's "index" template.
+  * Render the "_list" template from the client's "show" template.
+
+Exercise 6.4 (Inheritance)
+---------------------------
 
 * Add burger orders:
 

@@ -24,8 +24,9 @@
 <li><a class="reference internal" href="#why-is-the-rspec-rails-gem-in-both-test-and-development" id="id3">Why is the rspec-rails gem in both :test and :development?</a></li>
 <li><a class="reference internal" href="#exercise-6-1" id="id4">Exercise 6.1</a></li>
 <li><a class="reference internal" href="#demonstration-2" id="id5">Demonstration 2</a></li>
-<li><a class="reference internal" href="#exercise-6-2" id="id6">Exercise 6.2</a></li>
-<li><a class="reference internal" href="#exercise-6-3" id="id7">Exercise 6.3</a></li>
+<li><a class="reference internal" href="#exercise-6-2-twitter-bootstrap-simple-form" id="id6">Exercise 6.2 (Twitter Bootstrap + Simple Form)</a></li>
+<li><a class="reference internal" href="#exercise-6-3-partial-templates" id="id7">Exercise 6.3 (Partial Templates)</a></li>
+<li><a class="reference internal" href="#exercise-6-4-inheritance" id="id8">Exercise 6.4 (Inheritance)</a></li>
 </ul>
 </li>
 </ul>
@@ -145,16 +146,28 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </li>
 </ul>
 </div>
-<div class="section" id="exercise-6-2">
-<h2><a class="toc-backref" href="#id6">Exercise 6.2</a></h2>
+<div class="section" id="exercise-6-2-twitter-bootstrap-simple-form">
+<h2><a class="toc-backref" href="#id6">Exercise 6.2 (Twitter Bootstrap + Simple Form)</a></h2>
 <ul class="simple">
 <li>Go to <a class="reference external" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap homepage</a> for reference.</li>
 <li>Go to <a class="reference external" href="https://github.com/plataformatec/simple_form">Simple Form homepage</a> for reference.</li>
 <li>Use SimpleForm and Bootstrap</li>
 </ul>
 </div>
-<div class="section" id="exercise-6-3">
-<h2><a class="toc-backref" href="#id7">Exercise 6.3</a></h2>
+<div class="section" id="exercise-6-3-partial-templates">
+<h2><a class="toc-backref" href="#id7">Exercise 6.3 (Partial Templates)</a></h2>
+<ul class="simple">
+<li>Read <a class="reference external" href="http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials">Using Partials</a>
+(only chapter 3.4).</li>
+<li>When showing a client, also show all of his orders<ul>
+<li>Extract a partial template called &quot;_list&quot; from the order's &quot;index&quot; template.</li>
+<li>Render the &quot;_list&quot; template from the client's &quot;show&quot; template.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="exercise-6-4-inheritance">
+<h2><a class="toc-backref" href="#id8">Exercise 6.4 (Inheritance)</a></h2>
 <ul class="simple">
 <li>Add burger orders:<ul>
 <li>Add the <tt class="docutils literal">BurgerOrder</tt> and <tt class="docutils literal">PizzaOrder</tt> classes that inherit
