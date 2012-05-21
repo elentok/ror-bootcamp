@@ -139,7 +139,8 @@ Demonstration 3 (Localization)
 Exercise 6.4 (Localize)
 ------------------------
 
-* Make PizzaBurger support both hebrew and english
+* Read `Rails Internationalization API <http://guides.rubyonrails.org/i18n.html>`_.
+* Make PizzaBurger support both hebrew and english.
 
 Demonstration 4
 ---------------
