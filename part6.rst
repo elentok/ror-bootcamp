@@ -142,12 +142,56 @@ Exercise 6.4 (Localize)
 * Read `Rails Internationalization API <http://guides.rubyonrails.org/i18n.html>`_.
 * Make PizzaBurger support both hebrew and english.
 
-Demonstration 4
----------------
+Demonstration 4 (RSpec + Spork + FactoryGirl)
+----------------------------------------------
+
+* Automatically generated spec files
+* Add spork:
+
+  * add the gem "spork" under :development and :test
+  * run::
+
+      bundle
+      spork rspec --bootstrap
+
+  * edit "spec_helper.rb" and put everything that comes after the 
+    "---- Instructions ----" comment into the ``Spork.prefork`` block
+
+  * add the following line into the ``Spork.each_run`` block::
+
+      Dir.glob("#{::Rails.root}/app/models/*.rb").each { |file| load "#{file}" }
+
+  * edit the ``.rspec`` file in the root of your projects and add "--drb"
+  * run ``spork``
+
+* Add factory girl:
+
+  * add the gem "factory_girl_rails" under :development and :test
+  * run ``bundle``
+  * add the following line into the ``Spork.each_run`` block::
+
+      FactoryGirl.factories.clear
+      Dir.glob("#{::Rails.root}/spec/factories/*.rb").each { |file| load "#{file}" }
+
+  * restart spork
+
+* To create a new factory run::
+
+    rails g factory_girl:model ModelName
+
+* To run the specs, run ``rake spec``
+
+Exercise 6.5 (RSpec + Spork + FactoryGirl)
+-------------------------------------------
+
+* Make all the specs pass
+
+Demonstration 5 (Inheritance)
+------------------------------
 
 * Using one controller for multiple inheriting classes
 
-Exercise 6.5 (Inheritance)
+Exercise 6.6 (Inheritance)
 ---------------------------
 
 * Add burger orders:
