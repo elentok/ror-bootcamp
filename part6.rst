@@ -181,9 +181,12 @@ Demonstration 4 (RSpec + Spork + FactoryGirl)
 
 * To run the specs, run ``rake spec``
 
+* `more information about spork <https://github.com/sporkrb/spork>`_
+
 Exercise 6.5 (RSpec + Spork + FactoryGirl)
 -------------------------------------------
 
+* Read `Getting started with factory_girl <https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md>`_
 * Make all the specs pass
 
 Demonstration 5 (Inheritance)
