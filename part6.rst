@@ -131,7 +131,22 @@ Exercise 6.3 (Partial Templates)
   * Extract a partial template called "_list" from the order's "index" template.
   * Render the "_list" template from the client's "show" template.
 
-Exercise 6.4 (Inheritance)
+Demonstration 3 (Localization)
+-------------------------------
+
+* Watch the `I18n screencast <http://railscasts.com/episodes/138-i18n-revised>`_.
+
+Exercise 6.4 (Localize)
+------------------------
+
+* Make PizzaBurger support both hebrew and english
+
+Demonstration 4
+---------------
+
+* Using one controller for multiple inheriting classes
+
+Exercise 6.5 (Inheritance)
 ---------------------------
 
 * Add burger orders:
