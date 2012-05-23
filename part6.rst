@@ -205,3 +205,16 @@ Exercise 6.6 (Inheritance)
   * In the order controller's "new" action, decide which order to create by using a query parameter
   * In the order form view, decide which fields to show by checking the type of the object
 
+Exercise 6.7 (Coffeescript & AJAX)
+-----------------------------------
+
+* In the order form, add a button near the client selector that will allow you to
+  add a new client without leaving the form:
+
+  * Use `Twitter Bootstrap's Modal JS plugin <http://twitter.github.com/bootstrap/javascript.html#modals>`_
+    to open the new client popup.
+  * Use `$.ajax <http://api.jquery.com/jQuery.ajax/>`_ to save the new client to the server
+    (send a POST request to the ``/clients`` path).
+  * Write your coffeescript code in ``app/assets/javascripts/orders.js.coffee``
+    (you can put the code for the new client form in ``clients.js.coffee`` if you want).
+

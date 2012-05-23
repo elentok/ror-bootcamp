@@ -32,6 +32,7 @@
 <li><a class="reference internal" href="#exercise-6-5-rspec-spork-factorygirl" id="id11">Exercise 6.5 (RSpec + Spork + FactoryGirl)</a></li>
 <li><a class="reference internal" href="#demonstration-5-inheritance" id="id12">Demonstration 5 (Inheritance)</a></li>
 <li><a class="reference internal" href="#exercise-6-6-inheritance" id="id13">Exercise 6.6 (Inheritance)</a></li>
+<li><a class="reference internal" href="#exercise-6-7-coffeescript-ajax" id="id14">Exercise 6.7 (Coffeescript &amp; AJAX)</a></li>
 </ul>
 </li>
 </ul>
@@ -262,6 +263,21 @@ from <tt class="docutils literal">Order</tt> (use single-table inheritance)</li>
 <li>Add &quot;Order a burger&quot; to the menu</li>
 <li>In the order controller's &quot;new&quot; action, decide which order to create by using a query parameter</li>
 <li>In the order form view, decide which fields to show by checking the type of the object</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="exercise-6-7-coffeescript-ajax">
+<h2><a class="toc-backref" href="#id14">Exercise 6.7 (Coffeescript &amp; AJAX)</a></h2>
+<ul class="simple">
+<li>In the order form, add a button near the client selector that will allow you to
+add a new client without leaving the form:<ul>
+<li>Use <a class="reference external" href="http://twitter.github.com/bootstrap/javascript.html#modals">Twitter Bootstrap's Modal JS plugin</a>
+to open the new client popup.</li>
+<li>Use <a class="reference external" href="http://api.jquery.com/jQuery.ajax/">$.ajax</a> to save the new client to the server
+(send a POST request to the <tt class="docutils literal">/clients</tt> path).</li>
+<li>Write your coffeescript code in <tt class="docutils literal">app/assets/javascripts/orders.js.coffee</tt>
+(you can put the code for the new client form in <tt class="docutils literal">clients.js.coffee</tt> if you want).</li>
 </ul>
 </li>
 </ul>
