@@ -218,3 +218,27 @@ Exercise 6.7 (Coffeescript & AJAX)
   * Write your coffeescript code in ``app/assets/javascripts/orders.js.coffee``
     (you can put the code for the new client form in ``clients.js.coffee`` if you want).
 
+Demonstration 6 (Devise)
+-------------------------
+
+* Watch `Introducing Devise <http://railscasts.com/episodes/209-introducing-devise>`_
+* Watch `Customizing Devise <http://railscasts.com/episodes/210-customizing-devise>`_
+
+Exercise 6.8
+------------
+
+* Add users (login+signup and everything) to PizzaBurger
+
+Demonstration 7 (CanCan)
+-------------------------
+
+* Watch `Authorization with CanCan <http://railscasts.com/episodes/192-authorization-with-cancan>`_
+
+Exercise 6.9
+------------
+
+* Implement these two user roles:
+
+  * Customer - allowed to order
+  * Employee - allowed to view all orders and add clients
+
