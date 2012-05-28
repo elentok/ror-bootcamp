@@ -1,11 +1,8 @@
 ======================
-Ruby on Rails Bootcamp
+Part 3 - Debugging
 ======================
 
 `Back <index.html>`_
-
-Part 3 - Debugging
-==========================
 
 .. contents::
 

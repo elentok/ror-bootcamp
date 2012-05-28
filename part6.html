@@ -4,45 +4,383 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
-<title>Ruby on Rails Bootcamp</title>
-<link rel="stylesheet" href="style/style.css" type="text/css" />
-<link rel="stylesheet" href="style/highlight.css" type="text/css" />
-<link rel="stylesheet" href="style/ptserif.css" type="text/css" />
+<title>Part 6 - Rails</title>
+  <style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="style/ptserif.css" />
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div class="document" id="ruby-on-rails-bootcamp">
-<h1 class="title">Ruby on Rails Bootcamp</h1>
+<div class="document" id="part-6-rails">
+<h1 class="primary-title">Ruby on Rails Bootcamp</h1>
+<h1 class="title">Part 6 - Rails</h1>
 
 <p><a class="reference external" href="index.html">Back</a></p>
-<div class="section" id="part-6-rails">
-<h1><a class="toc-backref" href="#id1">Part 6 - Rails</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
-<ul class="simple">
-<li><a class="reference internal" href="#part-6-rails" id="id1">Part 6 - Rails</a><ul>
-<li><a class="reference internal" href="#demonstration-1" id="id2">Demonstration 1</a></li>
-<li><a class="reference internal" href="#why-is-the-rspec-rails-gem-in-both-test-and-development" id="id3">Why is the rspec-rails gem in both :test and :development?</a></li>
-<li><a class="reference internal" href="#exercise-6-1" id="id4">Exercise 6.1</a></li>
-<li><a class="reference internal" href="#demonstration-2" id="id5">Demonstration 2</a></li>
-<li><a class="reference internal" href="#exercise-6-2-twitter-bootstrap-simple-form" id="id6">Exercise 6.2 (Twitter Bootstrap + Simple Form)</a></li>
-<li><a class="reference internal" href="#exercise-6-3-partial-templates" id="id7">Exercise 6.3 (Partial Templates)</a></li>
-<li><a class="reference internal" href="#demonstration-3-localization" id="id8">Demonstration 3 (Localization)</a></li>
-<li><a class="reference internal" href="#exercise-6-4-localize" id="id9">Exercise 6.4 (Localize)</a></li>
-<li><a class="reference internal" href="#demonstration-4-rspec-spork-factorygirl" id="id10">Demonstration 4 (RSpec + Spork + FactoryGirl)</a></li>
-<li><a class="reference internal" href="#exercise-6-5-rspec-spork-factorygirl" id="id11">Exercise 6.5 (RSpec + Spork + FactoryGirl)</a></li>
-<li><a class="reference internal" href="#demonstration-5-inheritance" id="id12">Demonstration 5 (Inheritance)</a></li>
-<li><a class="reference internal" href="#exercise-6-6-inheritance" id="id13">Exercise 6.6 (Inheritance)</a></li>
-<li><a class="reference internal" href="#exercise-6-7-coffeescript-ajax" id="id14">Exercise 6.7 (Coffeescript &amp; AJAX)</a></li>
-<li><a class="reference internal" href="#demonstration-6-devise" id="id15">Demonstration 6 (Devise)</a></li>
-<li><a class="reference internal" href="#exercise-6-8" id="id16">Exercise 6.8</a></li>
-<li><a class="reference internal" href="#demonstration-7-cancan" id="id17">Demonstration 7 (CanCan)</a></li>
-<li><a class="reference internal" href="#exercise-6-9" id="id18">Exercise 6.9</a></li>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#introduction" id="id16">1.&nbsp;&nbsp;&nbsp;Introduction</a><ul class="auto-toc">
+<li><a class="reference internal" href="#demonstration" id="id17">1.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#why-is-the-rspec-rails-gem-in-both-test-and-development" id="id18">1.2.&nbsp;&nbsp;&nbsp;Why is the rspec-rails gem in both :test and :development?</a></li>
+<li><a class="reference internal" href="#exercise" id="id19">1.3.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#twitter-bootstrap-simple-form" id="id20">2.&nbsp;&nbsp;&nbsp;Twitter Bootstrap + Simple Form</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id1" id="id21">2.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id2" id="id22">2.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#partial-templates" id="id23">3.&nbsp;&nbsp;&nbsp;Partial Templates</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id3" id="id24">3.1.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localization" id="id25">4.&nbsp;&nbsp;&nbsp;Localization</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id4" id="id26">4.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id5" id="id27">4.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rspec-spork-factorygirl" id="id28">5.&nbsp;&nbsp;&nbsp;RSpec + Spork + FactoryGirl</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id6" id="id29">5.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id7" id="id30">5.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inheritance" id="id31">6.&nbsp;&nbsp;&nbsp;Inheritance</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id8" id="id32">6.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id9" id="id33">6.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#coffeescript-ajax" id="id34">7.&nbsp;&nbsp;&nbsp;Coffeescript &amp; AJAX</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id10" id="id35">7.1.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#authentication" id="id36">8.&nbsp;&nbsp;&nbsp;Authentication</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id11" id="id37">8.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id12" id="id38">8.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devise-authentication-gem" id="id39">9.&nbsp;&nbsp;&nbsp;Devise (authentication gem)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id13" id="id40">9.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cancan" id="id41">10.&nbsp;&nbsp;&nbsp;CanCan</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id14" id="id42">10.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id15" id="id43">10.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="demonstration-1">
-<h2><a class="toc-backref" href="#id2">Demonstration 1</a></h2>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id16">1.&nbsp;&nbsp;&nbsp;Introduction</a></h1>
+<div class="section" id="demonstration">
+<h2><a class="toc-backref" href="#id17">1.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul>
 <li><p class="first">Create a rails applications:</p>
 <pre class="literal-block">
@@ -89,7 +427,7 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </ul>
 </div>
 <div class="section" id="why-is-the-rspec-rails-gem-in-both-test-and-development">
-<h2><a class="toc-backref" href="#id3">Why is the rspec-rails gem in both :test and :development?</a></h2>
+<h2><a class="toc-backref" href="#id18">1.2.&nbsp;&nbsp;&nbsp;Why is the rspec-rails gem in both :test and :development?</a></h2>
 <p>It's pretty obvious why the :test group is required (in order to run tests),</p>
 <p>but why is the :development group required?</p>
 <p>Well, it's because of the rails generators, when you run <tt class="docutils literal">rails generate scaffold ModelName ...</tt>:</p>
@@ -100,8 +438,8 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </ul>
 </blockquote>
 </div>
-<div class="section" id="exercise-6-1">
-<h2><a class="toc-backref" href="#id4">Exercise 6.1</a></h2>
+<div class="section" id="exercise">
+<h2><a class="toc-backref" href="#id19">1.3.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Read chapters 1-9 of <a class="reference external" href="http://guides.rubyonrails.org/action_controller_overview.html">Action Controller Overview</a></li>
 <li>Read <a class="reference external" href="http://guides.rubyonrails.org/layouts_and_rendering.html">Layouts and Rendering</a></li>
@@ -126,8 +464,11 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </li>
 </ul>
 </div>
-<div class="section" id="demonstration-2">
-<h2><a class="toc-backref" href="#id5">Demonstration 2</a></h2>
+</div>
+<div class="section" id="twitter-bootstrap-simple-form">
+<h1><a class="toc-backref" href="#id20">2.&nbsp;&nbsp;&nbsp;Twitter Bootstrap + Simple Form</a></h1>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id21">2.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul>
 <li><p class="first">Watch the <a class="reference external" href="http://railscasts.com/episodes/234-simple-form-revised">Simple Form screencast</a></p>
 <ul class="simple">
@@ -156,16 +497,19 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </li>
 </ul>
 </div>
-<div class="section" id="exercise-6-2-twitter-bootstrap-simple-form">
-<h2><a class="toc-backref" href="#id6">Exercise 6.2 (Twitter Bootstrap + Simple Form)</a></h2>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id22">2.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Go to <a class="reference external" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap homepage</a> for reference.</li>
 <li>Go to <a class="reference external" href="https://github.com/plataformatec/simple_form">Simple Form homepage</a> for reference.</li>
 <li>Use SimpleForm and Bootstrap</li>
 </ul>
 </div>
-<div class="section" id="exercise-6-3-partial-templates">
-<h2><a class="toc-backref" href="#id7">Exercise 6.3 (Partial Templates)</a></h2>
+</div>
+<div class="section" id="partial-templates">
+<h1><a class="toc-backref" href="#id23">3.&nbsp;&nbsp;&nbsp;Partial Templates</a></h1>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id24">3.1.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials">Using Partials</a>
 (only chapter 3.4).</li>
@@ -176,21 +520,27 @@ rails generate scaffold ModelName field1:type1 field2:type2
 </li>
 </ul>
 </div>
-<div class="section" id="demonstration-3-localization">
-<h2><a class="toc-backref" href="#id8">Demonstration 3 (Localization)</a></h2>
+</div>
+<div class="section" id="localization">
+<h1><a class="toc-backref" href="#id25">4.&nbsp;&nbsp;&nbsp;Localization</a></h1>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id26">4.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
 <li>Watch the <a class="reference external" href="http://railscasts.com/episodes/138-i18n-revised">I18n screencast</a>.</li>
 </ul>
 </div>
-<div class="section" id="exercise-6-4-localize">
-<h2><a class="toc-backref" href="#id9">Exercise 6.4 (Localize)</a></h2>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id27">4.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://guides.rubyonrails.org/i18n.html">Rails Internationalization API</a>.</li>
 <li>Make PizzaBurger support both hebrew and english.</li>
 </ul>
 </div>
-<div class="section" id="demonstration-4-rspec-spork-factorygirl">
-<h2><a class="toc-backref" href="#id10">Demonstration 4 (RSpec + Spork + FactoryGirl)</a></h2>
+</div>
+<div class="section" id="rspec-spork-factorygirl">
+<h1><a class="toc-backref" href="#id28">5.&nbsp;&nbsp;&nbsp;RSpec + Spork + FactoryGirl</a></h1>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id29">5.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul>
 <li><p class="first">Automatically generated spec files</p>
 </li>
@@ -245,21 +595,24 @@ rails g factory_girl:model ModelName
 </li>
 </ul>
 </div>
-<div class="section" id="exercise-6-5-rspec-spork-factorygirl">
-<h2><a class="toc-backref" href="#id11">Exercise 6.5 (RSpec + Spork + FactoryGirl)</a></h2>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id30">5.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Read <a class="reference external" href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Getting started with factory_girl</a></li>
 <li>Make all the specs pass</li>
 </ul>
 </div>
-<div class="section" id="demonstration-5-inheritance">
-<h2><a class="toc-backref" href="#id12">Demonstration 5 (Inheritance)</a></h2>
+</div>
+<div class="section" id="inheritance">
+<h1><a class="toc-backref" href="#id31">6.&nbsp;&nbsp;&nbsp;Inheritance</a></h1>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id32">6.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
 <li>Using one controller for multiple inheriting classes</li>
 </ul>
 </div>
-<div class="section" id="exercise-6-6-inheritance">
-<h2><a class="toc-backref" href="#id13">Exercise 6.6 (Inheritance)</a></h2>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id33">6.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Add burger orders:<ul>
 <li>Add the <tt class="docutils literal">BurgerOrder</tt> and <tt class="docutils literal">PizzaOrder</tt> classes that inherit
@@ -271,8 +624,11 @@ from <tt class="docutils literal">Order</tt> (use single-table inheritance)</li>
 </li>
 </ul>
 </div>
-<div class="section" id="exercise-6-7-coffeescript-ajax">
-<h2><a class="toc-backref" href="#id14">Exercise 6.7 (Coffeescript &amp; AJAX)</a></h2>
+</div>
+<div class="section" id="coffeescript-ajax">
+<h1><a class="toc-backref" href="#id34">7.&nbsp;&nbsp;&nbsp;Coffeescript &amp; AJAX</a></h1>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id35">7.1.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>In the order form, add a button near the client selector that will allow you to
 add a new client without leaving the form:<ul>
@@ -286,27 +642,42 @@ to open the new client popup.</li>
 </li>
 </ul>
 </div>
-<div class="section" id="demonstration-6-devise">
-<h2><a class="toc-backref" href="#id15">Demonstration 6 (Devise)</a></h2>
+</div>
+<div class="section" id="authentication">
+<h1><a class="toc-backref" href="#id36">8.&nbsp;&nbsp;&nbsp;Authentication</a></h1>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id37">8.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
+<ul class="simple">
+<li>Watch <a class="reference external" href="http://railscasts.com/episodes/250-authentication-from-scratch-revised">Authentication from scratch</a></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id38">8.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
+<ul class="simple">
+<li>Add users (login+signup and everything) to PizzaBurger</li>
+</ul>
+</div>
+</div>
+<div class="section" id="devise-authentication-gem">
+<h1><a class="toc-backref" href="#id39">9.&nbsp;&nbsp;&nbsp;Devise (authentication gem)</a></h1>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id40">9.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
 <li>Watch <a class="reference external" href="http://railscasts.com/episodes/209-introducing-devise">Introducing Devise</a></li>
 <li>Watch <a class="reference external" href="http://railscasts.com/episodes/210-customizing-devise">Customizing Devise</a></li>
 </ul>
 </div>
-<div class="section" id="exercise-6-8">
-<h2><a class="toc-backref" href="#id16">Exercise 6.8</a></h2>
-<ul class="simple">
-<li>Add users (login+signup and everything) to PizzaBurger</li>
-</ul>
 </div>
-<div class="section" id="demonstration-7-cancan">
-<h2><a class="toc-backref" href="#id17">Demonstration 7 (CanCan)</a></h2>
+<div class="section" id="cancan">
+<h1><a class="toc-backref" href="#id41">10.&nbsp;&nbsp;&nbsp;CanCan</a></h1>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id42">10.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
 <li>Watch <a class="reference external" href="http://railscasts.com/episodes/192-authorization-with-cancan">Authorization with CanCan</a></li>
 </ul>
 </div>
-<div class="section" id="exercise-6-9">
-<h2><a class="toc-backref" href="#id18">Exercise 6.9</a></h2>
+<div class="section" id="id15">
+<h2><a class="toc-backref" href="#id43">10.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
 <li>Implement these two user roles:<ul>
 <li>Customer - allowed to order</li>

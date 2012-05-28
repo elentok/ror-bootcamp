@@ -4,40 +4,345 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
-<title>Ruby on Rails Bootcamp</title>
-<link rel="stylesheet" href="style/style.css" type="text/css" />
-<link rel="stylesheet" href="style/highlight.css" type="text/css" />
-<link rel="stylesheet" href="style/ptserif.css" type="text/css" />
+<title>Part 1 - The Ruby Language</title>
+  <style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="style/ptserif.css" />
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div class="document" id="ruby-on-rails-bootcamp">
-<h1 class="title">Ruby on Rails Bootcamp</h1>
+<div class="document" id="part-1-the-ruby-language">
+<h1 class="primary-title">Ruby on Rails Bootcamp</h1>
+<h1 class="title">Part 1 - The Ruby Language</h1>
 
 <p><a class="reference external" href="index.html">Back</a></p>
-<div class="section" id="part-1-the-ruby-language">
-<h1><a class="toc-backref" href="#id1">Part 1 - The Ruby Language</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#part-1-the-ruby-language" id="id1">Part 1 - The Ruby Language</a><ul>
-<li><a class="reference internal" href="#demonstration-1" id="id2">Demonstration #1</a></li>
-<li><a class="reference internal" href="#reading-material" id="id3">Reading Material</a></li>
-<li><a class="reference internal" href="#exercise-1-1" id="id4">Exercise 1.1</a></li>
-<li><a class="reference internal" href="#exercise-1-2" id="id5">Exercise 1.2</a></li>
-<li><a class="reference internal" href="#exercise-1-3" id="id6">Exercise 1.3</a></li>
-<li><a class="reference internal" href="#demonstration-2" id="id7">Demonstration #2</a></li>
-<li><a class="reference internal" href="#exercise-1-4" id="id8">Exercise 1.4</a></li>
-<li><a class="reference internal" href="#exercise-1-5" id="id9">Exercise 1.5</a></li>
-<li><a class="reference internal" href="#exercise-1-6" id="id10">Exercise 1.6</a></li>
-<li><a class="reference internal" href="#exercise-1-7" id="id11">Exercise 1.7</a></li>
-<li><a class="reference internal" href="#exercise-1-8" id="id12">Exercise 1.8</a></li>
-<li><a class="reference internal" href="#extra-reading" id="id13">Extra Reading</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#demonstration-1" id="id1">Demonstration #1</a></li>
+<li><a class="reference internal" href="#reading-material" id="id2">Reading Material</a></li>
+<li><a class="reference internal" href="#exercise-1-1" id="id3">Exercise 1.1</a></li>
+<li><a class="reference internal" href="#exercise-1-2" id="id4">Exercise 1.2</a></li>
+<li><a class="reference internal" href="#exercise-1-3" id="id5">Exercise 1.3</a></li>
+<li><a class="reference internal" href="#demonstration-2" id="id6">Demonstration #2</a></li>
+<li><a class="reference internal" href="#exercise-1-4" id="id7">Exercise 1.4</a></li>
+<li><a class="reference internal" href="#exercise-1-5" id="id8">Exercise 1.5</a></li>
+<li><a class="reference internal" href="#exercise-1-6" id="id9">Exercise 1.6</a></li>
+<li><a class="reference internal" href="#exercise-1-7" id="id10">Exercise 1.7</a></li>
+<li><a class="reference internal" href="#exercise-1-8" id="id11">Exercise 1.8</a></li>
+<li><a class="reference internal" href="#extra-reading" id="id12">Extra Reading</a></li>
 </ul>
 </div>
 <div class="section" id="demonstration-1">
-<h2><a class="toc-backref" href="#id2">Demonstration #1</a></h2>
+<h1><a class="toc-backref" href="#id1">Demonstration #1</a></h1>
 <ul>
 <li><p class="first">Interpreter (IRB and Pry)</p>
 </li>
@@ -77,7 +382,7 @@ comparing symbols is faster than comparing strings.</p>
 </ul>
 </div>
 <div class="section" id="reading-material">
-<h2><a class="toc-backref" href="#id3">Reading Material</a></h2>
+<h1><a class="toc-backref" href="#id2">Reading Material</a></h1>
 <ul class="simple">
 <li>Read the Ruby Language QuickStart:
 <a class="reference external" href="http://www.ruby-lang.org/en/documentation/quickstart">Part 1</a>,
@@ -87,7 +392,7 @@ comparing symbols is faster than comparing strings.</p>
 </ul>
 </div>
 <div class="section" id="exercise-1-1">
-<h2><a class="toc-backref" href="#id4">Exercise 1.1</a></h2>
+<h1><a class="toc-backref" href="#id3">Exercise 1.1</a></h1>
 <ul>
 <li><p class="first">Create the <cite>PizzaBurger</cite> application that will show this menu:</p>
 <pre class="literal-block">
@@ -167,7 +472,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-2">
-<h2><a class="toc-backref" href="#id5">Exercise 1.2</a></h2>
+<h1><a class="toc-backref" href="#id4">Exercise 1.2</a></h1>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/">Jamming with Ruby YAML</a> and
 <a class="reference external" href="http://rhnh.net/2011/01/31/yaml-tutorial">YAML Tutorial</a></li>
@@ -175,7 +480,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-3">
-<h2><a class="toc-backref" href="#id6">Exercise 1.3</a></h2>
+<h1><a class="toc-backref" href="#id5">Exercise 1.3</a></h1>
 <ul>
 <li><p class="first">Read <a class="reference external" href="http://ruby.about.com/od/rubyfeatures/a/hashes.htm">How to create and use Hashes in Ruby</a>.</p>
 </li>
@@ -204,7 +509,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="demonstration-2">
-<h2><a class="toc-backref" href="#id7">Demonstration #2</a></h2>
+<h1><a class="toc-backref" href="#id6">Demonstration #2</a></h1>
 <ul class="simple">
 <li>method argument starting with &quot;*&quot;</li>
 <li>Arrays/Hashes: min/max/group_by</li>
@@ -216,7 +521,7 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-4">
-<h2><a class="toc-backref" href="#id8">Exercise 1.4</a></h2>
+<h1><a class="toc-backref" href="#id7">Exercise 1.4</a></h1>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again">Ruby Singleton Pattern</a> (by Dalibor Nasevic)</li>
 <li>Read <a class="reference external" href="http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/">Include vs Extend</a> (by John Nunemaker)</li>
@@ -224,20 +529,20 @@ The order has been cancelled.
 </ul>
 </div>
 <div class="section" id="exercise-1-5">
-<h2><a class="toc-backref" href="#id9">Exercise 1.5</a></h2>
+<h1><a class="toc-backref" href="#id8">Exercise 1.5</a></h1>
 <ul class="simple">
 <li>Convert PizzaBurger to a singleton using the Module technique (as seen in the &quot;Ruby Singleton Pattern&quot; article)</li>
 </ul>
 </div>
 <div class="section" id="exercise-1-6">
-<h2><a class="toc-backref" href="#id10">Exercise 1.6</a></h2>
+<h1><a class="toc-backref" href="#id9">Exercise 1.6</a></h1>
 <ul class="simple">
 <li>Change PizzaOrder and BurgerOrder from standard inheritance to module-based composition
 (convert Order to a module)</li>
 </ul>
 </div>
 <div class="section" id="exercise-1-7">
-<h2><a class="toc-backref" href="#id11">Exercise 1.7</a></h2>
+<h1><a class="toc-backref" href="#id10">Exercise 1.7</a></h1>
 <ul>
 <li><p class="first">Read about <a class="reference external" href="http://www.sitepoint.com/lets-get-meta-missing-method/">missing_method</a> (by Myles Eftos)</p>
 </li>
@@ -256,7 +561,7 @@ with two methods:</p>
 </ul>
 </div>
 <div class="section" id="exercise-1-8">
-<h2><a class="toc-backref" href="#id12">Exercise 1.8</a></h2>
+<h1><a class="toc-backref" href="#id11">Exercise 1.8</a></h1>
 <ul class="simple">
 <li>Read <a class="reference external" href="http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class">Declaratively Adding Methods to a Class</a> (by Mark Menard)</li>
 <li>Read <a class="reference external" href="http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html">attr_accessor meta programming</a> (by Greg Houston)</li>
@@ -266,7 +571,7 @@ with two methods:</p>
 </ul>
 </div>
 <div class="section" id="extra-reading">
-<h2><a class="toc-backref" href="#id13">Extra Reading</a></h2>
+<h1><a class="toc-backref" href="#id12">Extra Reading</a></h1>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/styleguide/ruby">Github Ruby Styleguide</a></li>
 <li><a class="reference external" href="http://www.techotopia.com/index.php/Advanced_Ruby_Arrays">Advanced Ruby Arrays</a></li>
@@ -274,7 +579,6 @@ with two methods:</p>
 <li><a class="reference external" href="http://www.skorks.com/2009/09/a-wealth-of-ruby-loops-and-iterators/">A Wealth of Ruby loops and Iterators</a> (by Alan Skorkin).</li>
 <li><a class="reference external" href="http://www.skorks.com/2010/05/ruby-procs-and-lambdas-and-the-difference-between-them/">Ruby Procs and Lambdas</a> (by Alan Skorkin).</li>
 </ul>
-</div>
 </div>
 </div>
 </body>

@@ -1,16 +1,13 @@
 ======================
-Ruby on Rails Bootcamp
+Part 5 - RSpec (TDD)
 ======================
 
 `Back <index.html>`_
 
-Part 5 - RSpec (TDD)
-==========================
-
 .. contents::
 
 Demonstration
---------------------
+-------------
 
 * How to run rspec
 
@@ -33,18 +30,18 @@ Demonstration
 * `rspec demonstration code <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/rspec>`_.
 
 Reading
---------------------
+-------
 
 * `A Unit-testing framework in 44 lines <http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/>`_
 * Reference - `RSpec documentation <https://www.relishapp.com/rspec>`_
 
-Exercise 5.1
---------------------
+Exercise 1
+----------
 
 * Implement `Conway's Game of Life <http://en.wikipedia.org/wiki/Conway's_Game_of_Life>`_ using TDD and rspec.
 
-Exercise 5.2
---------------------
+Exercise 2
+----------
 
 In this exercise, you will implement a simple shop, with a shopping cart, products and orders.
 
@@ -86,8 +83,8 @@ In this exercise, you will implement a simple shop, with a shopping cart, produc
 
       * menu
 
-Exercise 5.3
---------------------
+Exercise 3
+----------
 
 * Extend the previous exercise:
  
@@ -108,7 +105,8 @@ Exercise 5.3
 
 
 Screencasts
---------------------
+-----------
+
 * Watch `Building RSpec from scratch <https://www.destroyallsoftware.com/screencasts/catalog/building-rspec-from-scratch>`_
 * Watch `Growing a test suite <https://www.destroyallsoftware.com/screencasts/catalog/growing-a-test-suite>`_
 * Watch `Stubbing unloaded dependencies <https://www.destroyallsoftware.com/screencasts/catalog/stubbing-unloaded-dependencies>`_

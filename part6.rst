@@ -1,17 +1,19 @@
 ======================
-Ruby on Rails Bootcamp
+Part 6 - Rails
 ======================
+
+.. sectnum::
+   :suffix: .
 
 `Back <index.html>`_
 
-Part 6 - Rails
-==========================
-
 .. contents::
 
-
-Demonstration 1
+Introduction
 -----------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Create a rails applications::
 
@@ -56,7 +58,7 @@ Demonstration 1
 * Watch the `Understanding the Asset Pipeline screencast <http://railscasts.com/episodes/279-understanding-the-asset-pipeline>`_.
 
 Why is the rspec-rails gem in both :test and :development?
------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's pretty obvious why the :test group is required (in order to run tests),
 
@@ -67,8 +69,8 @@ Well, it's because of the rails generators, when you run ``rails generate scaffo
   * if "rspec-rails" isn't in the :development group, rails will create Test::Unit tests.
   * if "rspec-rails" is in the :development, rails will create RSpec tests.
 
-Exercise 6.1
--------------
+Exercise
+~~~~~~~~
 
 * Read chapters 1-9 of `Action Controller Overview <http://guides.rubyonrails.org/action_controller_overview.html>`_
 * Read `Layouts and Rendering <http://guides.rubyonrails.org/layouts_and_rendering.html>`_
@@ -91,8 +93,11 @@ Exercise 6.1
   * Use haml and sass like in the demonstration
   * Use the ``rails generate scaffold`` command to create the ``Order`` and ``Client`` class
 
-Demonstration 2
-----------------
+Twitter Bootstrap + Simple Form
+-------------------------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Watch the `Simple Form screencast <http://railscasts.com/episodes/234-simple-form-revised>`_
 
@@ -113,15 +118,18 @@ Demonstration 2
 
 * The demo code is here: https://github.com/elentok/pizzaburger
 
-Exercise 6.2 (Twitter Bootstrap + Simple Form)
------------------------------------------------
+Exercise
+~~~~~~~~
 
 * Go to `Twitter Bootstrap homepage <http://twitter.github.com/bootstrap/>`_ for reference.
 * Go to `Simple Form homepage <https://github.com/plataformatec/simple_form>`_ for reference.
 * Use SimpleForm and Bootstrap
 
-Exercise 6.3 (Partial Templates)
----------------------------------
+Partial Templates
+-----------------
+
+Exercise
+~~~~~~~~
 
 * Read `Using Partials <http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials>`_
   (only chapter 3.4).
@@ -131,19 +139,25 @@ Exercise 6.3 (Partial Templates)
   * Extract a partial template called "_list" from the order's "index" template.
   * Render the "_list" template from the client's "show" template.
 
-Demonstration 3 (Localization)
--------------------------------
+Localization
+------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Watch the `I18n screencast <http://railscasts.com/episodes/138-i18n-revised>`_.
 
-Exercise 6.4 (Localize)
-------------------------
+Exercise
+~~~~~~~~
 
 * Read `Rails Internationalization API <http://guides.rubyonrails.org/i18n.html>`_.
 * Make PizzaBurger support both hebrew and english.
 
-Demonstration 4 (RSpec + Spork + FactoryGirl)
-----------------------------------------------
+RSpec + Spork + FactoryGirl
+---------------------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Automatically generated spec files
 * Add spork:
@@ -183,19 +197,22 @@ Demonstration 4 (RSpec + Spork + FactoryGirl)
 
 * `more information about spork <https://github.com/sporkrb/spork>`_
 
-Exercise 6.5 (RSpec + Spork + FactoryGirl)
--------------------------------------------
+Exercise
+~~~~~~~~
 
 * Read `Getting started with factory_girl <https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md>`_
 * Make all the specs pass
 
-Demonstration 5 (Inheritance)
-------------------------------
+Inheritance
+-----------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Using one controller for multiple inheriting classes
 
-Exercise 6.6 (Inheritance)
----------------------------
+Exercise
+~~~~~~~~
 
 * Add burger orders:
 
@@ -205,8 +222,11 @@ Exercise 6.6 (Inheritance)
   * In the order controller's "new" action, decide which order to create by using a query parameter
   * In the order form view, decide which fields to show by checking the type of the object
 
-Exercise 6.7 (Coffeescript & AJAX)
------------------------------------
+Coffeescript & AJAX
+-------------------
+
+Exercise
+~~~~~~~~
 
 * In the order form, add a button near the client selector that will allow you to
   add a new client without leaving the form:
@@ -218,24 +238,39 @@ Exercise 6.7 (Coffeescript & AJAX)
   * Write your coffeescript code in ``app/assets/javascripts/orders.js.coffee``
     (you can put the code for the new client form in ``clients.js.coffee`` if you want).
 
-Demonstration 6 (Devise)
--------------------------
+Authentication
+--------------
+
+Demonstration
+~~~~~~~~~~~~~
+
+* Watch `Authentication from scratch <http://railscasts.com/episodes/250-authentication-from-scratch-revised>`_
+
+Exercise
+~~~~~~~~
+
+* Add users (login+signup and everything) to PizzaBurger
+
+Devise (authentication gem)
+---------------------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Watch `Introducing Devise <http://railscasts.com/episodes/209-introducing-devise>`_
 * Watch `Customizing Devise <http://railscasts.com/episodes/210-customizing-devise>`_
 
-Exercise 6.8
-------------
 
-* Add users (login+signup and everything) to PizzaBurger
-
-Demonstration 7 (CanCan)
+CanCan
 -------------------------
+
+Demonstration
+~~~~~~~~~~~~~
 
 * Watch `Authorization with CanCan <http://railscasts.com/episodes/192-authorization-with-cancan>`_
 
-Exercise 6.9
-------------
+Exercise
+~~~~~~~~
 
 * Implement these two user roles:
 

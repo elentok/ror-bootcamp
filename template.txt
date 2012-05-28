@@ -1,0 +1,14 @@
+%(head_prefix)s
+%(head)s
+  %(stylesheet)s
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="style/ptserif.css" />
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+%(body_prefix)s
+<h1 class="primary-title">Ruby on Rails Bootcamp</h1>
+%(body_pre_docinfo)s
+%(docinfo)s
+%(body)s
+%(body_suffix)s

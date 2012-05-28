@@ -17,7 +17,8 @@ end
 
 guard :shell do
   watch( /(.*\.rst)$/ ) { |m|
-    system "./rst2html-pygments.py --stylesheet=style/style.css,style/highlight.css,style/ptserif.css --link-stylesheet #{m[1]} #{html_file(m)}"
+    #system "./rst2html-pygments.py --template=template.txt --link-script=http://code.jquery.com/jquery.min.js --stylesheet=style/style.css,style/highlight.css,style/ptserif.css --link-stylesheet #{m[1]} #{html_file(m)}"
+    system "./rst2html-pygments.py --template=template.txt  #{m[1]} #{html_file(m)}"
   }
 end
 

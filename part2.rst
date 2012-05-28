@@ -1,11 +1,8 @@
 ======================
-Ruby on Rails Bootcamp
+Part 2 - Ruby Gems
 ======================
 
 `Back <index.html>`_
-
-Part 2 - Ruby Gems
-==========================
 
 .. contents::
 

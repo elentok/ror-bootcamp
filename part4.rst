@@ -1,16 +1,19 @@
 ======================
-Ruby on Rails Bootcamp
+Part 4 - Active Record
 ======================
+
+.. sectnum::
+   :suffix: .
 
 `Back <index.html>`_
 
-Part 4 - Active Record
-==========================
-
 .. contents::
 
+Basics
+======
+
 Demonstration
---------------------
+-------------
 
 * Database generation script
   
@@ -60,8 +63,8 @@ Demonstration
 
 * `ActiveRecord demonstration code <https://github.com/elentok/ror-bootcamp/tree/gh-pages/exercises/active_record>`_.
 
-Exercise 4.1
---------------------
+Exercise
+--------
 
 * Create a file called ~/.pryrc and put these lines in the file:
 
@@ -77,8 +80,11 @@ Exercise 4.1
 
 * Modify PizzaBurger to store the orders to an SQLite database using ActiveRecord.
   
-Demonstration 2
---------------------
+Validations
+===========
+
+Demonstration
+-------------
 
 * custom validations (using :validate)
 * callbacks (before_save, before_validation)
@@ -86,20 +92,23 @@ Demonstration 2
   Use ``self`` when accessing the attribute.
   (see `trying to set a variable in before_validation but it isn't working <http://stackoverflow.com/questions/6065860/trying-to-set-a-variable-in-before-validation-but-it-isnt-working>`_).
 
-Exercise 4.2
---------------------
+Exercise
+--------
 
 * Read chapters 1-4 of `Validations <http://guides.rubyonrails.org/active_record_validations_callbacks.html>`_
 
 * Add validations to the PizzaBurger models
 
 Extra Reading
---------------------
+-------------
 
 * Read the rest of `Validations <http://guides.rubyonrails.org/active_record_validations_callbacks.html>`_
 
-Demonstration 3
---------------------
+Inheritance
+===========
+
+Demonstration
+-------------
 
 * Single Table Inheritance
 * Multi-Table (sort-of)Inheritance
@@ -107,20 +116,20 @@ Demonstration 3
   * Using composition
   * Using polymorphic associations
 
-Exercise 4.3
---------------------
+Exercise 1
+----------
 
 * Read the rest of `Association Basics <http://guides.rubyonrails.org/association_basics.html>`_
 
 * Use single table inheritance to implement ``PizzaOrder`` and ``BurgerOrder``.
 
-Exercise 4.4
---------------------
+Exercise 2
+----------
 
 * Now use polymorphic associations
 
-Screencasts
---------------------
+What goes in Active Records
+===========================
 
 * Watch `What goes in Active Records <https://www.destroyallsoftware.com/screencasts/catalog/what-goes-in-active-records>`_
 * Watch `What goes in Active Records Part 2 <https://www.destroyallsoftware.com/screencasts/catalog/what-goes-in-active-records-part-2>`_

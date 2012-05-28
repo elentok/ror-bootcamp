@@ -1,16 +1,13 @@
-======================
-Ruby on Rails Bootcamp
-======================
+===========================
+Part 1 - The Ruby Language
+===========================
 
 `Back <index.html>`_
-
-Part 1 - The Ruby Language
-==========================
 
 .. contents::
 
 Demonstration #1
------------------
+=================
 
 * Interpreter (IRB and Pry)
 * How to create and run a ruby script
@@ -38,7 +35,7 @@ Demonstration #1
 * Loops (each/for/loop/range)
 
 Reading Material
-----------------
+================
 
 * Read the Ruby Language QuickStart: 
   `Part 1 <http://www.ruby-lang.org/en/documentation/quickstart>`_, 
@@ -47,7 +44,7 @@ Reading Material
   `Part 4 <http://www.ruby-lang.org/en/documentation/quickstart/4>`_.
 
 Exercise 1.1
-----------------
+================
 
 * Create the `PizzaBurger` application that will show this menu::
 
@@ -120,7 +117,7 @@ Exercise 1.1
 * Validate all of the user input, if invalid show error messages and ask to enter again.
 
 Exercise 1.2
-----------------
+================
 
 * Read `Jamming with Ruby YAML <http://juixe.com/techknow/index.php/2009/10/08/jamming-with-ruby-yaml/>`_ and
   `YAML Tutorial <http://rhnh.net/2011/01/31/yaml-tutorial>`_
@@ -128,7 +125,7 @@ Exercise 1.2
 * Enhance exercise #1.1 to store (and load) the orders to a yaml file.
 
 Exercise 1.3
-----------------
+================
 
 * Read `How to create and use Hashes in Ruby <http://ruby.about.com/od/rubyfeatures/a/hashes.htm>`_.
  
@@ -151,7 +148,7 @@ Exercise 1.3
 * store the clients in a hash inside the PizzaBurger class
 
 Demonstration #2
-----------------
+=================
 
 * method argument starting with "*"
 * Arrays/Hashes: min/max/group_by
@@ -162,25 +159,25 @@ Demonstration #2
 * Show `How and why to avoid nil <https://www.destroyallsoftware.com/screencasts/catalog/how-and-why-to-avoid-nil>`_
 
 Exercise 1.4
-----------------
+================
 
 * Read `Ruby Singleton Pattern <http://dalibornasevic.com/posts/9-ruby-singleton-pattern-again>`_ (by Dalibor Nasevic)
 * Read `Include vs Extend <http://railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/>`_ (by John Nunemaker)
 * Convert PizzaBurger to a singleton using the Ruby Singleton module technique
 
 Exercise 1.5
-----------------
+================
 
 * Convert PizzaBurger to a singleton using the Module technique (as seen in the "Ruby Singleton Pattern" article)
 
 Exercise 1.6
-----------------
+================
 
 * Change PizzaOrder and BurgerOrder from standard inheritance to module-based composition
   (convert Order to a module)
 
 Exercise 1.7
-----------------
+================
 
 * Read about `missing_method <http://www.sitepoint.com/lets-get-meta-missing-method/>`_ (by Myles Eftos)
 * Move the save/load to yaml code to a class named ``PizzaBurgerData``
@@ -198,7 +195,7 @@ Exercise 1.7
 
 
 Exercise 1.8
-----------------
+================
 
 * Read `Declaratively Adding Methods to a Class <http://www.vitarara.org/cms/ruby_metaprogamming_declaratively_adding_methods_to_a_class>`_ (by Mark Menard)
 * Read `attr_accessor meta programming <http://ghouston.blogspot.com/2006/05/attraccessor-meta-programming.html>`_ (by Greg Houston)
@@ -207,7 +204,7 @@ Exercise 1.8
   (same as attr_accessor but creates a static property)
 
 Extra Reading
------------------
+================
 
 * `Github Ruby Styleguide <https://github.com/styleguide/ruby>`_
 * `Advanced Ruby Arrays <http://www.techotopia.com/index.php/Advanced_Ruby_Arrays>`_

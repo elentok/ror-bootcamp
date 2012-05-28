@@ -1,7 +1,3 @@
-======================
-Ruby on Rails Bootcamp
-======================
-
 This document is targeted at programmers that don't know a thing about Ruby on Rails 
 and want to learn.
 
@@ -10,7 +6,7 @@ The purpose of this document is to guide people who want to learn RoR through th
 .. contents::
 
 Schedule
-=========
+========
 
 +----------+-----------------+----------------+----------------------+-------------------+------------------+
 | Week/Day |      Sunday     |     Monday     |     Tuesday          |     Wednesday     |     Thursday     |
@@ -75,7 +71,7 @@ Introduction
   * NotePad++
 
 Course
-======
+========
 
 * `Part 1 - The Ruby Language <part1.html>`_
 * `Part 2 - Ruby Gems <part2.html>`_
@@ -86,6 +82,6 @@ Course
 
 
 Appendixes
-=======================
+===========
 
 * `Appendix 1 - Linux <appendix1.html>`_
