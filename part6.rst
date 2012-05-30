@@ -260,6 +260,10 @@ Demonstration
 * Watch `Introducing Devise <http://railscasts.com/episodes/209-introducing-devise>`_
 * Watch `Customizing Devise <http://railscasts.com/episodes/210-customizing-devise>`_
 
+* Create two types of users:
+
+  * Client - use the existing class (either combine Client and User).
+  * Employee
 
 CanCan
 -------------------------
@@ -272,8 +276,13 @@ Demonstration
 Exercise
 ~~~~~~~~
 
-* Implement these two user roles:
+* Implement the following roles:
 
-  * Customer - allowed to order
+  * Client
+
+    * Can create orders and edit its own orders
+
   * Employee - allowed to view all orders and add clients
+
+    * Can do anything
 
