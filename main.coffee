@@ -1,5 +1,7 @@
 $(window).ready ->
   $('.contents').remove()
+  $('.primary-title').click ->
+    $('.section').toggle()
 
   headings = $('.section > h1, .section > h2, .section > h3')
   for heading in headings
@@ -19,6 +21,6 @@ class SectionHeading
     anchor = @heading.find('a')
     anchor.attr('href', '#' + @section.attr('id'))
     anchor.click (e) =>
-      e.preventDefault()
       @section.toggle()
+      e.preventDefault() unless @section.is(':visible')
 

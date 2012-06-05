@@ -79,6 +79,7 @@ Course
 * `Part 4 - Active Record <part4.html>`_
 * `Part 5 - RSpec (TDD) <part5.html>`_
 * `Part 6 - Rails <part6.html>`_
+* `Part 7 - Backbone <part7.html>`_
 
 
 Appendixes

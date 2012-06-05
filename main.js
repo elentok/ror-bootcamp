@@ -5,6 +5,9 @@
   $(window).ready(function() {
     var heading, headings, section, _i, _len;
     $('.contents').remove();
+    $('.primary-title').click(function() {
+      return $('.section').toggle();
+    });
     headings = $('.section > h1, .section > h2, .section > h3');
     for (_i = 0, _len = headings.length; _i < _len; _i++) {
       heading = headings[_i];
@@ -32,8 +35,10 @@
       anchor = this.heading.find('a');
       anchor.attr('href', '#' + this.section.attr('id'));
       anchor.click(function(e) {
-        e.preventDefault();
-        return _this.section.toggle();
+        _this.section.toggle();
+        if (!_this.section.is(':visible')) {
+          return e.preventDefault();
+        }
       });
     }
 
