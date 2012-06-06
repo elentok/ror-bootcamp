@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
-<title></title>
+<title>Part 8 - Git</title>
   <style type="text/css">
 
 /*
@@ -319,167 +319,58 @@ ul.auto-toc {
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div class="document">
+<div class="document" id="part-8-git">
 <h1 class="primary-title">Ruby on Rails Bootcamp</h1>
+<h1 class="title">Part 8 - Git</h1>
 
-
-<p>This document is targeted at programmers that don't know a thing about Ruby on Rails
-and want to learn.</p>
-<p>The purpose of this document is to guide people who want to learn RoR through the process.</p>
+<p><a class="reference external" href="index.html">Back</a></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
-<ul class="simple">
-<li><a class="reference internal" href="#schedule" id="id1">Schedule</a></li>
-<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
-<li><a class="reference internal" href="#course" id="id3">Course</a></li>
-<li><a class="reference internal" href="#appendixes" id="id4">Appendixes</a></li>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#demonstration" id="id1">1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#exercise" id="id2">2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
 </ul>
 </div>
-<div class="section" id="schedule">
-<h1><a class="toc-backref" href="#id1">Schedule</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="10%" />
-<col width="17%" />
-<col width="16%" />
-<col width="22%" />
-<col width="19%" />
-<col width="18%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">Week/Day</th>
-<th class="head">Sunday</th>
-<th class="head">Monday</th>
-<th class="head">Tuesday</th>
-<th class="head">Wednesday</th>
-<th class="head">Thursday</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>Week #1</td>
-<td colspan="2"><ul class="first last simple">
-<li>Intro Lecture</li>
-<li>Part 1 (Ruby)</li>
-</ul>
-</td>
-<td><ul class="first last simple">
-<li>Part 2 (Gems)</li>
-<li>Part 3 (Debugging)</li>
-<li>Part 4
-(Active Record)</li>
-</ul>
-</td>
-<td><ul class="first last simple">
-<li>Part 4
-(Active Record)</li>
-<li>Part 5
-(RSpec)</li>
-</ul>
-</td>
-<td><ul class="first last simple">
-<li>Part 5
-(RSpec)</li>
-</ul>
-</td>
-</tr>
-<tr><td>Week #2</td>
-<td><ul class="first last simple">
-<li>Part 5 (Rspec)</li>
-</ul>
-</td>
-<td colspan="4"><ul class="first last simple">
-<li>Part 6 (Rails)</li>
-</ul>
-</td>
-</tr>
-<tr><td>Week #3</td>
-<td colspan="5"><ul class="first last simple">
-<li>Part 6 (Rails)</li>
-</ul>
-</td>
-</tr>
-<tr><td>Week #4</td>
-<td colspan="2"><ul class="first last simple">
-<li>Part 6 (Rails)</li>
-</ul>
-</td>
-<td colspan="2"><ul class="first last simple">
-<li>Part 7 (Backbone)</li>
-</ul>
-</td>
-<td><ul class="first last simple">
-<li>Part 8 (Git)</li>
-</ul>
-</td>
-</tr>
-<tr><td>Week #5</td>
-<td colspan="5" rowspan="4">&nbsp;</td>
-</tr>
-<tr><td>Week #6</td>
-</tr>
-<tr><td>Week #7</td>
-</tr>
-<tr><td>Week #8</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="introduction">
-<h1><a class="toc-backref" href="#id2">Introduction</a></h1>
-<ul class="simple">
-<li>Watch the <a class="reference external" href="intro.html">introduction lecture</a>.</li>
-<li>What is Ruby?<ul>
-<li>Ruby is a dynamic, interpreted, open source language.</li>
-</ul>
+<div class="section" id="demonstration">
+<h1><a class="toc-backref" href="#id1">1.&nbsp;&nbsp;&nbsp;Demonstration</a></h1>
+<ul>
+<li><p class="first">What is git?</p>
 </li>
-<li>What is Rails?<ul>
-<li>Rails is a web application framework</li>
-</ul>
+<li><p class="first">Configuring user and password:</p>
+<pre class="literal-block">
+git config --global user.name 'My Name'
+git config --global useremail 'me&#64;myhost.com'
+</pre>
 </li>
-<li>Versions<ul>
-<li>The newest version of Ruby is 1.9, the old version is 1.8
-(1.9 is not fully backward-compatible with 1.8 so not everyone switched from 1.8).</li>
-<li>The newest version of Rails is 3.2, the old version is 2.x
-(3.2 is not fully backward-compatible with 2.x so not everyone switched from 2.x).</li>
-</ul>
+<li><p class="first">Initializing a repository</p>
 </li>
-<li>Gems<ul>
-<li>Packaged modules of ruby code (sort of like C# DLLs but also include the code)</li>
-</ul>
+<li><p class="first">What is the index? (staging)</p>
 </li>
-<li>Installing Ruby On Rails<ul>
-<li>Windows - <a class="reference external" href="http://railsinstaller.org/">RailsInstaller</a></li>
-<li>Linux/Mac - Rvm
-Ruby Version Manager - allows running multiple versions of Ruby on the same machine
-(so people can run legacy Ruby 1.8 web apps and new 1.9 web apps side-by-side).</li>
-</ul>
+<li><p class="first">Commiting</p>
 </li>
-<li>Development Environment, you can use whatever you want:<ul>
-<li>Vim</li>
-<li>Sublime Text =&gt; recommended for beginners</li>
-<li>RubyMine</li>
-<li>NotePad++</li>
-</ul>
+<li><p class="first">Pushing changes</p>
+</li>
+<li><p class="first">Branches</p>
+</li>
+<li><p class="first">Merging</p>
+</li>
+<li><p class="first">Rebase</p>
+</li>
+<li><p class="first">Resolving conflicts</p>
 </li>
 </ul>
 </div>
-<div class="section" id="course">
-<h1><a class="toc-backref" href="#id3">Course</a></h1>
+<div class="section" id="exercise">
+<h1><a class="toc-backref" href="#id2">2.&nbsp;&nbsp;&nbsp;Exercise</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="part1.html">Part 1 - The Ruby Language</a></li>
-<li><a class="reference external" href="part2.html">Part 2 - Ruby Gems</a></li>
-<li><a class="reference external" href="part3.html">Part 3 - Debugging</a></li>
-<li><a class="reference external" href="part4.html">Part 4 - Active Record</a></li>
-<li><a class="reference external" href="part5.html">Part 5 - RSpec (TDD)</a></li>
-<li><a class="reference external" href="part6.html">Part 6 - Rails</a></li>
-<li><a class="reference external" href="part7.html">Part 7 - Backbone</a></li>
-<li><a class="reference external" href="part8.html">Part 8 - Git</a></li>
+<li>Read <a class="reference external" href="http://rogerdudler.github.com/git-guide/">http://rogerdudler.github.com/git-guide/</a></li>
+<li>In groups:<ul>
+<li>Create a remote repository</li>
+<li>Each member of the group should clone the repository</li>
+<li>Each member should commit once and push (use rebase to handle conflicts)</li>
+<li>Each member should commit multiple times (change all existing files) and push</li>
 </ul>
-</div>
-<div class="section" id="appendixes">
-<h1><a class="toc-backref" href="#id4">Appendixes</a></h1>
-<ul class="simple">
-<li><a class="reference external" href="appendix1.html">Appendix 1 - Linux</a></li>
+</li>
 </ul>
 </div>
 </div>
