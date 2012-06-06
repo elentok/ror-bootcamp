@@ -39,5 +39,7 @@ Exercise
   * Each member should commit once and push (use rebase to handle conflicts)
   * Each member should commit multiple times (change all existing files) and push
 
+* Use http://gitready.com for reference
+
 
 
