@@ -53,8 +53,8 @@ Part 2
 ------
 
 * Create a bare repository (``git init --bare``), we'll call it **REPO0**
-* Clone that repository (``git clone path-to-other-repo directory-of-other-repo``), 
-  we'll call it **REPO1**
+* Clone that repository (``git clone path-to-other-repo0 name-of-cloned-repo``), 
+  we'll call it **REPO1**, this will create the new repository in ``name-of-cloned-repo``.
 * Make some commits and push them (``git push -u origin master``)
 * Make some commits and push them (``git push`` - after pushing with ``-u``, 
   you don't need to add the ``-u origin master`` part anymore)
