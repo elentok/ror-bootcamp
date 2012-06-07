@@ -13,10 +13,10 @@ Demonstration
 =============
 
 * What is git?
-* Configuring user and password::
+* Configuring user and email::
 
     git config --global user.name 'My Name'
-    git config --global useremail 'me@myhost.com'
+    git config --global user.email 'me@myhost.com'
 
 * Initializing a repository
 * What is the index? (staging)
