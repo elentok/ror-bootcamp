@@ -331,6 +331,8 @@ ul.auto-toc {
 <li><a class="reference internal" href="#exercise" id="id2">2.&nbsp;&nbsp;&nbsp;Exercise</a><ul class="auto-toc">
 <li><a class="reference internal" href="#part-1" id="id3">2.1.&nbsp;&nbsp;&nbsp;Part 1</a></li>
 <li><a class="reference internal" href="#part-2" id="id4">2.2.&nbsp;&nbsp;&nbsp;Part 2</a></li>
+<li><a class="reference internal" href="#part-3" id="id5">2.3.&nbsp;&nbsp;&nbsp;Part 3</a></li>
+<li><a class="reference internal" href="#reference" id="id6">2.4.&nbsp;&nbsp;&nbsp;Reference</a></li>
 </ul>
 </li>
 </ul>
@@ -363,9 +365,11 @@ git config --global user.name 'My Name'
 git config --global user.email 'me&#64;myhost.com'
 </pre>
 </li>
-<li><p class="first">Create a repository (<cite>git init</cite>)</p>
+<li><p class="first">Create a repository (<tt class="docutils literal">git init</tt>)</p>
 </li>
-<li><p class="first">Add some files and commit:</p>
+<li><p class="first">Add some files, and run <tt class="docutils literal">git status</tt> (you'll see the new files under &quot;untracked files&quot;)</p>
+</li>
+<li><p class="first">now commit:</p>
 <pre class="literal-block">
 git add --all
 git commit -m &quot;commit message&quot;
@@ -373,11 +377,11 @@ git commit -m &quot;commit message&quot;
 </li>
 <li><p class="first">Change one of the files</p>
 </li>
-<li><p class="first">Use <cite>git diff</cite> to see the changes</p>
+<li><p class="first">Use <tt class="docutils literal">git diff</tt> to see the changes</p>
 </li>
-<li><p class="first">Add those changes to the index file (<cite>git add {file}</cite>)</p>
+<li><p class="first">Add those changes to the index file (<tt class="docutils literal">git add {file}</tt>)</p>
 </li>
-<li><p class="first">Run <cite>git diff</cite> - you can see your working directory has no changes
+<li><p class="first">Run <tt class="docutils literal">git diff</tt>, you can see your working directory has no changes
 (git diff shows the changes between your working directory and the staging area)</p>
 </li>
 </ul>
@@ -385,17 +389,32 @@ git commit -m &quot;commit message&quot;
 <div class="section" id="part-2">
 <h2><a class="toc-backref" href="#id4">2.2.&nbsp;&nbsp;&nbsp;Part 2</a></h2>
 <ul class="simple">
-<li>Create a bare repository (<cite>git init --bare</cite>)</li>
-<li>Make some commits</li>
-<li>Clone the repository</li>
-<li>Make some commits in the cloned repository</li>
+<li>Create a bare repository (<tt class="docutils literal">git init <span class="pre">--bare</span></tt>), we'll call it <strong>REPO0</strong></li>
+<li>Clone that repository (<tt class="docutils literal">git clone <span class="pre">path-to-other-repo</span> <span class="pre">directory-of-other-repo</span></tt>),
+we'll call it <strong>REPO1</strong></li>
+<li>Make some commits and push them (<tt class="docutils literal">git push <span class="pre">-u</span> origin master</tt>)</li>
+<li>Make some commits and push them (<tt class="docutils literal">git push</tt> - after pushing with <tt class="docutils literal"><span class="pre">-u</span></tt>,
+you don't need to add the <tt class="docutils literal"><span class="pre">-u</span> origin master</tt> part anymore)</li>
+<li>Clone the first repository again (in a different directory), we'll call this one <strong>REPO2</strong></li>
+<li>Make some commits in REPO2, and push them to REPO0</li>
+<li>Go back to REPO1 and pull the changes</li>
+</ul>
+</div>
+<div class="section" id="part-3">
+<h2><a class="toc-backref" href="#id5">2.3.&nbsp;&nbsp;&nbsp;Part 3</a></h2>
+<ul class="simple">
 <li>In groups:<ul>
-<li>Create a remote repository</li>
+<li>Create a remote repository (using github, bitbucket, SCM manager, etc...)</li>
 <li>Each member of the group should clone the repository</li>
 <li>Each member should commit once and push (use rebase to handle conflicts)</li>
 <li>Each member should commit multiple times (change all existing files) and push</li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="section" id="reference">
+<h2><a class="toc-backref" href="#id6">2.4.&nbsp;&nbsp;&nbsp;Reference</a></h2>
+<ul class="simple">
 <li>Use <a class="reference external" href="http://gitready.com">http://gitready.com</a> for reference</li>
 </ul>
 </div>
