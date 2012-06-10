@@ -20,7 +20,7 @@ Task Management
   * As an admin I want to add/edit/delete users
   * As an admin I want to add/edit/delete boards
   * As an admin I want to modify the columns on a board
-  * As an admin I want to define which user groups can see/review which repositories
+  * As an admin I want to define which user groups can view/edit which board
   * As a user I want to login to the system
   * As a user I want to add/edit/delete tasks to a board
     
