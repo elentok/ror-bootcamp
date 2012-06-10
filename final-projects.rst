@@ -19,9 +19,22 @@ Task Management
   * As an admin I want to add/edit/delete user groups
   * As an admin I want to add/edit/delete users
   * As an admin I want to add/edit/delete boards
+  * As an admin I want to modify the columns on a board
   * As an admin I want to define which user groups can see/review which repositories
   * As a user I want to login to the system
   * As a user I want to add/edit/delete tasks to a board
+    
+    * I want to set the **title** for a task
+    * I want to set the **description** for a task
+    * I want to set the **time spent** on a task
+    * I want to set the **time estimated** for a task
+    * I want to assign the task to a **user** (a task can be unassigned)
+    * I want to define **tags** for a task
+    * I want to define **subtasks** for a task
+    * I want to comment on a task (multiple comments)
+    * I want to move tasks between columns
+
+
 
 Code Review
 ===========
