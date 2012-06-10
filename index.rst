@@ -87,7 +87,7 @@ Course
 * `Part 6 - Rails <part6.html>`_
 * `Part 7 - Backbone <part7.html>`_
 * `Part 8 - Git <part8.html>`_
-
+* `Final Projects <final-projects.html>`_
 
 Appendixes
 ===========
