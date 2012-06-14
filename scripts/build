@@ -1,9 +1,14 @@
 #!/bin/bash
 
 function build {
-  html_file=`echo $1 | sed 's/\.rst$/.html/'`
-  echo "Compiling '$1' to '$html_file'"
-  dirname=`dirname $1 | sed 's#/[^/]\+#/..#g'`
+  file=`echo $1 | sed 's#^\./\?##'`
+  html_file=`echo $file | sed 's/\.rst$/.html/'`
+  echo "Compiling '$file' to '$html_file'"
+  dirname=`dirname $file`
+  if [ $dirname != "." ]; then
+    dirname=`dirname $file | sed 's#[^/]\+#..#g'`
+  fi
+  echo "dirname=[$dirname]"
   cat scripts/template.txt | sed "s#%%%ROOT%%%#$dirname#" > scripts/template.txt.tmp
   scripts/rst2html-pygments.py --template=scripts/template.txt.tmp $1 $html_file
   rm scripts/template.txt.tmp

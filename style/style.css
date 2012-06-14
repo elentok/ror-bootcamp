@@ -104,3 +104,7 @@ p {
   margin-top: 0;
   margin-bottom: 5px;
 }
+
+.index-page .title {
+  display: none;
+}
