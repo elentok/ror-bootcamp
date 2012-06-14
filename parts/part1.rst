@@ -2,7 +2,7 @@
 Part 1 - The Ruby Language
 ===========================
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

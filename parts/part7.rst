@@ -5,7 +5,7 @@ Part 7 - Backbone
 .. sectnum::
    :suffix: .
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

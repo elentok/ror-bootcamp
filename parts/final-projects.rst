@@ -5,7 +5,7 @@ Final Projects Ideas
 .. sectnum::
    :suffix: .
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

@@ -1,0 +1,30 @@
+%(head_prefix)s
+%(head)s
+  %(stylesheet)s
+  <link rel="stylesheet" type="text/css" href="%%%ROOT%%%/style/style.css" />
+  <link rel="stylesheet" type="text/css" href="%%%ROOT%%%/style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="%%%ROOT%%%/style/ptserif.css" />
+
+%(body_prefix)s
+<h1 class="primary-title">Ruby on Rails Bootcamp</h1>
+%(body_pre_docinfo)s
+%(docinfo)s
+%(body)s
+
+  <script type="text/javascript" src="%%%ROOT%%%/js/jquery.min.js"></script>
+  <script type="text/javascript" src="%%%ROOT%%%/js/main.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32652206-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+%(body_suffix)s

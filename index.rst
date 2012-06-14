@@ -41,7 +41,7 @@ Schedule
 Introduction
 ============
 
-* Watch the `introduction lecture <intro.html>`_.
+* Watch the `introduction lecture <parts/intro.html>`_.
 
 * What is Ruby? 
 
@@ -79,17 +79,17 @@ Introduction
 Course
 ========
 
-* `Part 1 - The Ruby Language <part1.html>`_
-* `Part 2 - Ruby Gems <part2.html>`_
-* `Part 3 - Debugging <part3.html>`_
-* `Part 4 - Active Record <part4.html>`_
-* `Part 5 - RSpec (TDD) <part5.html>`_
-* `Part 6 - Rails <part6.html>`_
-* `Part 7 - Backbone <part7.html>`_
-* `Part 8 - Git <part8.html>`_
-* `Final Projects <final-projects.html>`_
+* `Part 1 - The Ruby Language <parts/part1.html>`_
+* `Part 2 - Ruby Gems <parts/part2.html>`_
+* `Part 3 - Debugging <parts/part3.html>`_
+* `Part 4 - Active Record <parts/part4.html>`_
+* `Part 5 - RSpec (TDD) <parts/part5.html>`_
+* `Part 6 - Rails <parts/part6.html>`_
+* `Part 7 - Backbone <parts/part7.html>`_
+* `Part 8 - Git <parts/part8.html>`_
+* `Final Projects <parts/final-projects.html>`_
 
 Appendixes
 ===========
 
-* `Appendix 1 - Linux <appendix1.html>`_
+* `Appendix 1 - Linux <parts/appendix1.html>`_

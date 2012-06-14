@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
-<title>Part 3 - Debugging</title>
+<title>Part 2 - Ruby Gems</title>
   <style type="text/css">
 
 /*
@@ -312,57 +312,111 @@ ul.auto-toc {
   list-style-type: none }
 
 </style>
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
-  <link rel="stylesheet" type="text/css" href="style/highlight.css" />
-  <link rel="stylesheet" type="text/css" href="style/ptserif.css" />
-  <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="./../style/style.css" />
+  <link rel="stylesheet" type="text/css" href="./../style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="./../style/ptserif.css" />
+
 </head>
 <body>
-<div class="document" id="part-3-debugging">
+<div class="document" id="part-2-ruby-gems">
 <h1 class="primary-title">Ruby on Rails Bootcamp</h1>
-<h1 class="title">Part 3 - Debugging</h1>
+<h1 class="title">Part 2 - Ruby Gems</h1>
 
-<p><a class="reference external" href="index.html">Back</a></p>
+<p><a class="reference external" href="../index.html">Back</a></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#demonstration" id="id1">Demonstration</a></li>
-<li><a class="reference internal" href="#exercise-3" id="id2">Exercise 3</a></li>
+<li><a class="reference internal" href="#read" id="id2">Read</a></li>
+<li><a class="reference internal" href="#exercise-2" id="id3">Exercise 2</a></li>
 </ul>
 </div>
 <div class="section" id="demonstration">
 <h1><a class="toc-backref" href="#id1">Demonstration</a></h1>
 <ul class="simple">
-<li>debug a simple script<ul>
-<li>run via rdebug</li>
-<li>add breakpoint ('debugger')</li>
-<li>run via simple script (require 'debugger')</li>
-<li>help</li>
-<li>autolist</li>
-<li>autoeval</li>
+<li>difference between <tt class="docutils literal">require</tt>, <tt class="docutils literal">require_relative</tt> and <tt class="docutils literal">load</tt>:<ul>
+<li><tt class="docutils literal">require 'name'</tt> - relative to $LOAD_PATH</li>
+<li><tt class="docutils literal">require <span class="pre">'./...'</span></tt> - relative to the curent working path</li>
+<li><tt class="docutils literal">require_relative <span class="pre">'...'</span></tt> - relative to the path of the current file</li>
+<li><tt class="docutils literal">load <span class="pre">'...'</span></tt> - loads a file (even if it's already loaded)</li>
 </ul>
 </li>
-<li>use irb within the debugger</li>
-<li>use pry within the debugger</li>
+<li>install a gem</li>
+<li>create a Gemfile</li>
+<li>run bundle install</li>
+<li>use Gemfile groups</li>
+<li>watch the <a class="reference external" href="http://railscasts.com/episodes/201-bundler-revised">bundler screencast</a>.</li>
 </ul>
 </div>
-<div class="section" id="exercise-3">
-<h1><a class="toc-backref" href="#id2">Exercise 3</a></h1>
+<div class="section" id="read">
+<h1><a class="toc-backref" href="#id2">Read</a></h1>
+<ul>
+<li><p class="first">A gem is a ruby plugin</p>
+</li>
+<li><p class="first">To install a single gem:</p>
+<pre class="literal-block">
+gem install gem-name-here
+</pre>
+</li>
+<li><p class="first">A single project uses multiple gems and in order to manage gem dependencies
+and simplify deployment of a rails app we use a tool called <em>Bundler</em>.</p>
+</li>
+<li><p class="first">Bundler uses a file called <em>Gemfile</em>:</p>
+<div class="highlight"><pre><span class="c1"># this line tells bundler to use &quot;http://rubygems.org&quot; as the gem repository</span>
+<span class="c1"># (if you wish to use an offline repository, replace this url with your own)</span>
+<span class="n">source</span> <span class="s1">&#39;http://rubygems.org&#39;</span>
+
+<span class="c1"># this tells bundler to load the &quot;rails&quot; gem and all of its dependencies</span>
+<span class="n">gem</span> <span class="s1">&#39;rails&#39;</span>
+
+<span class="c1"># these gems will only be required for development</span>
+<span class="c1"># (when deploying a production environment these won&#39;t be loaded)</span>
+<span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">&#39;debugger&#39;</span>
+  <span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</li>
+<li><p class="first">After creating the Gemfile, run the command <tt class="docutils literal">bundle install</tt> to install the gems.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="exercise-2">
+<h1><a class="toc-backref" href="#id3">Exercise 2</a></h1>
 <ul class="simple">
-<li>Read <a class="reference external" href="http://pivotallabs.com/users/chad/blog/articles/366-ruby-debug-in-30-seconds-we-don-t-need-no-stinkin-gui-">Ruby debug in 30 seconds</a>
-(skip &quot;Install the latest gem&quot; and &quot;Install the cheatsheet&quot;</li>
-<li>References:<ul>
-<li><a class="reference external" href="https://github.com/pry/pry/wiki/">Pry Wiki</a>.</li>
+<li>Create a new folder</li>
+<li>Create a file called &quot;Gemfile&quot; and the following gems to it:<ul>
+<li>rails</li>
+<li>rspec-rails</li>
+<li>debugger</li>
 </ul>
 </li>
-<li>Debug the PizzaBurger application.<ul>
-<li>run it in debug mode</li>
-<li>run it normal mode (with breakpoints)</li>
+<li>Run <tt class="docutils literal">bundle install</tt>, you should see &quot;Your bundle is complete! ...&quot;</li>
 </ul>
-</li>
+<p><strong>Notes:</strong></p>
+<ul class="simple">
+<li>If it complains that there is no source, then add the source line (<tt class="docutils literal">source <span class="pre">'url-for-gem-server'</span></tt>)
+at the beginning of the file.</li>
+<li>You can run a local gem server by running <tt class="docutils literal">gem server</tt> in a terminal (the url for this server will be <em>http://localhost:8808</em>).</li>
 </ul>
 </div>
+
+  <script type="text/javascript" src="./../js/jquery.min.js"></script>
+  <script type="text/javascript" src="./../js/main.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32652206-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
 </div>
 </body>
 </html>

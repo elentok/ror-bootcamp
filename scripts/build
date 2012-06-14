@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function build {
+  html_file=`echo $1 | sed 's/\.rst$/.html/'`
+  echo "Compiling '$1' to '$html_file'"
+  dirname=`dirname $1 | sed 's#/[^/]\+#/..#g'`
+  cat scripts/template.txt | sed "s#%%%ROOT%%%#$dirname#" > scripts/template.txt.tmp
+  scripts/rst2html-pygments.py --template=scripts/template.txt.tmp $1 $html_file
+  rm scripts/template.txt.tmp
+}
+
+if [ "$1" != "" ]; then
+  build "$1"
+else
+  rst_files=`find . -iname '*\.rst' | sort`
+
+  for f in $rst_files; do
+    build "$f"
+  done
+fi
+

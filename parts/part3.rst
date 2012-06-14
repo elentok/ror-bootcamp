@@ -2,7 +2,7 @@
 Part 3 - Debugging
 ======================
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

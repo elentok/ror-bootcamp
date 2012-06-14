@@ -5,7 +5,7 @@ Part 4 - Active Record
 .. sectnum::
    :suffix: .
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

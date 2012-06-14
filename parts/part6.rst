@@ -5,7 +5,7 @@ Part 6 - Rails
 .. sectnum::
    :suffix: .
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

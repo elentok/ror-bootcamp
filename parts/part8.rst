@@ -5,7 +5,7 @@ Part 8 - Git
 .. sectnum::
    :suffix: .
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

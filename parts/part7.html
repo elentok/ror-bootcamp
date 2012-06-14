@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
-<title>Part 8 - Git</title>
+<title>Part 7 - Backbone</title>
   <style type="text/css">
 
 /*
@@ -312,113 +312,81 @@ ul.auto-toc {
   list-style-type: none }
 
 </style>
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
-  <link rel="stylesheet" type="text/css" href="style/highlight.css" />
-  <link rel="stylesheet" type="text/css" href="style/ptserif.css" />
-  <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="./../style/style.css" />
+  <link rel="stylesheet" type="text/css" href="./../style/highlight.css" />
+  <link rel="stylesheet" type="text/css" href="./../style/ptserif.css" />
+
 </head>
 <body>
-<div class="document" id="part-8-git">
+<div class="document" id="part-7-backbone">
 <h1 class="primary-title">Ruby on Rails Bootcamp</h1>
-<h1 class="title">Part 8 - Git</h1>
+<h1 class="title">Part 7 - Backbone</h1>
 
-<p><a class="reference external" href="index.html">Back</a></p>
+<p><a class="reference external" href="../index.html">Back</a></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#demonstration" id="id1">1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
-<li><a class="reference internal" href="#exercise" id="id2">2.&nbsp;&nbsp;&nbsp;Exercise</a><ul class="auto-toc">
-<li><a class="reference internal" href="#part-1" id="id3">2.1.&nbsp;&nbsp;&nbsp;Part 1</a></li>
-<li><a class="reference internal" href="#part-2" id="id4">2.2.&nbsp;&nbsp;&nbsp;Part 2</a></li>
-<li><a class="reference internal" href="#part-3" id="id5">2.3.&nbsp;&nbsp;&nbsp;Part 3</a></li>
-<li><a class="reference internal" href="#reference" id="id6">2.4.&nbsp;&nbsp;&nbsp;Reference</a></li>
+<li><a class="reference internal" href="#introduction" id="id3">1.&nbsp;&nbsp;&nbsp;Introduction</a><ul class="auto-toc">
+<li><a class="reference internal" href="#demonstration" id="id4">1.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#exercise" id="id5">1.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backbone-marionette" id="id6">2.&nbsp;&nbsp;&nbsp;Backbone.Marionette</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id1" id="id7">2.1.&nbsp;&nbsp;&nbsp;Demonstration</a></li>
+<li><a class="reference internal" href="#id2" id="id8">2.2.&nbsp;&nbsp;&nbsp;Exercise</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id3">1.&nbsp;&nbsp;&nbsp;Introduction</a></h1>
 <div class="section" id="demonstration">
-<h1><a class="toc-backref" href="#id1">1.&nbsp;&nbsp;&nbsp;Demonstration</a></h1>
+<h2><a class="toc-backref" href="#id4">1.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
-<li>What is git?</li>
-<li>Initializing a repository</li>
-<li>What is the index? (staging)</li>
-<li>Commiting</li>
-<li>Pushing changes</li>
-<li>Branches</li>
-<li>Merging</li>
-<li>Rebase</li>
-<li>Resolving conflicts</li>
+<li>Watch <a class="reference external" href="http://railscasts.com/episodes/323-backbone-on-rails-part-1">Backbone on Rails part 1</a></li>
+<li>Watch <a class="reference external" href="http://railscasts.com/episodes/325-backbone-on-rails-part-2">Backbone on Rails part 2</a></li>
 </ul>
 </div>
 <div class="section" id="exercise">
-<h1><a class="toc-backref" href="#id2">2.&nbsp;&nbsp;&nbsp;Exercise</a></h1>
+<h2><a class="toc-backref" href="#id5">1.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
-<li>Read <a class="reference external" href="http://rogerdudler.github.com/git-guide/">http://rogerdudler.github.com/git-guide/</a></li>
-</ul>
-<div class="section" id="part-1">
-<h2><a class="toc-backref" href="#id3">2.1.&nbsp;&nbsp;&nbsp;Part 1</a></h2>
-<ul>
-<li><p class="first">Configuring user and email (these will be assigned to all your commits):</p>
-<pre class="literal-block">
-git config --global user.name 'My Name'
-git config --global user.email 'me&#64;myhost.com'
-</pre>
-</li>
-<li><p class="first">Create a repository (<tt class="docutils literal">git init</tt>)</p>
-</li>
-<li><p class="first">Add some files, and run <tt class="docutils literal">git status</tt> (you'll see the new files under &quot;untracked files&quot;)</p>
-</li>
-<li><p class="first">now commit:</p>
-<pre class="literal-block">
-git add --all
-git commit -m &quot;commit message&quot;
-</pre>
-</li>
-<li><p class="first">Change one of the files</p>
-</li>
-<li><p class="first">Use <tt class="docutils literal">git diff</tt> to see the changes</p>
-</li>
-<li><p class="first">Add those changes to the index file (<tt class="docutils literal">git add {file}</tt>)</p>
-</li>
-<li><p class="first">Run <tt class="docutils literal">git diff</tt>, you can see your working directory has no changes
-(git diff shows the changes between your working directory and the staging area)</p>
-</li>
+<li>Create a new application to manage (list/add/edit/delete) clients.</li>
 </ul>
 </div>
-<div class="section" id="part-2">
-<h2><a class="toc-backref" href="#id4">2.2.&nbsp;&nbsp;&nbsp;Part 2</a></h2>
+</div>
+<div class="section" id="backbone-marionette">
+<h1><a class="toc-backref" href="#id6">2.&nbsp;&nbsp;&nbsp;Backbone.Marionette</a></h1>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id7">2.1.&nbsp;&nbsp;&nbsp;Demonstration</a></h2>
 <ul class="simple">
-<li>Create a bare repository (<tt class="docutils literal">git init <span class="pre">--bare</span></tt>), we'll call it <strong>REPO0</strong></li>
-<li>Clone that repository (<tt class="docutils literal">git clone <span class="pre">path-to-other-repo0</span> <span class="pre">name-of-cloned-repo</span></tt>),
-we'll call it <strong>REPO1</strong>, this will create the new repository in <tt class="docutils literal"><span class="pre">name-of-cloned-repo</span></tt>.</li>
-<li>Make some commits and push them (<tt class="docutils literal">git push <span class="pre">-u</span> origin master</tt>)</li>
-<li>Make some commits and push them (<tt class="docutils literal">git push</tt> - after pushing with <tt class="docutils literal"><span class="pre">-u</span></tt>,
-you don't need to add the <tt class="docutils literal"><span class="pre">-u</span> origin master</tt> part anymore)</li>
-<li>Clone the first repository again (in a different directory), we'll call this one <strong>REPO2</strong></li>
-<li>Make some commits in REPO2, and push them to REPO0</li>
-<li>Go back to REPO1 and pull the changes</li>
+<li>Create the demo application: <a class="reference external" href="http://github.com/elentok/backbone-marionette-example">http://github.com/elentok/backbone-marionette-example</a></li>
 </ul>
 </div>
-<div class="section" id="part-3">
-<h2><a class="toc-backref" href="#id5">2.3.&nbsp;&nbsp;&nbsp;Part 3</a></h2>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id8">2.2.&nbsp;&nbsp;&nbsp;Exercise</a></h2>
 <ul class="simple">
-<li>In groups:<ul>
-<li>Create a remote repository (using github, bitbucket, SCM manager, etc...)</li>
-<li>Each member of the group should clone the repository</li>
-<li>Each member should commit once and push (use rebase to handle conflicts)</li>
-<li>Each member should commit multiple times (change all existing files) and push</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="reference">
-<h2><a class="toc-backref" href="#id6">2.4.&nbsp;&nbsp;&nbsp;Reference</a></h2>
-<ul class="simple">
-<li>Use <a class="reference external" href="http://gitready.com">http://gitready.com</a> for reference</li>
+<li>Recreate the previous application using Backbone.Marionette.</li>
+<li>Use <a class="reference external" href="https://github.com/derickbailey/backbone.marionette/blob/master/apidoc.md">https://github.com/derickbailey/backbone.marionette/blob/master/apidoc.md</a> for reference.</li>
 </ul>
 </div>
 </div>
+
+  <script type="text/javascript" src="./../js/jquery.min.js"></script>
+  <script type="text/javascript" src="./../js/main.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32652206-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
 </div>
 </body>
 </html>

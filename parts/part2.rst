@@ -2,7 +2,7 @@
 Part 2 - Ruby Gems
 ======================
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 

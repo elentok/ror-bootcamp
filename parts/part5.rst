@@ -2,16 +2,16 @@
 Part 5 - RSpec (TDD)
 ======================
 
-`Back <index.html>`_
+`Back <../index.html>`_
 
 .. contents::
 
 Demonstration
 -------------
 
-* How to run rspec
+* How to run rspec::
 
-  * Add ``gem "rspec-rails"`` to the :test and :development groups
+    rspec file_spec.rb
 
 * `String Calcluator kata <http://www.21apps.com/agile/tdd-kata-by-example-video/>`_:
 
