@@ -108,3 +108,14 @@ p {
 .index-page .title {
   display: none;
 }
+
+.credits {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(avatar.svg);
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  padding-top: 100px;
+  background-position: center top;
+  text-align: center;
+}

@@ -7,7 +7,7 @@ Ruby on Rails Bootcamp
 This document is targeted at programmers that don't know a thing about Ruby on Rails 
 and want to learn.
 
-The purpose of this document is to guide people who want to learn RoR through the process.
+.. class:: credits
 
 Created by `David Elentok <http://elentok.com>`_ (`@elentok <https://twitter.com/#!/elentok>`_).
 
